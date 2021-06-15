@@ -1,5 +1,6 @@
 ## Moselikk's blog
-/code for fun/
+
+*code for fun*
 
 ### What's in it
 
