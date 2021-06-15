@@ -1,5 +1,4 @@
 ## Moselikk's blog
----
 code for fun
 
 ### What's in it
