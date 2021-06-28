@@ -8,5 +8,5 @@
 
   
 
-![Luigi's Mansion: Dark Moon](https://hive.indienova.com/ranch/gamedb/2019/03/cover/g-1869919-loUz1D.jpg_gcoverWp)
+![Luigi's Mansion: Dark Moon](https://github.com/moselikk/moselikk.github.io/blob/main/pictures/luigi.webp)
 
