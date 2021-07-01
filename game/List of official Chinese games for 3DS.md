@@ -8,5 +8,5 @@
 
   
 
-![Luigi's Mansion: Dark Moon](https://github.com/moselikk/moselikk.github.io/blob/main/pictures/luigi.webp)
+![Luigi's Mansion: Dark Moon](https://gitee.com/zongminz_admin/images/raw/master/pic/20210701/092820092-1.JPG)
 
