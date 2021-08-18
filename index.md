@@ -1,7 +1,8 @@
 ---
 layout: default
+title: Another page
+description: This is just another page
 ---
-<br>
 
 ## List
 - [blog](https://moselikk.com/moselikk-blog/)
