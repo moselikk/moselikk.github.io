@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Another page
-description: This is just another page
+title: moselikk's page
+description: 
 ---
 
 ## List
