@@ -2,4 +2,5 @@ title: moselikk
 #description: 
 show_downloads: false
 google_analytics:
+markdown: GFM
 theme: jekyll-theme-cayman
