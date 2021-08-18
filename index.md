@@ -1,6 +1,6 @@
 ---
 layout: default
-title: moselikk's page
+title: Moselikk's page
 description: 
 ---
 
