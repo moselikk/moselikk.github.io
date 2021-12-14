@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 3DS官方汉化游戏一览
 description: List of official Chinese games for 3ds
 date: 2021-08-18
