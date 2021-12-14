@@ -14,7 +14,7 @@ lang: "zh-cmn-Hans"
 description: "Less is more."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://moselikk.com" # the base hostname & protocol for your site
-timezone: Asia/Beijing
+timezone: Asia/Shanghai
 encoding: UTF-8
 
 social:
