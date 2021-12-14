@@ -1,0 +1,46 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: minefield
+email: moselikk@gmail.com
+author: "Moseli KK"
+logo: "./apple-touch-icon.png"
+lang: "zh-cmn-Hans"
+description: "Less is more."
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://moselikk.com" # the base hostname & protocol for your site
+timezone: Asia/Beijing
+encoding: UTF-8
+
+social:
+  name: moselikk
+  links:
+    #- https://twitter.com/#
+
+webmaster_verifications:
+  google: ""
+
+tracking:
+  ga_id: "UA-xxxxxx-yy"
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+permalink: /blog/:title
+
