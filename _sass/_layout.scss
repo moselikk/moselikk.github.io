@@ -61,9 +61,12 @@
  * Homepage
  */
 .homepage-img {
-    background-color:rgba(0, 0, 0, 0.0);
     width: 300px;
     margin: auto;
+}
+
+.homepage-img img {
+    background-color: rgba(0, 0, 0, 0.0);
 }
 
 
