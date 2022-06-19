@@ -4,7 +4,7 @@ title: about
 permalink: /about/
 ---
 
-![](https://less-1251975755.cos.ap-beijing.myqcloud.com/202206192257584.png)
+![](https://less-1251975755.cos.ap-beijing.myqcloud.com/202206192332437.png)
 
 *Moseli 河北人 本科毕业*
 
