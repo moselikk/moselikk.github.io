@@ -72,9 +72,8 @@
           }
           return 'good';
         }
-
-        function sendToGoogleAnalytics({ name, delta, value, id }) {
-          gtag('event', name, {
+//#region
+         /*  gtag('event', name, {
             value: delta, // Use `delta` so the value can be summed.
             metric_id: id, // Needed to aggregate events.
             metric_value: value, // Optional.
@@ -87,9 +86,20 @@
         webVitals.getFID(sendToGoogleAnalytics);
         webVitals.getLCP(sendToGoogleAnalytics);
         webVitals.getFCP(sendToGoogleAnalytics);
-        webVitals.getTTFB(sendToGoogleAnalytics);
+        webVitals.getTTFB(sendToGoogleAnalytics);  */
+//#endregion
       };
       document.head.appendChild(script);
     })();
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XML2B8X414"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XML2B8X414');
   </script>
 </head>
