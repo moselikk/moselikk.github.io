@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "S函数形参arguments的特点"
+title:  "JS函数形参arguments的特点"
 date:   2022-08-9 15:00:00 +0800
 categories: 
 ---
