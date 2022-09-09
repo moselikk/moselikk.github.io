@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "fix: element-ui多页表格打印无表头"
+title:  "element-ui多页表格打印无表头"
 date:   2021-06-18 00:00:00 +0800
 categories: 
 ---
