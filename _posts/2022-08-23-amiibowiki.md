@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "amiibowiki"
+title:  "Amiibowiki"
 date:   2022-08-23 15:00:00 +0800
 categories: 
 ---
