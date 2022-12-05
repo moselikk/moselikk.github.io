@@ -3,8 +3,23 @@
   {% include head.html %}
 
   <body>
-    <div class="page-content" id="article">
-      <div class="wrapper">{{ content }}</div>
+    <div class="outer">
+      <div class="navigation">
+        <div class="homepage-img">
+          <img src="https://less-1251975755.cos.ap-beijing.myqcloud.com/202206192339428.png" alt="">
+        </div>
+        <ul class="menu">
+          <li>合</li>
+          <li>气</li>
+          <li>道</li>
+        </ul>
+      </div>
+      <div class="page-content" id="article">
+        <div class="wrapper">
+          <p id="hitokoto" class="hitokoto"><a href="#" id="hitokoto_text">:D 获取中...</a></p>
+          {{ content }}
+        </div>
+      </div>
     </div>
     <script>
       // open outbound links in new tab
@@ -30,6 +45,14 @@
           }
         }
       }
+      fetch('https://v1.hitokoto.cn')
+      .then(response => response.json())
+      .then(data => {
+        const hitokoto = document.getElementById('hitokoto_text')
+        hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
+        hitokoto.innerText = data.hitokoto
+      })
+      .catch(console.error)
     </script>
     <script
       src="https://static.cloudflareinsights.com/beacon.min.js"
