@@ -82,6 +82,7 @@
  }
 .homepage-img {
     width: 130px;
+    height: 130px;
     margin: auto;
 }
 
@@ -119,10 +120,14 @@
                 padding: 60px 0;
             }
             .hitokoto{
+                padding-left: 0.6rem;
+                padding-right: 0.2rem;
                 font-style:italic;
-                font-size: 1rem;
+                font-size: 0.8rem;
                 margin-top: 43px;
                 float: right;
+                background-color: #eee;
+                border-radius: 3px;
             }
         }
     }
