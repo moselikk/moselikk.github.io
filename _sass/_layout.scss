@@ -225,3 +225,41 @@ div.highlight {
 summary + .highlight {
   margin-top: $spacing-unit / 1.5;
 }
+
+/* 响应式 */
+@media screen and (max-width: 800px) {
+  .outer {
+    flex-direction: column !important;
+  }
+  .nav-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+  }
+  .homepage-img {
+    position: static;
+    top: 0;
+  }
+  .menu {
+    position: static !important;
+    top: 0 !important;
+    justify-content: center;
+    margin-top: 30px !important;
+    li {
+      font-size: 3rem !important;
+    }
+  }
+  .navigation {
+    height: 300px;
+    max-width: 100%;
+    background-origin: 0;
+    .nav-wrapper {
+      margin: 0;
+      background-color: rgba($color: #fff, $alpha: 0);
+    }
+  }
+  .menu {
+    display: flex !important;
+    width: 100% !important;
+  }
+}
