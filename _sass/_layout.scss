@@ -228,7 +228,13 @@ summary + .highlight {
 
 /* 响应式 */
 @media screen and (max-width: 800px) {
-  .outer {
+    .navigation{
+        display: none;
+    }
+    .page-content{
+        padding-top: 0;
+    }
+  /* .outer {
     flex-direction: column !important;
   }
   .nav-wrapper {
@@ -261,5 +267,5 @@ summary + .highlight {
   .menu {
     display: flex !important;
     width: 100% !important;
-  }
+  } */
 }
