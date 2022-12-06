@@ -5,54 +5,62 @@
   <body>
     <div class="outer">
       <div class="navigation">
-        <div class="homepage-img">
-          <img src="https://less-1251975755.cos.ap-beijing.myqcloud.com/202206192339428.png" alt="less is kk">o</div>
+        <div class="nav-wrapper">
+          <div class="homepage-img">
+            <img
+              src="https://less-1251975755.cos.ap-beijing.myqcloud.com/202206192339428.png"
+              alt=""
+            />
+          </div>
+          <ul class="menu">
+            <li>合</li>
+            <li>气</li>
+            <li>道</li>
+          </ul>
         </div>
-        <ul class="menu">
-          <li>合</li>
-          <li>气</li>
-          <li>道</li>
-        </ul>
       </div>
       <div class="page-content" id="article">
         <div class="wrapper">
-          <p id="hitokoto" class="hitokoto"><a href="#" id="hitokoto_text">:D 获取中...</a></p>
+          <p id="hitokoto" class="hitokoto">
+            <a href="#" id="hitokoto_text">:D 获取中...</a>
+          </p>
           {{ content }}
         </div>
       </div>
     </div>
+
     <script>
       // open outbound links in new tab
       let origin = document.location.origin;
-      let links = document.getElementsByTagName('a');
+      let links = document.getElementsByTagName("a");
       for (let link of links) {
         if (
           link.href &&
           link.href.indexOf(origin) != 0 &&
-          !link.href.includes('mailto:')
+          !link.href.includes("mailto:")
         )
-          link.setAttribute('target', '_blank');
+          link.setAttribute("target", "_blank");
       }
 
       // responsive table
-      let tables = document.getElementsByTagName('table');
+      let tables = document.getElementsByTagName("table");
       for (let table of tables) {
         let ths = table.tHead.rows[0].cells;
         let trs = table.tBodies[0].rows;
         for (let row of trs) {
           for (let i = 0; i < row.cells.length; i++) {
-            row.cells[i].setAttribute('data-label', ths[i].textContent);
+            row.cells[i].setAttribute("data-label", ths[i].textContent);
           }
         }
       }
-      fetch('https://v1.hitokoto.cn')
-      .then(response => response.json())
-      .then(data => {
-        const hitokoto = document.getElementById('hitokoto_text')
-        hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
-        hitokoto.innerText = data.hitokoto
-      })
-      .catch(console.error)
+      fetch("https://v1.hitokoto.cn")
+        .then((response) => response.json())
+        .then((data) => {
+          const hitokoto = document.getElementById("hitokoto_text");
+          hitokoto.href = "https://hitokoto.cn/?uuid=" + data.uuid;
+          hitokoto.innerText = data.hitokoto;
+        })
+        .catch(console.error);
     </script>
     <script
       src="https://static.cloudflareinsights.com/beacon.min.js"
@@ -61,9 +69,9 @@
     ></script>
     <script src="/js/zooming.min.js"></script>
     <script>
-      if (window.Zooming && typeof screen.orientation == 'undefined')
-        window.addEventListener('load', function () {
-          new Zooming().listen('.post-content img');
+      if (window.Zooming && typeof screen.orientation == "undefined")
+        window.addEventListener("load", function () {
+          new Zooming().listen(".post-content img");
         });
     </script>
   </body>
