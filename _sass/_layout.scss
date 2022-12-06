@@ -120,6 +120,16 @@
 }
 .wrapper {
   margin-bottom: 98px;
+  .hitokoto {
+    padding-left: 0.6rem;
+    padding-right: 0.2rem;
+    font-style: italic;
+    font-size: 12px;
+    margin-top: 43px;
+    float: right;
+    background-color: #eee;
+    border-radius: 3px;
+  }
 }
 
 .page-content {
@@ -141,16 +151,7 @@
         margin: 0 auto;
         padding: 60px 0;
       }
-      .hitokoto {
-        padding-left: 0.6rem;
-        padding-right: 0.2rem;
-        font-style: italic;
-        font-size: 0.8rem;
-        margin-top: 43px;
-        float: right;
-        background-color: #eee;
-        border-radius: 3px;
-      }
+      
     }
   }
 }
