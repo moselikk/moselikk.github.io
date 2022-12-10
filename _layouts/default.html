@@ -1,86 +1,79 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
-  {% include head.html %}
+{% include head.html %}
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNT7YDK0B1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-MNT7YDK0B1');
 </script>
-  <body>
-    <div class="outer">
-      <div class="navigation">
-        <div class="nav-wrapper">
-          <div class="homepage-img">
-            <img
-              src="https://less-1251975755.cos.ap-beijing.myqcloud.com/202206192339428.png"
-              alt=""
-            />
-          </div>
-          <ul class="menu">
-            <li>合</li>
-            <li>气</li>
-            <li>道</li>
-          </ul>
+
+<body>
+  <div class="outer">
+    <div class="navigation">
+      <div class="nav-wrapper">
+        <div class="homepage-img">
+          <img src="https://less-1251975755.cos.ap-beijing.myqcloud.com/202206192339428.png" alt="" />
         </div>
-      </div>
-      <div class="page-content" id="article">
-        <div class="wrapper">
-          <p id="hitokoto" class="hitokoto">
-            <a href="#" id="hitokoto_text">:D 获取中...</a>
-          </p>
-          {{ content }}
-        </div>
+        <ul id="sidebar-title" class="menu">
+        </ul>
       </div>
     </div>
+    <div class="page-content" id="article">
+      <div class="wrapper">
+        <p id="hitokoto" class="hitokoto">
+          <a href="#" id="hitokoto_text">:D 获取中...</a>
+        </p>
+        {{ content }}
+      </div>
+    </div>
+  </div>
+  <script src="../js/random-tip.js"></script>
+  <script>
+    // open outbound links in new tab
+    let origin = document.location.origin;
+    let links = document.getElementsByTagName("a");
+    for (let link of links) {
+      if (
+        link.href &&
+        link.href.indexOf(origin) != 0 &&
+        !link.href.includes("mailto:")
+      )
+        link.setAttribute("target", "_blank");
+    }
 
-    <script>
-      // open outbound links in new tab
-      let origin = document.location.origin;
-      let links = document.getElementsByTagName("a");
-      for (let link of links) {
-        if (
-          link.href &&
-          link.href.indexOf(origin) != 0 &&
-          !link.href.includes("mailto:")
-        )
-          link.setAttribute("target", "_blank");
-      }
-
-      // responsive table
-      let tables = document.getElementsByTagName("table");
-      for (let table of tables) {
-        let ths = table.tHead.rows[0].cells;
-        let trs = table.tBodies[0].rows;
-        for (let row of trs) {
-          for (let i = 0; i < row.cells.length; i++) {
-            row.cells[i].setAttribute("data-label", ths[i].textContent);
-          }
+    // responsive table
+    let tables = document.getElementsByTagName("table");
+    for (let table of tables) {
+      let ths = table.tHead.rows[0].cells;
+      let trs = table.tBodies[0].rows;
+      for (let row of trs) {
+        for (let i = 0; i < row.cells.length; i++) {
+          row.cells[i].setAttribute("data-label", ths[i].textContent);
         }
       }
-      fetch("https://v1.hitokoto.cn")
-        .then((response) => response.json())
-        .then((data) => {
-          const hitokoto = document.getElementById("hitokoto_text");
-          hitokoto.href = "https://hitokoto.cn/?uuid=" + data.uuid;
-          hitokoto.innerText = data.hitokoto;
-        })
-        .catch(console.error);
-    </script>
-    <script
-      src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": ""}'
-      onerror="gtag('set', 'user_properties', {blocker: 'true'});"
-    ></script>
-    <script src="/js/zooming.min.js"></script>
-    <script>
-      if (window.Zooming && typeof screen.orientation == "undefined")
-        window.addEventListener("load", function () {
-          new Zooming().listen(".post-content img");
-        });
-    </script>
-  </body>
+    }
+    fetch("https://v1.hitokoto.cn")
+      .then((response) => response.json())
+      .then((data) => {
+        const hitokoto = document.getElementById("hitokoto_text");
+        hitokoto.href = "https://hitokoto.cn/?uuid=" + data.uuid;
+        hitokoto.innerText = data.hitokoto;
+      })
+      .catch(console.error);
+  </script>
+  <script src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": ""}'
+    onerror="gtag('set', 'user_properties', {blocker: 'true'});"></script>
+  <script src="/js/zooming.min.js"></script>
+  <script>
+    if (window.Zooming && typeof screen.orientation == "undefined")
+      window.addEventListener("load", function () {
+        new Zooming().listen(".post-content img");
+      });
+  </script>
+</body>
+
 </html>
