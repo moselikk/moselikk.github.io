@@ -26,7 +26,8 @@ webmaster_verifications:
   google: ""
 
 tracking:
-  ga_id: "UA-xxxxxx-yy"
+  ga_id:
+    # "UA-xxxxxx-yy"
 
 # Build settings
 markdown: kramdown

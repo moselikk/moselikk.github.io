@@ -51,4 +51,4 @@ $on-screen: 769px;
 }
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import 'base', 'layout';
+@import '../_sass/base', '../_sass/layout';

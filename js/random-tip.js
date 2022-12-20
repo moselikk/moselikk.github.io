@@ -1,6 +1,6 @@
-/*
-* 三字Tip
-*/
+/**
+ * 三字Tip
+ */
 
 const sidebarTipArr = [
 	'要坚强','不放弃','不服输','永奋斗','誓不休','你超棒','不旋踵','往前冲',
@@ -25,7 +25,7 @@ function getNoRepeatNum(minNum, maxNum) {
 			if (nowTime - oldTime < 6e4) return num;
 		}
 		let randomNum = getRandomNum(minNum, maxNum);
-		while (randomNum == num) {
+		while (randomNum === num) {
 			randomNum = getRandomNum(minNum, maxNum);
 		}
 		window.localStorage.setItem('moNum', randomNum);
