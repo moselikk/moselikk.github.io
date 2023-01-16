@@ -97,6 +97,18 @@
         font-size: 4rem;
       }
     }
+    .project{
+      position: absolute;
+      top: 80%;
+      right: 17px;
+      width: 80px;
+      font-size: 10px;
+      img{
+        display: inline-block;
+        width: 1em;
+        vertical-align: middle;
+      }
+    }
   }
 }
 .homepage-img {
