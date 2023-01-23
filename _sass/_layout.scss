@@ -101,7 +101,7 @@
       position: absolute;
       top: 80%;
       right: 17px;
-      width: 80px;
+      width: 82px;
       font-size: 10px;
       img{
         display: inline-block;
@@ -209,6 +209,14 @@
 
 .post-link {
   font-size: 16px;
+}
+/* Excerpt */
+.excerpt-source{
+  text-align: right;
+  padding-right: 2rem;
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 25px;
 }
 
 /**
