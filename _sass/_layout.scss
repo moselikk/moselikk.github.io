@@ -108,6 +108,14 @@
         width: 1em;
         vertical-align: middle;
       }
+      a{
+        padding: 1px; 
+      }
+      a:hover{
+        border-bottom: 2px solid #00ae50;
+        background-color: rgba($color: #00ae50, $alpha: 0.1)
+
+      }
     }
   }
 }
