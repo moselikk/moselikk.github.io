@@ -20,7 +20,7 @@ eNSP V100R003C00SPC100
 
 如满足以上条件，解决方法如下：
 
-1. 问题发生原因：所安装 VirtualBox 版本与 Hyper-V 冲突，可使用以下命令检查 Hyper-V 是否开启
+- 问题发生原因：所安装 VirtualBox 版本与 Hyper-V 冲突，可使用以下命令检查 Hyper-V 是否开启
 
 （系统附加功能 Hyper-V **没打勾不代表没有启用**，如使用WSL但没在附加功能中手动开启，Hyper-V 也会是启用状态）
 ```bash
@@ -31,7 +31,7 @@ eNSP V100R003C00SPC100
 $ bcdedit
 
 ```
-2. 解决方法：关闭 Hyper-V 后 VirtualBox 与 eNSP 均可正常使用
+- 解决方法：关闭 Hyper-V 后 VirtualBox 与 eNSP 均可正常使用
 
 ```bash
 // 需使用管理员权限shell运行
