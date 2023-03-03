@@ -6,16 +6,25 @@ categories:
 ---
 
 ### 个人常用环境配置文件备份：
+
+VSCode
 ![VSCode](https://less-1251975755.cos.ap-beijing.myqcloud.com/2023-03-03_10-22-36.png)
-VSCode配置备份：[下载](https://file-1251975755.cos.ap-nanjing.myqcloud.com/VSCode_Setting.code-profile)<br>
-![WindowsTerminal](https://less-1251975755.cos.ap-beijing.myqcloud.com/2023-03-03_11-23-45.png)
+
+VSCode配置备份：[下载](https://file-1251975755.cos.ap-nanjing.myqcloud.com/VSCode_Setting.code-profile)
+
+PowerShell（需自行下载安装，系统自带 Windows PowerShell 配置会有无法预料的问题）
+![WindowsTerminal](https://less-1251975755.cos.ap-beijing.myqcloud.com/2023-03-03_13-49-17.png)
+
+Ubuntu zsh (WSL)
+![WindowsTerminalWSL](https://less-1251975755.cos.ap-beijing.myqcloud.com/2023-03-03_13-49-07.png)
+
 PowerShell配置备份：[下载](https://file-1251975755.cos.ap-nanjing.myqcloud.com/Microsoft.PowerShell_profile.ps1)<br>
 WindowsTerminal配置备份：[下载](https://file-1251975755.cos.ap-nanjing.myqcloud.com/windows_terminal_settings.json)
 
 ### 配置文件使用：
 > VSCode：按 `Ctrl+Shift+P` 打开命令输入框，输入 `Import Profile` 导入配置文件，选择所下载的配置文件导入。
 
-> PowerShell：Terminal 中输入 `$PROFILE` 查看 PowerShell 配置文件地址，将下载的配置文件复制到相应文件中保存（需先安装好我配置文件中用到的软件）。
+> PowerShell：Terminal 中输入 `$PROFILE` 查看 PowerShell 配置文件地址，将下载的配置文件复制到相应文件中保存（需先安装好配置文件中用到的软件，如：`starship`）。
 
 > WindowsTerminal：打开 终端 - 设置 - 打开JSON文件 将下载的配置文件中内容复制保存即可。
 
