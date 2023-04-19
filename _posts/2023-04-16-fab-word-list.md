@@ -48,6 +48,7 @@ categories:
 - VLSI `Very Large Scale Integration Circuit` 超大规模集成电路
 - ULSI `Ultra Large Scale Integration` 极大规模集成电路
 - IC `Integrated Circuit Chip` 集成电路
+- CMOS `Complementary Metal Oxide Semiconductor` 互补式金属氧化物半导体
 
 - 按导电类型不同分类：
 - 集成电路按导电类型可分为双极型集成电路和单极型集成电路。双极型集成电路的制作工艺复杂，功耗较大，代表集成电路有TTL、ECL、HTL、LST-TL、STTL等类型
@@ -62,6 +63,11 @@ categories:
 
 - PVD `Physical Vapor Deposition` 物理气相沉积
 - CVD `Chemical Vapor Deposition` 化学气相沉积
+- CMP 化学机械研磨
+
+- PR 光阻
+
+
 - Quartz 石英
 - RF Generator 射频发生器
 - Pump 泵
@@ -90,3 +96,22 @@ categories:
 - Edge Ring 边缘环
 
 - PDCA 循环 `Plan（计划）、Do（执行）、Check（检查）和Act（处理）`
+
+---
+
+> 前段制程（扩散制程）：<br>
+> FEOL：在硅片上做出电阻、电容、二极管等元件<br>
+> BEOL：在各种原件间做出各种连接线路<br>
+> 》〉成膜，曝光，蚀刻，掺杂，CMP，清洗/干燥，针测〈《
+
+> 后段制程：<br>
+> 封装：<br>
+> 测试：<br>
+> 》〉背面研磨，切割〈《
+
+|   英文   |   中文   |   英文   |  中文  ｜
+|:-------:|:--------:|:-------:|:------:|
+| Si | 硅 | SiO<sub>2 | 二氧化硅 |
+| O<sub>2 | 氧气 | SiH<sub>4 | 硅烷 |
+| N<sub>2 | 氮气 | Poly-Si | 多晶硅 |
+| B | 硼 | NiO<sub>2 | 二氧化镍 |
