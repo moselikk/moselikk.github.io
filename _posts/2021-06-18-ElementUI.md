@@ -1,21 +1,21 @@
 ---
 layout: post
-title:  "ElementUI多页表格打印无表头"
+title:  "ElementUI 多页表格打印无表头"
 date:   2021-06-18 00:00:00 +0800
 categories: 
 ---
-开发审批记录类系统过程中，使用者对于列表打印功能要求较多，虽然现在公司都为线上审批无纸化办公，但是难免还是会有需要将系统中的数据打印出来进行签字的需求，在传统制造业尤为明显。在自测过程中发现使用Vue加element-ui开发的产品，在打印长表格时打印多页会出现只有第一页有表头的情况。
+开发审批记录类系统过程中，使用者对于列表打印功能要求较多，虽然现在公司都为线上审批无纸化办公，但是难免还是会有需要将系统中的数据打印出来进行签字的需求，在传统制造业尤为明显。在自测过程中发现使用 Vue 加 element-ui 开发的产品，在打印长表格时打印多页会出现只有第一页有表头的情况。
 
 ![](https://less-1251975755.cos.ap-beijing.myqcloud.com/posts/2022-08-12%2011.00.22.png)
 
 ![](https://less-1251975755.cos.ap-beijing.myqcloud.com/posts/2022-08-12%2011.00.31.png)
 
-在HTML中原生table表头若是用thead写，那打印时会自动优化将每页纸都加上表头，排查发现，element-ui的表格组件为了实现表头浮动，将表头和表格内容部分分别放在两个table里且包在了两个div里，致使打印时无法自动为后续页添加表头
+在 HTML 中原生 table 表头若是用 thead 写，那打印时会自动优化将每页纸都加上表头，排查发现，element-ui 的表格组件为了实现表头浮动，将表头和表格内容部分分别放在两个 table 里且包在了两个 div 里，致使打印时无法自动为后续页添加表头
 
 ![](https://less-1251975755.cos.ap-beijing.myqcloud.com/posts/2022-08-12%2011.11.28.png)
 
 ## 解决思路
-通过在打印时将原本的thead结构隐藏，并复制一份与tbody放在同一个table中，即可实现目标功能
+通过在打印时将原本的 thead 结构隐藏，并复制一份与 tbody 放在同一个 table 中，即可实现目标功能
 
 复制结构：
 ```javascript
@@ -37,7 +37,7 @@ export default{
 }
 </script>
 ```
-设置打印时css规则：
+设置打印时 css 规则：
 ```css
 .el-table >>> .el-table__body-wrapper table thead{
   display: none;
@@ -88,7 +88,7 @@ export default{
 import ElTableP from './components/el-table-p.vue'
 Vue.component('el-table-p', ElTableP)
 ```
-使用table时使用自定义的组件快速方便满足需求:
+使用 table 时使用自定义的组件快速方便满足需求:
 ```HTML
 <!--index.js=>template-->
   <el-table-p
