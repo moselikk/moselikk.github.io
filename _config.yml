@@ -45,4 +45,12 @@ plugins:
 
 permalink: /blog/:title
 
+gitalk:
+  clientID: 'Ov23liIfrOwneaRJHCAX'
+  clientSecret: 'e7280b26ac83f5bf55be6040ec6a833e74da3705'
+  repo: 'moselikk.github.io'
+  owner: 'moselikk'
+  admin: ['moselikk']
+  distractionFreeMode: false  # 是否启用清爽模式
+
 
