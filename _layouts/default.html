@@ -13,19 +13,18 @@
 
 <body>
   <div class="outer">
-    {% include navigation.html %}
     <div class="page-content" id="article">
       <div class="wrapper">
+        <div id="hitokoto" class="hitokoto">
+          <a href="#" id="hitokoto_text">...... </a>
+        </div>
         <div class="hanging-drop">
-          <p id="hitokoto" class="hitokoto">
-            <a href="#" id="hitokoto_text">:D 获取中...</a>
-          </p>
         </div>
         {{ content }}
       </div>
     </div>
   </div>
-  <script src="../js/random-tip.js"></script>
+  <!-- <script src="../js/random-tip.js"></script> -->
   <script>
     // open outbound links in new tab
     let origin = document.location.origin;
@@ -68,7 +67,7 @@
         new Zooming().listen(".post-content img");
       });
   </script>
-  <!-- <script src="../js/denglong.js"></script> -->
+  <script src="../js/denglong.js"></script>
 </body>
 
 </html>

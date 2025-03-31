@@ -82,49 +82,19 @@
   position: relative;
   .nav-wrapper {
     @extend .wrapper;
-    .menu {
+    .tip-enum {
       display: block;
       list-style: none;
       width: 80px;
-      margin: 0;
-      padding: 0;
-      position: absolute;
       right: 17px;
       top: 29%;
-      li {
-        margin: 0;
-        padding: 0;
-        font-size: 2rem;
-      }
     }
-    .project{
-      position: absolute;
-      top: 80%;
-      right: 17px;
-      width: 82px;
-      font-size: 10px;
-      img{
-        display: inline-block;
-        width: 1em;
-        vertical-align: middle;
-      }
-      a{
-        padding: 1px; 
-      }
-      a:hover{
-        border-bottom: 2px solid #00ae50;
-        background-color: rgba($color: #00ae50, $alpha: 0.1)
-
-      }
-    }
+   
   }
 }
 .homepage-img {
   width: 130px;
   height: 80px;
-  position: absolute;
-  right: 0;
-  top: 12%;
   img{
     width: 90px;
   }
@@ -144,16 +114,20 @@
 }
 .wrapper {
   margin-bottom: 98px;
+  position: relative;
+ 
   .hitokoto {
+    position: absolute;
+    top: 48px;
+    right: 0;
     padding-left: 0.6rem;
-    padding-right: 0.2rem;
+    padding-right: 0.4rem;
     font-style: italic;
     font-size: 12px;
-    margin-top: 43px;
-    float: right;
     background-color: #eee;
     border-radius: 3px;
   }
+
 }
 
 .page-content {
@@ -176,6 +150,22 @@
         padding: 60px 0;
       }
       
+    }
+  }
+}
+
+.user-info{
+  text-align: center;
+  .project{
+    padding-top: 16px;
+    font-size: 12px;
+    a{
+      padding: 1px; 
+    }
+    a:hover{
+      border-bottom: 2px solid #00ae50;
+      background-color: rgba($color: #00ae50, $alpha: 0.1)
+
     }
   }
 }
@@ -267,39 +257,4 @@ summary + .highlight {
     .page-content{
         padding-top: 0;
     }
-
-  /* .outer {
-    flex-direction: column !important;
-  }
-  .nav-wrapper {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center;
-  }
-  .homepage-img {
-    position: static;
-    top: 0;
-  }
-  .menu {
-    position: static !important;
-    top: 0 !important;
-    justify-content: center;
-    margin-top: 30px !important;
-    li {
-      font-size: 3rem !important;
-    }
-  }
-  .navigation {
-    height: 300px;
-    max-width: 100%;
-    background-origin: 0;
-    .nav-wrapper {
-      margin: 0;
-      background-color: rgba($color: #fff, $alpha: 0);
-    }
-  }
-  .menu {
-    display: flex !important;
-    width: 100% !important;
-  } */
 }

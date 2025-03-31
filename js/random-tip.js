@@ -37,7 +37,7 @@ function getNoRepeatNum(minNum, maxNum) {
 
 const sidebarTipArrNum = getNoRepeatNum(0, sidebarTipArr.length - 1);
 let tipNow = sidebarTipArr[sidebarTipArrNum];
-const sidebarTittle = document.querySelector('.menu');
+const sidebarTittle = document.querySelector('.tip-enum');
 
 
-sidebarTittle.innerHTML = `<li>${tipNow[0]}</li><li>${tipNow[1]}</li><li>${tipNow[2]}</li>`;
+sidebarTittle.innerHTML = `<span>${tipNow}</span>`;
