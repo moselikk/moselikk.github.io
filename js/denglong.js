@@ -1,6 +1,8 @@
 const denglong = [['deng-box', '春节'], ['deng-box1', '快乐']]
 const hangingDrop = document.querySelector('.hanging-drop')
 const date = new Date();
+const month = date.getMonth() + 1;
+const day = date.getDate();
 const year = date.getFullYear();
 const formattedMonth = String(month).padStart(2, '0');
 const formattedDay = String(day).padStart(2, '0');
@@ -25,17 +27,16 @@ function createDeng(dengName, title) {
   hangingDrop.appendChild(dengBox)
 }
 
-fetch(`https://timor.tech/api/holiday/year/${date.getFullYear()}`)
+fetch(`https://timor.tech/api/holiday/year/${year}`)
 .then((response) => response.json())
-.then(({holiday}) =>{
+.then(({holiday}) => {
   if(holiday && holiday[formattedDate] && regex.test(holiday[formattedDate].name)){
     if(window.location.pathname === "/"){
       denglong.forEach((item) => {
-        createDeng(...item)
-      })
+        createDeng(...item);
+      });
     }
   }
-  return
 })
 .catch(console.error);
 
