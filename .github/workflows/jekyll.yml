@@ -1,8 +1,9 @@
-name: Deploy Jekyll site to Pages
+name: Deploy Jekyll site to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main  # 仅在main分支推送时触发
   workflow_dispatch:
 
 permissions:
@@ -11,39 +12,60 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: "pages-${{ github.ref }}"
+  cancel-in-progress: true  # 新运行会取消旧运行
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby-version: ["3.2"]  # 使用最新稳定版Ruby
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
         with:
-          ruby-version: '3.1'
-          bundler-cache: true
-          cache-version: 0
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
+          submodules: recursive  # 包含子模块
+
+      - name: Set up Ruby ${{ matrix.ruby-version }}
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+          bundler-cache: true  # 缓存Bundler依赖
+          cache-path: vendor/bundle
+
+      - name: Merge Gitalk configuration
         run: |
-          echo "gitalk:" >> _config.yml
-          echo "  clientID: '${{ secrets.GITALK_CLIENT_ID }}'" >> _config.yml
-          echo "  clientSecret: '${{ secrets.GITALK_CLIENT_SECRET }}'" >> _config.yml
-          echo "  repo: 'moselikk.github.io'" >> _config.yml
-          echo "  owner: 'moselikk'" >> _config.yml
-          echo "  admin: ['moselikk']" >> _config.yml
-          echo "  distractionFreeMode: false" >> _config.yml
-          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+          cat <<EOF >> _config.yml
+          gitalk:
+            clientID: '${{ secrets.GITALK_CLIENT_ID }}'
+            clientSecret: '${{ secrets.GITALK_CLIENT_SECRET }}'
+            repo: '${{ github.repository }}'
+            owner: '${{ github.repository_owner }}'
+            admin:
+              - '${{ github.repository_owner }}'
+            distractionFreeMode: false
+          EOF
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Validate Jekyll configuration
+        run: bundle exec jekyll doctor
+
+      - name: Build Jekyll site
+        run: |
+          bundle exec jekyll build --safe \
+            --baseurl "${{ steps.pages.outputs.base_path }}" \
+            --destination ./_site \
+            --trace
         env:
           JEKYLL_ENV: production
-          
+          LC_ALL: C.UTF-8
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
 
   deploy:
     environment:
@@ -60,3 +82,4 @@ jobs:
           repository-name: ${{ github.repository }}
           branch: gh-pages
           folder: ./_site
+          force-orphan: true  # 创建独立分支
