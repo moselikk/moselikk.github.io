@@ -49,14 +49,54 @@
         }
       }
     }
-    fetch("https://v1.hitokoto.cn")
-      .then((response) => response.json())
-      .then((data) => {
-        const hitokoto = document.getElementById("hitokoto_text");
-        hitokoto.href = "https://hitokoto.cn/?uuid=" + data.uuid;
-        hitokoto.innerText = data.hitokoto;
-      })
-      .catch(console.error);
+
+    // hitokoto api
+    const c = ["a", "b","c","d","h","i","j","k"];
+    const result = c.map(item => `c=${item}`).join('&');
+
+      // Function to fetch hitokoto
+      function fetchHitokoto() {
+      fetch(`https://v1.hitokoto.cn?${query}`)
+        .then((response) => response.json())
+        .then((data) => {
+          const hitokoto = document.getElementById("hitokoto_text");
+          hitokoto.href = "https://hitokoto.cn/?uuid=" + data.uuid;
+          const from = data.from ? " -" + data.from : ''
+          hitokoto.innerText = data.hitokoto + from;
+          // Store the timestamp and result of the last API call
+          localStorage.setItem('lastHitokotoCall', Date.now());
+          localStorage.setItem('lastHitokotoResult', JSON.stringify(data));
+        })
+        .catch(console.error);
+    }
+
+    // Function to use the last hitokoto result
+    function useLastHitokotoResult() {
+      const data = JSON.parse(localStorage.getItem('lastHitokotoResult'));
+      const hitokoto = document.getElementById("hitokoto_text");
+      hitokoto.href = "https://hitokoto.cn/?uuid=" + data.uuid;
+      hitokoto.innerText = data.hitokoto;
+    }
+
+    // Check if we can call the API
+    function canCallHitokoto() {
+      const lastCall = localStorage.getItem('lastHitokotoCall');
+      const now = Date.now();
+      // Check if the last call was more than a minute ago
+      return !lastCall || now - lastCall > 60 * 1000;
+    }
+
+    // Main logic
+    if (canCallHitokoto()) {
+      fetchHitokoto();
+    } else {
+      const lastResult = localStorage.getItem('lastHitokotoResult');
+      if (lastResult) {
+        useLastHitokotoResult();
+      } else {
+        fetchHitokoto();
+      }
+    }
   </script>
   <!-- <script src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": ""}'
     onerror="gtag('set', 'user_properties', {blocker: 'true'});"></script> -->
