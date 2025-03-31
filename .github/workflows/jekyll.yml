@@ -23,6 +23,7 @@ jobs:
               - ${{ github.repository_owner }}
             distractionFreeMode: false
           EOF
+          cat _config.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
