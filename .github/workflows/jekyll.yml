@@ -49,13 +49,16 @@ jobs:
       # 完整部署配置
       - uses: jeffreytse/jekyll-deploy-action@v0.6.0
         with:
-          provider: 'github'
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: 'gh-pages'
-          jekyll_src: './'
-          jekyll_cfg: '_config.yml'
-          ruby_ver: '3.2.0'  # 明确指定 Ruby 版本
-          bundler_ver: '2.5.0'
-          pre_build_commands: |
-            sudo apt-get update
-            sudo apt-get install -y libvips libvips-dev  # 常见图片处理依赖
+          provider: 'github'         # Default is github
+          token: ${{ secrets.GITHUB_TOKEN }} # It's your Personal Access Token(PAT)
+          ssh_private_key: ''        # It's your SSH private key (SSH approach)
+          repository: ''             # Default is current repository
+          branch: 'gh-pages'         # Default is gh-pages for github provider
+          jekyll_src: './'           # Default is root directory
+          jekyll_cfg: '_config.yml'  # Default is _config.yml
+          jekyll_baseurl: ''         # Default is according to _config.yml
+          ruby_ver: ''               # Default is 3.2.0 version
+          bundler_ver: ''            # Default is compatible bundler version (~>2.5.0)
+          cname: ''                  # Default is to not use a cname
+          actor: ''                  # Default is the GITHUB_ACTOR
+          pre_build_commands: ''     # Installing additional dependencies (Arch Linux)
