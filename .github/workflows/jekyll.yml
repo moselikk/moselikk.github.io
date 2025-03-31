@@ -15,12 +15,12 @@ jobs:
         run: |
           cat <<EOF >> _config.yml
           gitalk:
-            clientID: '${{ secrets.GITALK_CLIENT_ID }}'
-            clientSecret: '${{ secrets.GITALK_CLIENT_SECRET }}'
-            repo: '${{ github.repository }}'
-            owner: '${{ github.repository_owner }}'
+            clientID: ${{ secrets.GITALK_CLIENT_ID }}
+            clientSecret: ${{ secrets.GITALK_CLIENT_SECRET }}
+            repo: ${{ github.repository }}
+            owner: ${{ github.repository_owner }}
             admin:
-              - '${{ github.repository_owner }}'
+              - ${{ github.repository_owner }}
             distractionFreeMode: false
           EOF
         env:
