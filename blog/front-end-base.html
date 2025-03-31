@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>
+    前端速查自用
+  </title>
+  <meta
+    name="description"
+    content="HTML"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link
+    rel="canonical"
+    href="https://moselikk.com/blog/front-end-base"
+  />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="alternate" type="application/rss+xml" title="moselikk"
+  href="https://moselikk.com/feed.xml">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>前端速查自用 | moselikk</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="前端速查自用" />
+<meta name="author" content="Moselikk" />
+<meta property="og:locale" content="zh_cmn_Hans" />
+<meta name="description" content="HTML" />
+<meta property="og:description" content="HTML" />
+<link rel="canonical" href="https://moselikk.com/blog/front-end-base" />
+<meta property="og:url" content="https://moselikk.com/blog/front-end-base" />
+<meta property="og:site_name" content="moselikk" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-11-08T10:56:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="前端速查自用" />
+<meta name="google-site-verification" content="" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Moselikk"},"dateModified":"2020-11-08T10:56:00+08:00","datePublished":"2020-11-08T10:56:00+08:00","description":"HTML","headline":"前端速查自用","mainEntityOfPage":{"@type":"WebPage","@id":"https://moselikk.com/blog/front-end-base"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://moselikk.com/apple-touch-icon.png"},"name":"Moselikk"},"url":"https://moselikk.com/blog/front-end-base"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <script>
+
+  </script>
+  <script>
+  </script>
+</head>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K329WMFD');</script>
+  <!-- End Google Tag Manager -->
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K329WMFD"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="outer">
+    <div class="page-content" id="article">
+      <div class="wrapper">
+        <div id="hitokoto" class="hitokoto">
+          <a href="#" id="hitokoto_text">...... </a>
+        </div>
+        <div class="hanging-drop">
+        </div>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">前端速查自用</h1>
+    <p class="post-meta">
+      <span><svg width="10px" height="10px" style="fill: #888; margin-right: 5px; vertical-align: baseline;" viewBox="0 0 16 16"><path d="M2.06 6.69c.14-.4.5-.69.94-.69h11V5c0-.55-.45-1-1-1H6.41l-1.7-1.71A.997.997 0 0 0 4 2H1c-.55 0-1 .45-1 1v9.84l2.05-6.15h.01zM16 8c0-.55-.45-1-1-1H4a.99.99 0 0 0-.94.69l-2 6c-.04.09-.06.2-.06.31 0 .55.45 1 1 1h11c.44 0 .81-.29.94-.69l2-6c.04-.09.06-.2.06-.31z"></path></svg>
+      <time datetime="2020-11-08T10:56:00+08:00" itemprop="datePublished">Nov 8, 2020</time></span>
+      <a href="/"><span><svg width="10px" height="10px" style="fill: #888; margin-right: 5px; vertical-align: baseline;" viewBox="0 0 16 16"><path d="M1 3h14c.55 0 1-.45 1-1s-.45-1-1-1H1c-.55 0-1 .45-1 1s.45 1 1 1zm14 10H1c-.55 0-1 .45-1 1s.45 1 1 1h14c.55 0 1-.45 1-1s-.45-1-1-1zm0-4H1c-.55 0-1 .45-1 1s.45 1 1 1h14c.55 0 1-.45 1-1s-.45-1-1-1zm0-4H1c-.55 0-1 .45-1 1s.45 1 1 1h14c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg>Home</span></a>
+      <a href="mailto:moselikk@gmail.com"><span><svg width="10px" height="10px" style="fill: #888; margin-right: 5px; vertical-align: baseline;" viewBox="0 0 16 16"><path d="M6 10c-1.1 0-2-.9-2-2V3H1c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1v2a1.003 1.003 0 0 0 1.71.71L5.41 13H10c.55 0 1-.45 1-1v-1.17l-.83-.83H6zm9-10H6c-.55 0-1 .45-1 1v7c0 .55.45 1 1 1h4.59l2.71 2.71c.17.18.42.29.7.29.55 0 1-.45 1-1V9c.55 0 1-.45 1-1V1c0-.55-.45-1-1-1z"></path></svg>Email</span></a>
+      <a href="https://github.com/moselikk"><span><svg width="10px" height="10px" style="fill: #888; margin-right: 5px; vertical-align: baseline;" viewBox="0 0 16 16"><path d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>Github</span></a>
+      <a href="/excerpt"><span><svg width="10px" height="10px" style="fill: #888; margin-right: 5px; vertical-align: baseline;" viewBox="0 0 16 16"><path d="M11 11c-.28 0-.53.11-.71.29L9 12.59V8c0-.55-.45-1-1-1s-1 .45-1 1v4.59L5.71 11.3A.965.965 0 0 0 5 11a1.003 1.003 0 0 0-.71 1.71l3 3c.18.18.43.29.71.29s.53-.11.71-.29l3-3A1.003 1.003 0 0 0 11 11zm1-7c-.03 0-.07 0-.1.01A5 5 0 0 0 2 5c0 .11.01.22.02.33A3.51 3.51 0 0 0 0 8.5c0 1.41.84 2.61 2.03 3.17C2.2 10.17 3.46 9 5 9c.06 0 .13.02.19.02C5.07 8.7 5 8.36 5 8c0-1.66 1.34-3 3-3s3 1.34 3 3c0 .36-.07.7-.19 1.02.06 0 .13-.02.19-.02 1.48 0 2.7 1.07 2.95 2.47A3.964 3.964 0 0 0 16 8c0-2.21-1.79-4-4-4z"></path></svg>Excerpt</span></a>
+      <a href="/about"><span><svg xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" style="fill: #888; margin-right: 5px; vertical-align: baseline;" viewBox="0 0 16 16"><!-- Icon from Tabler Icons by Paweł Kuna - https://github.com/tabler/tabler-icons/blob/master/LICENSE --><path fill="currentColor" d="M18.333 2c1.96 0 3.56 1.537 3.662 3.472l.005.195v12.666c0 1.96-1.537 3.56-3.472 3.662l-.195.005H5.667a3.667 3.667 0 0 1-3.662-3.472L2 18.333V5.667c0-1.96 1.537-3.56 3.472-3.662L5.667 2zM6 15a1 1 0 0 0-1 1v2l.007.117A1 1 0 0 0 7 18v-2l-.007-.117A1 1 0 0 0 6 15m3-4a1 1 0 0 0-1 1v6l.007.117A1 1 0 0 0 10 18v-6l-.007-.117A1 1 0 0 0 9 11m3 2a1 1 0 0 0-1 1v4l.007.117A1 1 0 0 0 13 18v-4l-.007-.117A1 1 0 0 0 12 13"/></svg>About</span></a>
+    </p>
+  </header>
+
+
+  
+
+  <div class="post-content" itemprop="articleBody">
+    <h2 id="html">HTML</h2>
+
+<ol>
+  <li><strong>系统结构</strong>
+    <ul>
+      <li>B/S架构
+  Browser / Server</li>
+      <li>
+        <p>C/S架构
+  Client / Server</p>
+
+        <p><em>企业一般用B/S架构</em></p>
+
+        <h2 id="游戏-app等用cs架构"><em>游戏 、APP等用C/S架构</em></h2>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<ul>
+  <li>ASP是Active Server Page的缩写，意为“活动服务器网页”，ASP的网页文件的格式是.asp，现在常用于各种动态网站中。与HTML相比，ASP网页具有6大特点。
+ASP是Active Server Page的缩写，意为“活动服务器网页”。ASP是微软公司开发的代替CGI脚本程序的一种应用,它可以与数据库和其它程序进行交互，是一种简单、方便的编程工具。ASP的网页文件的格式是.asp，现在常用于各种动态网站中。 ASP是一种服务器端脚本编写环境，可以用来创建和运行动态网页或web应用程序。ASP网页可以包含HTML标记、普通文本、脚本命令以及COM组件等。利用ASP可以向网页中添加交互式内容（如在线表单），也可以创建使用HTML网页作为用户界面的web应用程序。
+与HTML相比，ASP网页具有以下特点：
+    <ol>
+      <li>利用ASP可以实现突破静态网页的一些功能限制，实现动态网页技术；</li>
+      <li>ASP文件是包含在HTML代码所组成的文件中的，易于修改和测试；</li>
+      <li>服务器上的ASP解释程序会在服务器端制定ASP程序，并将结果以HTML格式传送到客户端浏览器上，因此使用各种浏览器都可以正常浏览ASP所产生的网页；</li>
+      <li>ASP提供了一些内置对象，使用这些对象可以使服务器端脚本功能更强。例如可以从web浏览器中获取用户通过HTML表单提交的信息，并在脚本中对这些信息进行处理，然后向web浏览器发送信息；</li>
+      <li>ASP可以使用服务器端ActiveX组建来执行各种各样的任务，例如存取数据库、发现哦那个Email或访问文件系统等。</li>
+      <li>由于服务器是将ASP程序执行的结果以HTML格式传回客户端浏览器，因此使用者不会看到ASP所编写的原始程序代码，可放置ASP程序代码被窃取。</li>
+    </ol>
+  </li>
+  <li>HTML ul li标签可用于菜单栏（apple官网 w3school）
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"navfirst"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">id=</span><span class="s">"h"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/h.asp"</span> <span class="na">title=</span><span class="s">"HTML 系列教程"</span><span class="nt">&gt;</span>HTML 系列教程<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">id=</span><span class="s">"b"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/b.asp"</span> <span class="na">title=</span><span class="s">"浏览器脚本教程"</span><span class="nt">&gt;</span>浏览器脚本<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">id=</span><span class="s">"s"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/s.asp"</span> <span class="na">title=</span><span class="s">"服务器脚本教程"</span><span class="nt">&gt;</span>服务器脚本<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">id=</span><span class="s">"p"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/p.asp"</span> <span class="na">title=</span><span class="s">"编程教程"</span><span class="nt">&gt;</span>编程教程<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">id=</span><span class="s">"x"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/x.asp"</span> <span class="na">title=</span><span class="s">"XML 系列教程"</span><span class="nt">&gt;</span>XML 系列教程<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">id=</span><span class="s">"w"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/w.asp"</span> <span class="na">title=</span><span class="s">"建站手册"</span><span class="nt">&gt;</span>建站手册<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">id=</span><span class="s">"r"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/r.asp"</span> <span class="na">title=</span><span class="s">"参考手册"</span><span class="nt">&gt;</span>参考手册<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>JS使用事件监听器(一种事件绑定方式)时，使用函数时不带有’()’，因为’()’表示函数会在页面加载到这里时运行，而不是事件触发时执行。匿名函数不同，虽然也有小括号，但其只会在事件触发时执行。</li>
+  <li>JS将事件绑定的到元素的方式有三种：HTML事件处理程序（老式方法以不再使用，旧代码中可能会有）；传统的DOM事件处理程序：DOM监听器。</li>
+  <li>
+    <p>如果需要向事件处理程序或事件监听器所调用的函数传递参数，就需要把方法调用封装在“匿名函数”中。（将命名函数封装成匿名函数） 例：function() {checkUsername(5)}</p>
+  </li>
+  <li>value 值</li>
+  <li>source 源头，来源</li>
+  <li>element 元素，基本部分</li>
+  <li>event 事件</li>
+  <li>selector 选择器</li>
+  <li>node 节点</li>
+  <li>query 查询指令</li>
+</ul>
+
+<h2 id="javascript-的组成分为三个部分">JavaScript 的组成分为三个部分：</h2>
+
+<ul>
+  <li>ECMAScript</li>
+  <li>DOM：标签元素相关的API</li>
+  <li>BOM：浏览器相关的API</li>
+</ul>
+
+<h2 id="nodejs-的组成分为">Node.js 的组成分为：</h2>
+
+<ul>
+  <li><strong>ECMAScript</strong>。ECMAScript 的所有语法在 Node 环境中都可以使用。</li>
+  <li><strong>Node 环境</strong>提供的一些<strong>附加 API</strong>(包括文件、网络等相关的 API)。</li>
+</ul>
+
+<h2 id="form表单">Form表单</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;fieldset&gt;</code> 标签将表单里的内容进行打包，代表一组；而<code class="language-plaintext highlighter-rouge">&lt;legend&gt;</code>标签的则是 fieldset 里的元素定义标题。</li>
+</ul>
+
+<h3 id="表单属性"><strong>表单属性</strong></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">placeholder</code> 占位符（提示文字）</li>
+  <li><code class="language-plaintext highlighter-rouge">autofocus</code> 自动获取焦点</li>
+  <li><code class="language-plaintext highlighter-rouge">multiple</code> 文件上传多选或多个邮箱地址</li>
+  <li><code class="language-plaintext highlighter-rouge">autocomplete</code> 自动完成（填充的）。on 开启（默认），off 取消。用于表单元素，也可用于表单自身(on/off)</li>
+  <li><code class="language-plaintext highlighter-rouge">form</code> 指定表单项属于哪个form，处理复杂表单时会需要</li>
+  <li><code class="language-plaintext highlighter-rouge">novalidate</code> 关闭默认的验证功能（只能加给form）</li>
+  <li><code class="language-plaintext highlighter-rouge">required</code> 表示必填项</li>
+  <li><code class="language-plaintext highlighter-rouge">pattern</code> 自定义正则，验证表单。</li>
+</ul>
+
+<h3 id="表单事件"><strong>表单事件</strong></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">oninput()</code>：用户输入内容时触发，可用于输入字数统计。</li>
+  <li><code class="language-plaintext highlighter-rouge">oninvalid()</code>：验证不通过时触发。比如，如果验证不通过时，想弹出一段提示文字，就可以用到它。</li>
+</ul>
+
+<h2 id="多媒体"><strong>多媒体</strong></h2>
+
+<p>在HTML5之前，在网页上播放音频/视频的通用方法是利用Flash来播放。但是大多情况下，并非所有用户的浏览器都安装了Flash插件，由此使得音频、视频播放的处理变得非常复杂；并且移动设备的浏览器并不支持Flash插件。H5里面提供了视频和音频的标签。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;audio</span> <span class="na">src=</span><span class="s">"music/yinyue.mp3"</span> <span class="na">autoplay</span> <span class="na">controls</span><span class="nt">&gt;</span> <span class="nt">&lt;/audio&gt;</span>
+</code></pre></div></div>
+<audio src="music/yinyue.mp3" autoplay="" controls=""> </audio>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;video</span> <span class="na">src=</span><span class="s">"video/movie.mp4"</span> <span class="na">controls</span> <span class="na">autoplay</span><span class="nt">&gt;&lt;/video&gt;</span>
+</code></pre></div></div>
+<video src="video/movie.mp4" controls="" autoplay=""></video>
+
+<h2 id="dom-操作"><strong>DOM 操作</strong></h2>
+
+<h3 id="获取元素"><strong>获取元素</strong></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">document.querySelector("selector")</code> 通过CSS选择器获取符合条件的第一个元素。</li>
+  <li><code class="language-plaintext highlighter-rouge">document.querySelectorAll("selector")</code> 通过CSS选择器获取符合条件的所有元素，以类数组形式存在。</li>
+</ul>
+
+<h3 id="类名操作"><strong>类名操作</strong></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Node.classList.add("class")</code> 添加class</li>
+  <li><code class="language-plaintext highlighter-rouge">Node.classList.remove("class")</code> 移除class</li>
+  <li><code class="language-plaintext highlighter-rouge">Node.classList.toggle("class")</code> 切换class，有则移除，无则添加</li>
+  <li><code class="language-plaintext highlighter-rouge">Node.classList.contains("class")</code> 检测是否存在class</li>
+</ul>
+
+<h3 id="自定义属性"><strong>自定义属性</strong></h3>
+
+<p>js 里可以通过 <code class="language-plaintext highlighter-rouge">box1.index=100;</code> <code class="language-plaintext highlighter-rouge">box1.title</code> 来自定义属性和获取属性。</p>
+
+<p>H5可以直接在标签里添加自定义属性，<strong>但必须以 <code class="language-plaintext highlighter-rouge">data-</code> 开头</strong>。</p>
+
+<h3 id="css关键词">CSS关键词</h3>
+
+<p>BOX 盒模型</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">width</code>宽&amp;<code class="language-plaintext highlighter-rouge">height</code>高  <code class="language-plaintext highlighter-rouge">content</code>内容</li>
+  <li><code class="language-plaintext highlighter-rouge">padding</code>：内边距</li>
+  <li><code class="language-plaintext highlighter-rouge">border</code>：边框</li>
+  <li><code class="language-plaintext highlighter-rouge">margin</code>：外边距</li>
+  <li><code class="language-plaintext highlighter-rouge">border</code>属性：宽度 样式 颜色（样式：<code class="language-plaintext highlighter-rouge">solid</code>实线、<code class="language-plaintext highlighter-rouge">dashed</code>点画线、<code class="language-plaintext highlighter-rouge">dotted</code>虚线）</li>
+</ul>
+
+<p><strong>浮</strong></p>
+
+<ul>
+  <li>float 浮动属性 （值：left right）</li>
+</ul>
+
+<p>定位属性</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">position</code> 位置</li>
+  <li><code class="language-plaintext highlighter-rouge">absolute</code> 绝对的</li>
+  <li><code class="language-plaintext highlighter-rouge">relative</code> 相对的</li>
+  <li><code class="language-plaintext highlighter-rouge">fixed</code> 使···固定，确定的</li>
+  <li><code class="language-plaintext highlighter-rouge">flat</code>  水平的</li>
+  <li><code class="language-plaintext highlighter-rouge">infinite</code> 无限的</li>
+  <li><code class="language-plaintext highlighter-rouge">count</code>  数数</li>
+  <li><code class="language-plaintext highlighter-rouge">normal</code> 正常</li>
+  <li><code class="language-plaintext highlighter-rouge">alternate</code> 反向</li>
+  <li><code class="language-plaintext highlighter-rouge">steps</code> 迈步（动画不连续执行-间断执行）</li>
+  <li><code class="language-plaintext highlighter-rouge">opacity:</code> 0.3; 设置图片不透明度 值0-1 0:完全透明 1:完全不透明</li>
+</ul>
+
+<p>JS <strong>生成 [x, y) 之间的随机数</strong></p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">Math</span><span class="p">.</span><span class="nf">round</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span><span class="o">*</span><span class="p">(</span><span class="nx">y</span><span class="o">-</span><span class="nx">x</span><span class="p">)</span><span class="o">+</span><span class="nx">x</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="重要生成-x-y之间的随机整数"><strong>【重要】生成 [x, y]之间的随机整数</strong></h3>
+
+<p>也就是说：生成两个整数之间的随机整数，<strong>并且要包含这两个整数</strong>。</p>
+
+<p>这个功能很常用，我们可以将其封装成一个方法，代码实现如下：</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="cm">/*
+    * 生成两个整数之间的随机整数，并且要包含这两个整数
+    */</span>
+    <span class="kd">function</span> <span class="nf">getRandom</span><span class="p">(</span><span class="nx">min</span><span class="p">,</span> <span class="nx">max</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">max</span> <span class="o">-</span> <span class="nx">min</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="nx">min</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">getRandom</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">));</span>
+</code></pre></div></div>
+
+<h3 id="时间戳的定义和作用"><strong>时间戳的定义和作用</strong></h3>
+
+<p><strong>时间戳</strong>：指的是从格林威治标准时间的<code class="language-plaintext highlighter-rouge">1970年1月1日，0时0分0秒</code>到当前日期所花费的<strong>毫秒数</strong>（1秒 = 1000毫秒）。</p>
+
+<p>计算机底层在保存时间时，使用的都是时间戳。时间戳的存在，就是为了<strong>统一</strong>时间的单位。</p>
+
+<p>我们经常会利用时间戳来计算时间，因为它更精确。而且，在实战开发中，接口返回给前端的日期数据，都是以时间戳的形式。</p>
+
+<h3 id="获取当前时间的时间戳"><strong>获取当前时间的时间戳</strong></h3>
+
+<p>如果我们要获取<strong>当前时间</strong>的时间戳，除了上面的几种方式之外，还有另一种方式。代码如下：</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 方式六：获取当前时间的时间戳（很常用的写法）</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nf">now</span><span class="p">());</span> <span class="c1">// 打印结果举例：1589448165370</span>
+</code></pre></div></div>
+
+<p>上面这种方式六，用得也很多。只不过，<code class="language-plaintext highlighter-rouge">Date.now()</code>是H5标准中新增的特性，如果你的项目需要兼容低版本的IE浏览器，就不要用了。这年头，谁还用IE呢？</p>
+
+<h3 id="利用时间戳检测代码的执行时间"><strong>利用时间戳检测代码的执行时间</strong></h3>
+
+<p>我们可以在业务代码的前面定义 <code class="language-plaintext highlighter-rouge">时间戳1</code>，在业务代码的后面定义 <code class="language-plaintext highlighter-rouge">时间戳2</code>。把这两个时间戳相减，就能得出业务代码的执行时间。</p>
+
+<h3 id="举例1模拟日历"><strong>举例1：模拟日历</strong></h3>
+
+<p>要求每天打开这个页面，都能定时显示当前的日期。</p>
+
+<p>代码实现：</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">&lt;</span><span class="err">!</span><span class="na">DOCTYPE</span> <span class="na">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span> <span class="na">lang</span><span class="p">=</span><span class="s">"en"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="p">=</span><span class="s">"UTF-8"</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+            div <span class="si">{</span>
+                <span class="nx">width</span><span class="p">:</span> <span class="mi">800</span><span class="nx">px</span><span class="p">;</span>
+                <span class="nl">margin</span><span class="p">:</span> <span class="mi">200</span><span class="nx">px</span> <span class="nx">auto</span><span class="p">;</span>
+                <span class="nl">color</span><span class="p">:</span> <span class="nx">red</span><span class="p">;</span>
+                <span class="nx">text</span><span class="o">-</span><span class="nx">align</span><span class="p">:</span> <span class="nx">center</span><span class="p">;</span>
+                <span class="nl">font</span><span class="p">:</span> <span class="mi">600</span> <span class="mi">30</span><span class="nx">px</span><span class="o">/</span><span class="mi">30</span><span class="nx">px</span> <span class="dl">'</span><span class="s1">simsun</span><span class="dl">'</span><span class="p">;</span>
+            <span class="si">}</span>
+        <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+            //模拟日历
+            //需求：每天打开这个页面都能定时显示年月日和星期几
+            function getCurrentDate() <span class="si">{</span>
+                <span class="c1">//1.创建一个当前日期的日期对象</span>
+                <span class="kd">const</span> <span class="nx">date</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="p">();</span>
+                <span class="c1">//2.然后获取其中的年、月、日和星期</span>
+                <span class="kd">const</span> <span class="nx">year</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nf">getFullYear</span><span class="p">();</span>
+                <span class="kd">const</span> <span class="nx">month</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nf">getMonth</span><span class="p">();</span>
+                <span class="kd">const</span> <span class="nx">hao</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nf">getDate</span><span class="p">();</span>
+                <span class="kd">const</span> <span class="nx">week</span> <span class="o">=</span> <span class="nx">date</span><span class="p">.</span><span class="nf">getDay</span><span class="p">();</span>
+                <span class="c1">//        console.log(year+" "+month+" "+hao+" "+week);</span>
+                <span class="c1">//3.赋值给div</span>
+                <span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">星期日</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">星期一</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">星期二</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">星期三</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">星期四</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">星期五</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">星期六</span><span class="dl">'</span><span class="p">];</span>
+                <span class="kd">const</span> <span class="nx">div</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementsByTagName</span><span class="p">(</span><span class="dl">'</span><span class="s1">div</span><span class="dl">'</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+                <span class="k">return</span> <span class="dl">'</span><span class="s1">今天是：</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">year</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">年</span><span class="dl">'</span> <span class="o">+</span> <span class="p">(</span><span class="nx">month</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">月</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">hao</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">日 </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">week</span><span class="p">];</span>
+            <span class="si">}</span>
+
+            const div = document.getElementsByTagName('div')[0];
+            div.innerText = getCurrentDate();
+        <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></div>
+
+<h3 id="数组">数组</h3>
+
+<p><strong>使用字面量创建数组</strong></p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="p">[];</span> <span class="c1">// 创建一个空的数组</span>
+
+<span class="kd">var</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span> <span class="c1">// 创建带初始值的数组</span>
+</code></pre></div></div>
+
+<p><strong>使用构造函数创建数组</strong></p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Array</span><span class="p">(</span><span class="nx">参数</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="nc">Array</span><span class="p">(</span><span class="nx">参数</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>如果<strong>参数为空</strong>，则表示创建一个空数组；如果参数是<strong>一个数值</strong>时，表示数组的长度；如果有多个参数时，表示数组中的元素。</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 方式一</span>
+<span class="kd">var</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">];</span>
+
+<span class="c1">// 方式二</span>
+<span class="kd">var</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Array</span><span class="p">();</span> <span class="c1">// 参数为空</span>
+<span class="kd">var</span> <span class="nx">arr3</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Array</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span> <span class="c1">// 参数为一个数值</span>
+<span class="kd">var</span> <span class="nx">arr4</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Array</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">);</span> <span class="c1">// 参数为多个数值</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">arr1</span><span class="p">);</span> <span class="c1">// 打印结果：object</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">arr1 = </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nf">stringify</span><span class="p">(</span><span class="nx">arr1</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">arr2 = </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nf">stringify</span><span class="p">(</span><span class="nx">arr2</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">arr3 = </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nf">stringify</span><span class="p">(</span><span class="nx">arr3</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">arr4 = </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nf">stringify</span><span class="p">(</span><span class="nx">arr4</span><span class="p">));</span>
+</code></pre></div></div>
+
+<p>结果：</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">object</span><span class="p">;</span>
+
+<span class="nx">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">];</span>
+<span class="nx">arr2</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="nx">arr3</span> <span class="o">=</span> <span class="p">[</span><span class="kc">null</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="kc">null</span><span class="p">];</span>
+<span class="nx">arr4</span> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">];</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">***JSON.stringify(arr)</code>  将数组转换为字符串       ————***!!!</li>
+</ul>
+
+<p>数组转字符串方式</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">字符串</span> <span class="o">=</span> <span class="nx">数组</span><span class="p">.</span><span class="nf">toString</span><span class="p">();</span>
+<span class="nx">字符串</span> <span class="o">=</span> <span class="nc">String</span><span class="p">(</span><span class="nx">数组</span><span class="p">);</span>
+<span class="nx">字符串</span> <span class="o">=</span> <span class="nx">数组</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="dl">'</span><span class="s1">,</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// 将数组转为字符串，每一项用 英文逗号 分隔</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">A instanceof B</code>来判断 A 是否属于 B 类型</p>
+  </li>
+  <li>
+    <p><strong>数组合并的另一种方式</strong>：</p>
+
+    <p>我们可以使用<code class="language-plaintext highlighter-rouge">...</code>这种展开语法，将两个数组进行合并。举例如下：</p>
+  </li>
+</ul>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+
+<span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">a</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">b</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">c</span><span class="dl">'</span><span class="p">,</span> <span class="p">...</span><span class="nx">arr1</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nf">stringify</span><span class="p">(</span><span class="nx">result</span><span class="p">));</span> <span class="c1">// 打印结果：["a","b","c",1,2,3]</span>
+</code></pre></div></div>
+
+<ul>
+  <li>数组排序</li>
+</ul>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">&lt;</span><span class="err">!</span><span class="na">DOCTYPE</span> <span class="na">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="p">=</span><span class="s">"en"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="p">=</span><span class="s">"UTF-8"</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="p">=</span><span class="s">"viewport"</span> <span class="na">content</span><span class="p">=</span><span class="s">"width=device-width, initial-scale=1.0"</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+            let dataList = [
+                <span class="si">{</span>
+                    <span class="nx">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">品牌鞋子，高品质低价入手</span><span class="dl">'</span><span class="p">,</span>
+                    <span class="nx">publishTime</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+                <span class="si">}</span>,
+                <span class="si">{</span>
+                    <span class="nx">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">不是很贵，但是很暖</span><span class="dl">'</span><span class="p">,</span>
+                    <span class="nx">publishTime</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+                <span class="si">}</span>,
+                <span class="si">{</span>
+                    <span class="nx">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">无法拒绝的美食，跟我一起吃吃</span><span class="dl">'</span><span class="p">,</span>
+                    <span class="nx">publishTime</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+                <span class="si">}</span>,
+            ];
+
+            console.log('example 排序前的数组：' + JSON.stringify(dataList));
+
+            // 将dataList 数组，按照 publishTime 字段，从小到大排序。（会改变原数组）
+            dataList.sort((a, b) =&gt; parseInt(a.publishTime) - parseInt(b.publishTime));
+
+            console.log('example 排序后的数组：' + JSON.stringify(dataList));
+        <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></div>
+
+<p>打印结果：</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">example</span> <span class="nx">排序前的数组</span><span class="err">：</span><span class="p">[</span>
+    <span class="p">{</span><span class="dl">"</span><span class="s2">title</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">窗前明月光</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">publishTime</span><span class="dl">"</span><span class="p">:</span><span class="mi">200</span><span class="p">},</span>
+    <span class="p">{</span><span class="dl">"</span><span class="s2">title</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">疑是地上霜</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">publishTime</span><span class="dl">"</span><span class="p">:</span><span class="mi">100</span><span class="p">},</span>
+    <span class="p">{</span><span class="dl">"</span><span class="s2">title</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">举头望明月</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">publishTime</span><span class="dl">"</span><span class="p">:</span><span class="mi">300</span><span class="p">}</span>
+<span class="p">]</span>
+
+<span class="nx">example</span> <span class="nx">排序后的数组</span><span class="err">：</span><span class="p">[</span>
+    <span class="p">{</span><span class="dl">"</span><span class="s2">title</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">疑是地上霜</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">publishTime</span><span class="dl">"</span><span class="p">:</span><span class="mi">100</span><span class="p">},</span>
+    <span class="p">{</span><span class="dl">"</span><span class="s2">title</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">窗前明月光</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">publishTime</span><span class="dl">"</span><span class="p">:</span><span class="mi">200</span><span class="p">},</span>
+    <span class="p">{</span><span class="dl">"</span><span class="s2">title</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">举头望明月</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">publishTime</span><span class="dl">"</span><span class="p">:</span><span class="mi">300</span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></div>
+
+<p>上方代码中，有人可能会问： publishTime 字段已经是 int 类型了，为啥在排序前还要做一次 parseInt() 转换？这是因为，这种数据，一般是后台接口返回给前端的，数据可能是 int 类型、也可能是字符串类型，所以还是统一先做一次 partInt() 比较保险。这是一种良好的工作习惯。</p>
+
+<ul>
+  <li>将一个字符串数组输出为<code class="language-plaintext highlighter-rouge">|</code>分割的形式</li>
+</ul>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">jay</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">gem</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">jj</span><span class="dl">'</span><span class="p">];</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="dl">'</span><span class="s1">|</span><span class="dl">'</span><span class="p">));</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p><strong>创建数组对象：</strong>
+1.使用字面量创建数组        <code class="language-plaintext highlighter-rouge">var arr = [1,2,3];</code>
+2.使用构造函数创建数组   <code class="language-plaintext highlighter-rouge">let arr = new Array(参数);</code></p>
+  </li>
+  <li>
+    <p>DOM设置节点的属性值</p>
+  </li>
+</ul>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code>		<span class="nx">元素节点</span><span class="p">.</span><span class="nf">setAttribute</span><span class="p">(</span><span class="dl">"</span><span class="s2">属性名</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">新的属性值</span><span class="dl">"</span><span class="p">);</span>
+		<span class="c1">//举例：</span>
+		<span class="nx">myNode</span><span class="p">.</span><span class="nf">setAttribute</span><span class="p">(</span><span class="dl">"</span><span class="s2">src</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">images/3.jpg</span><span class="dl">"</span><span class="p">);</span>
+    <span class="nx">myNode</span><span class="p">.</span><span class="nf">setAttribute</span><span class="p">(</span><span class="dl">"</span><span class="s2">class</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">image3-box</span><span class="dl">"</span><span class="p">);</span>
+    <span class="nx">myNode</span><span class="p">.</span><span class="nf">setAttribute</span><span class="p">(</span><span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">你好</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>如果是节点的“原始属性”</strong>（比如 普通标签的<code class="language-plaintext highlighter-rouge">class/className</code>属性、普通标签的<code class="language-plaintext highlighter-rouge">style</code>属性、普通标签的 title属性、img 标签的<code class="language-plaintext highlighter-rouge">src</code>属性、超链接的<code class="language-plaintext highlighter-rouge">href</code>属性等），<strong>方式1和方式2是等价的</strong>，可以混用。怎么理解混用呢？比如说：用 <code class="language-plaintext highlighter-rouge">div.title = '我是标题'</code>设置属性，用 <code class="language-plaintext highlighter-rouge">div.getAttribute('title')</code>获取属性，就是混用。
+“非原始属性”，在使用这两种方式时，是有区别的。
+非原始属性需要get值和set值必须使用同一种方法。</li>
+  <li><strong>innerHTML和innerText的区别
+1.</strong>value：标签的value属性。
+2.<strong>innerHTML</strong>：双闭合标签里面的内容（包含标签）。
+3.<strong>innerText</strong>：双闭合标签里面的内容（不包含标签）。（老版本的火狐用textContent）</li>
+</ul>
+
+<h2 id="es6">ES6</h2>
+
+<h3 id="let-和-const-的特点重要"><strong>let 和 const 的特点【重要】</strong></h3>
+
+<ul>
+  <li>不属于顶层对象 Window</li>
+  <li>不允许重复声明</li>
+  <li>不存在变量提升</li>
+  <li>暂时性死区</li>
+  <li>支持块级作用域</li>
+</ul>
+
+<p>相反， 用<code class="language-plaintext highlighter-rouge">var</code>声明的变量：存在变量提升、可以重复声明、<strong>没有块级作用域</strong>。</p>
+
+<h3 id="varletconst-的共同点"><strong>var/let/const 的共同点</strong></h3>
+
+<ul>
+  <li>全局作用域中定义的变量，可以在函数中使用。</li>
+  <li>函数中声明的变量，只能在函数及其子函数中使用，外部无法使用。</li>
+</ul>
+
+<h2 id="异步编程">异步编程</h2>
+
+<h3 id="1浏览器兼容处理低版本的浏览器显示问题一直是前端开发人员头痛的问题之一移动设备兼容性较好ie6已经越来越少人用了服务器分类及php入门">1.浏览器兼容：处理低版本的浏览器显示问题一直是前端开发人员头痛的问题之一。移动设备兼容性较好，ie6已经越来越少人用了。<strong>服务器分类及PHP入门</strong></h3>
+
+<h3 id="cs架构"><strong>C/S架构</strong></h3>
+
+<p>是Client/Server这两个单词的首字母，指的是客户端，服务器。</p>
+
+<p>优点:</p>
+
+<ul>
+  <li>性能较高：可以将一部分的计算工作放在客户端上,这样服务器只需要处理数据即可。</li>
+  <li>界面酷炫:客户端可以使用更多系统提供的效果,做出更为炫目的效果。</li>
+</ul>
+
+<p>缺点:</p>
+
+<ul>
+  <li>更新软件：如果有新的功能，就要推出新的版本。</li>
+  <li>不同设备访问：如果使用其他的电脑，没有安装客户端的话就无法登陆软件。</li>
+</ul>
+
+<h3 id="bs架构"><strong>B/S架构</strong></h3>
+
+<p>是Browser/Server的这两个单词的首字母。指的是浏览器、服务器，是WEB兴起之后的一种架构。</p>
+
+<p>现在所有的网站都是B/S架构，较为常见的例子有百度、知乎、网易云音乐Web等等，只需要通过浏览器即可使用.</p>
+
+<p>优点：</p>
+
+<ul>
+  <li>更新简洁：如果需要更新内容了,对开发人员而言需要更改服务器的内容，对用户而言只需要刷新浏览器即可。</li>
+  <li>多设备同步：所有数据都在网上,只要能够使用浏览器即可登录使用。</li>
+</ul>
+
+<p>缺点:</p>
+
+<ul>
+  <li>性能较低：相比于客户端应用性能较低,但是随着硬件性能的提升,这个差距在缩小。</li>
+  <li>浏览器兼容：处理低版本的浏览器显示问题一直是前端开发人员头痛的问题之一。移动设备兼容性较好，ie6已经越来越少人用了。</li>
+</ul>
+
+<h2 id="服务器分类"><strong>服务器分类</strong></h2>
+
+<p>项目开发时，有三套环境：</p>
+
+<ul>
+  <li>Development 开发环境</li>
+  <li>Test 测试环境</li>
+  <li>Production 生产环境</li>
+</ul>
+
+<p>程序员平时干活儿用开发环境；开发完成后，部署到测试环境；测试完成后，产品上线，部署到生产环境。</p>
+
+<p>三套环境意味着三个服务器。</p>
+
+<h3 id="服务器类型"><strong>服务器类型</strong></h3>
+
+<p>按类型分：</p>
+
+<ul>
+  <li>文件服务器</li>
+  <li>数据库服务器</li>
+  <li>邮件服务器</li>
+  <li>Web 服务器等</li>
+</ul>
+
+<p>按软件分：</p>
+
+<ul>
+  <li>Apache 服务器</li>
+  <li>Nginx 服务器</li>
+  <li>IIS 服务器</li>
+  <li>Tomcat 服务器</li>
+  <li>Node 服务器等</li>
+</ul>
+
+<p>按操作系统分：</p>
+
+<ul>
+  <li>Linux服务器</li>
+  <li>Windows服务器等</li>
+</ul>
+
+<h3 id="服务器软件"><strong>服务器软件</strong></h3>
+
+<p><strong>提供了某种服务的计算器，我们称之为服务器。</strong>那么这些赋予计算器各种服务功能的软件主要有哪一些呢？</p>
+
+<p>常见的服务器软件有：</p>
+
+<ul>
+  <li>文件服务器：Server-U、FileZilla、VsFTP等
+<em>ming: freeNAS</em></li>
+  <li>数据库服务器：Oracle、MySQL、PostgreSQL、MSSQL等；</li>
+  <li>邮件服务器：Postfix、Sendmail等；</li>
+  <li>HTTP 服务器：Apache（免费、开源）、Nginx、IIS（微软的.net服务器）、Tomcat（java编程的服务器）、NodeJS 等。</li>
+</ul>
+
+<h2 id="ajax">Ajax</h2>
+
+<ul>
+  <li><strong>Ajax：Asynchronous Javascript And XML（异步 JavaScript 和 XML)</strong>
+它并不是凭空出现的新技术，而是对于现有技术的结合。Ajax 的核心是 js 对象：<strong>XMLHttpRequest</strong>。</li>
+  <li>
+    <p><strong>发送 Ajax 请求的五个步骤</strong>：</p>
+
+    <p>（1）创建异步对象，即 XMLHttpRequest 对象。</p>
+
+    <p>（2）使用 open 方法设置请求参数。<code class="language-plaintext highlighter-rouge">open(method, url, async)</code>。参数解释：请求的方法、请求的 url、是否异步。第三个参数如果不写，则默认为 true。</p>
+
+    <p>（3）发送请求：<code class="language-plaintext highlighter-rouge">send()</code>。</p>
+
+    <p>（4）注册事件：注册 onreadystatechange 事件，状态改变时就会调用。</p>
+
+    <p>如果要在数据完整请求回来的时候才调用，我们需要手动写一些判断的逻辑。</p>
+
+    <p>（5）服务端响应，获取返回的数据。</p>
+  </li>
+</ul>
+
+<h2 id="deno">deno</h2>
+
+<ul>
+  <li>deno为node.js作者做的 和node.js功能类似</li>
+</ul>
+
+<h2 id="定律haha">—定律—haha</h2>
+
+<ul>
+  <li>Jeff Atwood 在 2007 年提出了著名的 Atwood 定律：<strong>任何能够用 JavaScript 实现的应用系统，最终都必将用 JavaScript 实现</strong>。 Jeff Atwood 是谁不重要（他是 Stack Overflow 网站的联合创始人），重要的是这条定律。</li>
+</ul>
+
+<h2 id="es6-1">ES6</h2>
+
+<p>现在有了 ES6 语法，字符串拼接可以这样写：</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Taylor</span><span class="dl">'</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">age</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">18</span><span class="dl">'</span><span class="p">;</span>
+
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">name:</span><span class="dl">'</span><span class="o">+</span><span class="nx">name</span><span class="o">+</span><span class="dl">'</span><span class="s1">,age:</span><span class="dl">'</span><span class="o">+</span><span class="nx">age</span><span class="p">);</span>   <span class="c1">//传统写法</span>
+
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="s2">`name:</span><span class="p">${</span><span class="nx">name</span><span class="p">}</span><span class="s2">,age:</span><span class="p">${</span><span class="nx">age</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>  <span class="c1">//ES6 写法</span>
+</code></pre></div></div>
+
+<p>注意，上方代码中，倒数第二行用的是单引号，最后一行用的是反引号（在tab键的上方）。</p>
+
+<h2 id="组件">组件</h2>
+
+<ul>
+  <li>组件：构成页面局部功能的代码和资源的集合</li>
+</ul>
+
+<h3 id="对象">对象</h3>
+
+<ul>
+  <li>一般对象</li>
+  <li>数组对象</li>
+  <li>函数对象</li>
+</ul>
+
+<h2 id="jsx语法规则">JSX语法规则：</h2>
+
+<ol>
+  <li>创建虚拟DOM时，不要写引号；</li>
+  <li>标签中要混入js表达式，要是用{}</li>
+  <li>标签中样式的类名要用className指定</li>
+  <li>标签中的内联样式要用<code class="language-plaintext highlighter-rouge">style=\{\{color:'white'\}\}</code>，注意属性名转为小驼峰</li>
+  <li>只能有一个根标签</li>
+  <li>标签必须闭合</li>
+  <li>关于标签首字母
+    <ul>
+      <li>若首字母小写，那么React就会去寻找与之同名的html标签
+若找见，直接转为html同名元素
+若未找见，报错</li>
+      <li>若首字母大写，那么React就会去寻找与之同名的组件
+若找见，那么就是用组件
+若未找见，报错</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="模板字符串">模板字符串</h2>
+
+<p>模板字符串（template string）是增强版的字符串，用反引号（`）标识。它可以当作普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量。</p>
+
+<ul>
+  <li>示例：<code class="language-plaintext highlighter-rouge">我的名字是${name}</code></li>
+</ul>
+
+<h3 id="解构赋值">解构赋值</h3>
+
+<ul>
+  <li>
+    <p>const {isHot} = this.state</p>
+
+    <p>对象和数组可以解构赋值</p>
+
+    <p>必须保证等号右边是对象或数组，对象用{}， 数组用[],逗号占位[,,3],拿的是第三个</p>
+
+    <p>实质是：const isHot = this.state.isHot</p>
+
+    <p>连续解构赋值：{state:{isHot}} = this</p>
+  </li>
+  <li>
+    <p>{isHot ? ‘炎热’ : ‘凉爽’}</p>
+  </li>
+</ul>
+
+<h3 id="react绑定事件监听">React绑定事件监听</h3>
+
+<ol>
+  <li>React对原生事件进行了二次封装，使用小驼峰命名。例如：onClick</li>
+  <li>事件绑定函数用{}包裹，不可以加()，加了会立马执行。例如：onClick={show}</li>
+  <li>ES原生绑定事件有三种</li>
+</ol>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+	<span class="nt">&lt;head&gt;</span>
+		<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span> <span class="nt">/&gt;</span>
+		<span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
+	<span class="nt">&lt;/head&gt;</span>
+	<span class="nt">&lt;body&gt;</span>
+		<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"btn"</span><span class="nt">&gt;</span>点我<span class="nt">&lt;/button&gt;</span>
+
+		<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="nt">&gt;</span>
+			<span class="kd">const</span> <span class="nx">btn</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">btn</span><span class="dl">'</span><span class="p">)</span>
+
+			<span class="nx">btn</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="o">=&gt;</span><span class="p">{</span>
+				<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span>
+			<span class="p">}</span>
+
+			<span class="cm">/* btn.addEventListener('click',()=&gt;{
+				alert(1)
+			}) */</span>
+
+			<span class="cm">/* function show() {
+				alert(1)
+			} */</span>
+		<span class="nt">&lt;/script&gt;</span>
+	<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>类里边赋值语句，是增加类的属性，等号左边为属性名，等号右边为属性值</li>
+</ul>
+
+<h2 id="严格模式-use-strict">严格模式 ’use strict’</h2>
+
+<ul>
+  <li>严格模式可以局部开启</li>
+  <li>类中所有定义的方法，浏览器在运行时 ，全都加上了 ‘ use strict’</li>
+</ul>
+
+<h2 id="js类">JS类</h2>
+
+<ul>
+  <li>类里边的方法，都在类的原型上</li>
+  <li>改变this指向：call，apply，bind(更改this指向，但是不调用)</li>
+</ul>
+
+<h2 id="展开语法">…展开语法</h2>
+
+<ul>
+  <li>可以展开数组，有@@iterator迭代器</li>
+  <li>
+    <p>…默认不能展开对象，但是包在另外一个对象里可以展开另一个对象。浅克隆对象</p>
+
+    <p>可以修改，合并对象</p>
+  </li>
+  <li>打包，拆包</li>
+</ul>
+
+<h3 id="回调函数三个特点">回调函数三个特点</h3>
+
+<ol>
+  <li>自己定义的</li>
+  <li>自己没调用</li>
+  <li>得执行</li>
+</ol>
+
+<h3 id="箭头函数">箭头函数</h3>
+
+<ul>
+  <li>箭头函数没有自的this，用this会向外层找</li>
+  <li>箭头函数只有一个参数可以省略()，只有一行代码可以省略{}</li>
+</ul>
+
+<h3 id="对象属性">对象属性</h3>
+
+<ul>
+  <li>对象中的属性名都是字符串</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>操作对象属性，一种是Person.a</td>
+          <td>一种是Person[a] (可读变量)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<h2 id="对象简写方式">对象简写方式</h2>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">abcde</span><span class="dl">'</span>
+<span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="na">a</span><span class="p">:</span><span class="nx">a</span><span class="p">}</span>
+<span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="nx">a</span><span class="p">}</span> <span class="c1">//变量与属性同名可简写</span>
+</code></pre></div></div>
+
+<h3 id="react状态提升">React状态提升</h3>
+
+<ul>
+  <li>和兄弟组件公用的状态放在父组件，或祖组件里</li>
+</ul>
+
+<h3 id="jsx">JSX</h3>
+
+<ul>
+  <li>JSX不能直接渲染对象，需要是数组</li>
+</ul>
+
+<h2 id="项目">项目</h2>
+
+<ul>
+  <li>一般做项目在最开始写静态页面之前，要重置样式
+github项目minireset.css</li>
+</ul>
+
+  </div>
+<!-- Gitalk 评论系统 -->
+
+<div id="gitalk-container"></div>
+<script>
+  const gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: 'moselikk/moselikk.github.io',
+    owner: 'moselikk',
+    admin: '["moselikk"]',
+    id: 'https://moselikk.com/blog/front-end-base', // Ensure uniqueness and length less than 50
+    distractionFreeMode: 'false' // Facebook-like distraction free mode
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+</article>
+
+      </div>
+    </div>
+  </div>
+  <script>
+    // open outbound links in new tab
+    let origin = document.location.origin;
+    let links = document.getElementsByTagName("a");
+    for (let link of links) {
+      if (
+        link.href &&
+        link.href.indexOf(origin) != 0 &&
+        !link.href.includes("mailto:")
+      )
+        link.setAttribute("target", "_blank");
+    }
+
+    // responsive table
+    let tables = document.getElementsByTagName("table");
+    for (let table of tables) {
+      let ths = table.tHead.rows[0].cells;
+      let trs = table.tBodies[0].rows;
+      for (let row of trs) {
+        for (let i = 0; i < row.cells.length; i++) {
+          row.cells[i].setAttribute("data-label", ths[i].textContent);
+        }
+      }
+    }
+
+    // hitokoto api
+    const rule = ["a", "b","c","d","h","i","j","k"];
+    const query = rule.map(item => `c=${item}`).join('&');
+
+      // Function to fetch hitokoto
+      function fetchHitokoto() {
+      fetch(`https://v1.hitokoto.cn?${query}`)
+        .then((response) => response.json())
+        .then((data) => {
+          const hitokoto = document.getElementById("hitokoto_text");
+          hitokoto.href = "https://hitokoto.cn/?uuid=" + data.uuid;
+          const from = data.from ? " -" + data.from : ''
+          hitokoto.innerText = data.hitokoto + from;
+          // Store the timestamp and result of the last API call
+          localStorage.setItem('lastHitokotoCall', Date.now());
+          localStorage.setItem('lastHitokotoResult', JSON.stringify(data));
+        })
+        .catch(console.error);
+    }
+
+    // Function to use the last hitokoto result
+    function useLastHitokotoResult() {
+      const data = JSON.parse(localStorage.getItem('lastHitokotoResult'));
+      const hitokoto = document.getElementById("hitokoto_text");
+      hitokoto.href = "https://hitokoto.cn/?uuid=" + data.uuid;
+      hitokoto.innerText = data.hitokoto;
+    }
+
+    // Check if we can call the API
+    function canCallHitokoto() {
+      const lastCall = localStorage.getItem('lastHitokotoCall');
+      const now = Date.now();
+      // Check if the last call was more than a minute ago
+      return !lastCall || now - lastCall > 60 * 1000;
+    }
+
+    // Main logic
+    if (canCallHitokoto()) {
+      fetchHitokoto();
+    } else {
+      const lastResult = localStorage.getItem('lastHitokotoResult');
+      if (lastResult) {
+        useLastHitokotoResult();
+      } else {
+        fetchHitokoto();
+      }
+    }
+  </script>
+  <!-- <script src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": ""}'
+    onerror="gtag('set', 'user_properties', {blocker: 'true'});"></script> -->
+  <script src="/js/zooming.min.js"></script>
+  <script>
+    if (window.Zooming && typeof screen.orientation == "undefined")
+      window.addEventListener("load", function () {
+        new Zooming().listen(".post-content img");
+      });
+  </script>
+  <script src="../js/denglong.js"></script>
+</body>
+
+</html>

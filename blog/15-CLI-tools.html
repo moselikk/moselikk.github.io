@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>
+    CLI工具
+  </title>
+  <meta
+    name="description"
+    content="一、包管理工具"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link
+    rel="canonical"
+    href="https://moselikk.com/blog/15-CLI-tools"
+  />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="alternate" type="application/rss+xml" title="moselikk"
+  href="https://moselikk.com/feed.xml">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>CLI工具 | moselikk</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="CLI工具" />
+<meta name="author" content="Moselikk" />
+<meta property="og:locale" content="zh_cmn_Hans" />
+<meta name="description" content="一、包管理工具" />
+<meta property="og:description" content="一、包管理工具" />
+<link rel="canonical" href="https://moselikk.com/blog/15-CLI-tools" />
+<meta property="og:url" content="https://moselikk.com/blog/15-CLI-tools" />
+<meta property="og:site_name" content="moselikk" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-02T15:23:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="CLI工具" />
+<meta name="google-site-verification" content="" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Moselikk"},"dateModified":"2021-02-02T15:23:00+08:00","datePublished":"2021-02-02T15:23:00+08:00","description":"一、包管理工具","headline":"CLI工具","mainEntityOfPage":{"@type":"WebPage","@id":"https://moselikk.com/blog/15-CLI-tools"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://moselikk.com/apple-touch-icon.png"},"name":"Moselikk"},"url":"https://moselikk.com/blog/15-CLI-tools"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <script>
+
+  </script>
+  <script>
+  </script>
+</head>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K329WMFD');</script>
+  <!-- End Google Tag Manager -->
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K329WMFD"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="outer">
+    <div class="page-content" id="article">
+      <div class="wrapper">
+        <div id="hitokoto" class="hitokoto">
+          <a href="#" id="hitokoto_text">...... </a>
+        </div>
+        <div class="hanging-drop">
+        </div>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">CLI工具</h1>
+    <p class="post-meta">
+      <span><svg width="10px" height="10px" style="fill: #888; margin-right: 5px; vertical-align: baseline;" viewBox="0 0 16 16"><path d="M2.06 6.69c.14-.4.5-.69.94-.69h11V5c0-.55-.45-1-1-1H6.41l-1.7-1.71A.997.997 0 0 0 4 2H1c-.55 0-1 .45-1 1v9.84l2.05-6.15h.01zM16 8c0-.55-.45-1-1-1H4a.99.99 0 0 0-.94.69l-2 6c-.04.09-.06.2-.06.31 0 .55.45 1 1 1h11c.44 0 .81-.29.94-.69l2-6c.04-.09.06-.2.06-.31z"></path></svg>
+      <time datetime="2021-02-02T15:23:00+08:00" itemprop="datePublished">Feb 2, 2021</time></span>
+      <a href="/"><span><svg width="10px" height="10px" style="fill: #888; margin-right: 5px; vertical-align: baseline;" viewBox="0 0 16 16"><path d="M1 3h14c.55 0 1-.45 1-1s-.45-1-1-1H1c-.55 0-1 .45-1 1s.45 1 1 1zm14 10H1c-.55 0-1 .45-1 1s.45 1 1 1h14c.55 0 1-.45 1-1s-.45-1-1-1zm0-4H1c-.55 0-1 .45-1 1s.45 1 1 1h14c.55 0 1-.45 1-1s-.45-1-1-1zm0-4H1c-.55 0-1 .45-1 1s.45 1 1 1h14c.55 0 1-.45 1-1s-.45-1-1-1z"></path></svg>Home</span></a>
+      <a href="mailto:moselikk@gmail.com"><span><svg width="10px" height="10px" style="fill: #888; margin-right: 5px; vertical-align: baseline;" viewBox="0 0 16 16"><path d="M6 10c-1.1 0-2-.9-2-2V3H1c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1v2a1.003 1.003 0 0 0 1.71.71L5.41 13H10c.55 0 1-.45 1-1v-1.17l-.83-.83H6zm9-10H6c-.55 0-1 .45-1 1v7c0 .55.45 1 1 1h4.59l2.71 2.71c.17.18.42.29.7.29.55 0 1-.45 1-1V9c.55 0 1-.45 1-1V1c0-.55-.45-1-1-1z"></path></svg>Email</span></a>
+      <a href="https://github.com/moselikk"><span><svg width="10px" height="10px" style="fill: #888; margin-right: 5px; vertical-align: baseline;" viewBox="0 0 16 16"><path d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>Github</span></a>
+      <a href="/excerpt"><span><svg width="10px" height="10px" style="fill: #888; margin-right: 5px; vertical-align: baseline;" viewBox="0 0 16 16"><path d="M11 11c-.28 0-.53.11-.71.29L9 12.59V8c0-.55-.45-1-1-1s-1 .45-1 1v4.59L5.71 11.3A.965.965 0 0 0 5 11a1.003 1.003 0 0 0-.71 1.71l3 3c.18.18.43.29.71.29s.53-.11.71-.29l3-3A1.003 1.003 0 0 0 11 11zm1-7c-.03 0-.07 0-.1.01A5 5 0 0 0 2 5c0 .11.01.22.02.33A3.51 3.51 0 0 0 0 8.5c0 1.41.84 2.61 2.03 3.17C2.2 10.17 3.46 9 5 9c.06 0 .13.02.19.02C5.07 8.7 5 8.36 5 8c0-1.66 1.34-3 3-3s3 1.34 3 3c0 .36-.07.7-.19 1.02.06 0 .13-.02.19-.02 1.48 0 2.7 1.07 2.95 2.47A3.964 3.964 0 0 0 16 8c0-2.21-1.79-4-4-4z"></path></svg>Excerpt</span></a>
+      <a href="/about"><span><svg xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" style="fill: #888; margin-right: 5px; vertical-align: baseline;" viewBox="0 0 16 16"><!-- Icon from Tabler Icons by Paweł Kuna - https://github.com/tabler/tabler-icons/blob/master/LICENSE --><path fill="currentColor" d="M18.333 2c1.96 0 3.56 1.537 3.662 3.472l.005.195v12.666c0 1.96-1.537 3.56-3.472 3.662l-.195.005H5.667a3.667 3.667 0 0 1-3.662-3.472L2 18.333V5.667c0-1.96 1.537-3.56 3.472-3.662L5.667 2zM6 15a1 1 0 0 0-1 1v2l.007.117A1 1 0 0 0 7 18v-2l-.007-.117A1 1 0 0 0 6 15m3-4a1 1 0 0 0-1 1v6l.007.117A1 1 0 0 0 10 18v-6l-.007-.117A1 1 0 0 0 9 11m3 2a1 1 0 0 0-1 1v4l.007.117A1 1 0 0 0 13 18v-4l-.007-.117A1 1 0 0 0 12 13"/></svg>About</span></a>
+    </p>
+  </header>
+
+
+  
+
+  <div class="post-content" itemprop="articleBody">
+    <h2 id="一包管理工具">一、包管理工具</h2>
+
+<blockquote>
+  <p>包管理器或包管理系统是一系列软件工具的集合, 这些软件工具用和电脑操做系统一致的方式, 使应用的安装, 升级, 配置和删除软件包的过程自动化, 它一般维护一个数据库软件的依赖和版本信息, 防止软件不匹配和没法跟踪.</p>
+
+</blockquote>
+
+<h3 id="1-homebrew--maclinux软件安装工具">1. Homebrew — Mac&amp;Linux软件安装工具</h3>
+
+<ul>
+  <li>安装</li>
+</ul>
+
+<blockquote>
+  <p>Homebrew会将软件包安装到独立目录，并将其文件软连接至/usr/localHomebrew不会将文件安装到它自己目录以外，因此您可将Homebrew安装到任意位置</p>
+
+</blockquote>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="c">#! 安装</span>
+/bin/bash <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="si">)</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<ul>
+  <li>基础命令</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>xxx    <span class="c">#! 安装xxx软件</span>
+brew uninstall xxx  <span class="c">#! 卸载xxx软件</span>
+brew outdated       <span class="c">#! 查询可更新的包</span>
+brew search /xxx/   <span class="c">#! 搜索xxx软件包 </span>
+brew search /wge<span class="k">*</span>/  <span class="c">#!*表示模糊搜索 </span>
+brew list xxx       <span class="c">#! 显示已安装软件列表</span>
+brew update         <span class="c">#! 更新brew，把所有的Formula目录更新，并且会对本机已经安装并有更新的软件用*标明</span>
+brew upgrade        <span class="c">#! 更新所有包</span>
+brew upgrade xxx    <span class="c">#! 更新xxx软件</span>
+brew cleanup        <span class="c">#! 清理所有包旧版本</span>
+brew cleanup <span class="nt">-n</span>     <span class="c">#! 查看可清理的旧包版本，不执行实际操作</span>
+brew cleanup xxx    <span class="c">#! 清理xxx包的旧版本</span>
+brew info xxx       <span class="c">#! 查看xxx软件信息</span>
+brew deps xxx       <span class="c">#! 查看xxx包依赖</span>
+brew pin xxx        <span class="c">#! 锁定xxx包</span>
+brew unpin xxx      <span class="c">#! 取消锁定xxx包</span>
+brew <span class="nb">help</span>           <span class="c">#! 帮助</span>
+brew <span class="nt">-v</span>             <span class="c">#! Homebrew版本</span>
+
+</code></pre></div></div>
+
+<ul>
+  <li>卸载Homebrew</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>brew <span class="nt">--prefix</span>
+<span class="nb">rm</span> <span class="nt">-rf</span> Cellar
+brew prune
+<span class="nb">rm </span>git ls-files
+<span class="nb">rm</span> <span class="nt">-r</span> Library/Homebrew Library/Aliases Library/Formula Library/Contributions
+<span class="nb">rm</span> <span class="nt">-rf</span> .git
+<span class="nb">rm</span> <span class="nt">-rf</span> ~/Library/Caches/Homebrew
+</code></pre></div></div>
+
+<ul>
+  <li>Tips</li>
+</ul>
+
+<aside>
+💡 homebrew本身就是一个git仓库。使用homebrew安装软件包时，会自动先下载软件包，然后解压安装，但有时候下载会卡住，或者很慢，这个时候你可以通过其他工具先将所需的软件包下载 下来，注意版本一定要对应，homebrew放置软件包源码的路径为/Library/Caches/Homebrew/，只要你将所需要的软件包下载正 确的版本，放置在此目录下，那么再使用brew install xxx的时候，brew就能直接安装了，有时候brew install xxx卡在下载界面，这招很管用
+
+</aside>
+
+<h3 id="2-macports--用于在mac-操作系统上编译安装和升级基于命令行x11-或-aqua-的开源软件">2. MacPorts — 用于在<a href="http://www.apple.com/macos/">Mac 操作系统</a>上编译、安装和升级基于命令行、X11 或 Aqua 的开源软件</h3>
+
+<blockquote>
+  <p>MacPorts类似与apt-get以及yum等软件包管理工具，可以方便的进行安装与卸载软件的功能，同时可以自动安装软件包的依赖，非常方便，同类的还有brew等工具。</p>
+
+</blockquote>
+
+<blockquote>
+  <p>Mac下面除了用dmg、pkg来安装软件外，比较方便的还有用MacPorts来帮助你安装其他应用程序，跟BSD中的ports道理一样。MacPorts就像apt-get、yum一样，可以快速安装些软件。</p>
+
+</blockquote>
+
+<h3 id="nvm-nodejs安装版本管理工具">nvm Node.js安装版本管理工具</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#安装最新稳定版node</span>
+<span class="nv">$ </span>nvm <span class="nb">install </span>stable 
+
+<span class="c">#安装指定版本node</span>
+<span class="nv">$ </span>nvm <span class="nb">install</span> &lt;version&gt;  
+
+<span class="c">#临时版本 - 只在当前窗口生效指定版本</span>
+<span class="nv">$ </span>nvm use &lt;version&gt;  
+
+<span class="c">#永久版本 - 所有窗口生效指定版本</span>
+<span class="nv">$ </span>nvm <span class="nb">alias </span>default &lt;version&gt;
+
+<span class="c">#查看当前node版本及npm版本</span>
+<span class="nv">$ </span>nvm use system  
+</code></pre></div></div>
+
+<h3 id="4-npm--js世界的包管理工具">4. npm — JS世界的包管理工具</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                Node.js 平台的默认包管理工具
+</code></pre></div></div>
+
+<h3 id="5-yarn--包管理工具">5. yarn — 包管理工具</h3>
+
+<h3 id="5-pip---python-平台的默认包管理工具">5. pip —  Python 平台的默认包管理工具</h3>
+
+<h2 id="二常用cli工具">二、常用CLI工具</h2>
+
+<h3 id="1文件下载工具-wget">1.文件下载工具 wget</h3>
+
+<blockquote>
+  <p>GNU Wget 是一种网络实用程序，可使用 HTTP 和 FTP 这两种最广泛使用的 Internet 协议从万维网上检索文件。它以非交互方式工作，因此可以在注销后在后台工作。该程序支持对 Web 创作页面和 FTP 站点的递归检索——您可以使用 Wget 制作档案和主页的镜像，或者像 WWW 机器人一样在 Web 上移动，检查损坏的链接。</p>
+
+</blockquote>
+
+<aside>
+🌐 [http://www.gnu.org/software/wget/](http://www.gnu.org/software/wget/)
+
+</aside>
+
+<blockquote>
+  <p>手册 <a href="https://www.gnu.org/software/wget/manual/">https://www.gnu.org/software/wget/manual/</a></p>
+
+</blockquote>
+
+<p>使用方法：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget <span class="o">[</span>option]… <span class="o">[</span>URL]…
+</code></pre></div></div>
+
+<p>指令：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>启动：
+  <span class="nt">-V</span>,  <span class="nt">--version</span>                   显示 Wget 的版本信息并退出
+  <span class="nt">-h</span>,  <span class="nt">--help</span>                      打印此帮助
+  <span class="nt">-b</span>,  <span class="nt">--background</span>                启动后转入后台
+  <span class="nt">-e</span>,  <span class="nt">--execute</span><span class="o">=</span>命令              运行一个“.wgetrc”风格的命令
+
+日志和输入文件：
+  <span class="nt">-o</span>,  <span class="nt">--output-file</span><span class="o">=</span>文件          将日志信息写入 FILE
+  <span class="nt">-a</span>,  <span class="nt">--append-output</span><span class="o">=</span>文件        将信息添加至 FILE
+  <span class="nt">-d</span>,  <span class="nt">--debug</span>                     打印大量调试信息
+  <span class="nt">-q</span>,  <span class="nt">--quiet</span>                     安静模式 <span class="o">(</span>无信息输出<span class="o">)</span>
+  <span class="nt">-v</span>,  <span class="nt">--verbose</span>                   详尽的输出 <span class="o">(</span>此为默认值<span class="o">)</span>
+  <span class="nt">-nv</span>, <span class="nt">--no-verbose</span>                关闭详尽输出，但不进入安静模式
+       <span class="nt">--report-speed</span><span class="o">=</span>类型         以 &lt;类型&gt; 报告带宽。类型可以是 bits
+  <span class="nt">-i</span>,  <span class="nt">--input-file</span><span class="o">=</span>文件           下载本地或外部 &lt;文件&gt; 中的 URL
+  <span class="nt">-F</span>,  <span class="nt">--force-html</span>                把输入文件当成 HTML 文件
+  <span class="nt">-B</span>,  <span class="nt">--base</span><span class="o">=</span>URL                  解析相对于 URL 的 HTML 输入文件链接 <span class="o">(</span><span class="nt">-i</span> <span class="nt">-F</span><span class="o">)</span>
+       <span class="nt">--config</span><span class="o">=</span>文件               指定要使用的配置文件
+       <span class="nt">--no-cookies</span>                不读取任何配置文件
+       <span class="nt">--rejected-log</span><span class="o">=</span>文件         将拒绝 URL 的原因写入 &lt;文件&gt;。
+
+下载：
+  <span class="nt">-t</span>,  <span class="nt">--tries</span><span class="o">=</span>数字                设置重试次数为 &lt;数字&gt; <span class="o">(</span>0 代表无限制<span class="o">)</span>
+       <span class="nt">--retry-connrefused</span>         即使拒绝连接也是重试
+       <span class="nt">--retry-on-http-error</span><span class="o">=</span>ERRORS    提供以逗号分隔的列表，列出遇到时进行重试的 HTTP 错误
+  <span class="nt">-O</span>,  <span class="nt">--output-document</span><span class="o">=</span>文件      将文档写入 FILE
+  <span class="nt">-nc</span>, <span class="nt">--no-clobber</span>                不要下载已存在将被覆盖的文件
+       <span class="nt">--no-netrc</span>                  不要尝试从 .netrc 获取凭据
+  <span class="nt">-c</span>,  <span class="nt">--continue</span>                  断点续传下载文件
+       <span class="nt">--start-pos</span><span class="o">=</span>偏移量          从由零计数的 &lt;偏移量&gt; 开始下载
+       <span class="nt">--progress</span><span class="o">=</span>类型             选择进度条类型
+       <span class="nt">--show-progress</span>             在任意啰嗦状态下都显示进度条
+  <span class="nt">-N</span>,  <span class="nt">--timestamping</span>              只获取比本地文件新的文件
+       <span class="nt">--no-if-modified-since</span>      不要在时间戳 <span class="o">(</span>timestamping<span class="o">)</span> 模式下使用
+                                     <span class="k">if</span><span class="nt">-modified-since</span> get 条件请求
+       <span class="nt">--no-use-server-timestamps</span>  不用服务器上的时间戳来设置本地文件
+  <span class="nt">-S</span>,  <span class="nt">--server-response</span>           打印服务器响应
+       <span class="nt">--spider</span>                    不下载任何文件
+  <span class="nt">-T</span>,  <span class="nt">--timeout</span><span class="o">=</span>SECONDS           将所有超时设为 SECONDS 秒
+       <span class="nt">--dns-timeout</span><span class="o">=</span>SECS          设置 DNS 查寻超时为 SECS 秒
+       <span class="nt">--connect-timeout</span><span class="o">=</span>SECS      设置连接超时为 SECS 秒
+       <span class="nt">--read-timeout</span><span class="o">=</span>SECS         设置读取超时为 SECS 秒
+  <span class="nt">-w</span>,  <span class="nt">--wait</span><span class="o">=</span>SECONDS              <span class="nb">wait </span>SECONDS between retrievals
+                                     <span class="o">(</span>applies <span class="k">if </span>more <span class="k">then </span>1 URL is to be retrieved<span class="o">)</span>
+       <span class="nt">--waitretry</span><span class="o">=</span>SECONDS         <span class="nb">wait </span>1..SECONDS between retries of a retrieval
+                                     <span class="o">(</span>applies <span class="k">if </span>more <span class="k">then </span>1 URL is to be retrieved<span class="o">)</span>
+       <span class="nt">--random-wait</span>               <span class="nb">wait </span>from 0.5<span class="k">*</span>WAIT...1.5<span class="k">*</span>WAIT secs between retrievals
+                                     <span class="o">(</span>applies <span class="k">if </span>more <span class="k">then </span>1 URL is to be retrieved<span class="o">)</span>
+       <span class="nt">--no-proxy</span>                  禁止使用代理
+  <span class="nt">-Q</span>,  <span class="nt">--quota</span><span class="o">=</span>数字                设置获取配额为 &lt;数字&gt; 字节
+       <span class="nt">--bind-address</span><span class="o">=</span>ADDRESS      绑定至本地主机上的 ADDRESS <span class="o">(</span>主机名或是 IP<span class="o">)</span>
+       <span class="nt">--limit-rate</span><span class="o">=</span>RATE           限制下载速率为 RATE
+       <span class="nt">--no-dns-cache</span>              关闭 DNS 查询缓存
+       <span class="nt">--restrict-file-names</span><span class="o">=</span>系统  限定文件名中的字符为 &lt;系统&gt; 允许的字符
+       <span class="nt">--ignore-case</span>               匹配文件/目录时忽略大小写
+  <span class="nt">-4</span>,  <span class="nt">--inet4-only</span>                仅连接至 IPv4 地址
+  <span class="nt">-6</span>,  <span class="nt">--inet6-only</span>                仅连接至 IPv6 地址
+       <span class="nt">--prefer-family</span><span class="o">=</span>地址族      首先连接至指定家族（IPv6，IPv4 或 none）的地址
+       <span class="nt">--user</span><span class="o">=</span>用户                 将 ftp 和 http 的用户名均设置为 &lt;用户&gt;
+       <span class="nt">--password</span><span class="o">=</span>密码             将 ftp 和 http 的密码均设置为 &lt;密码&gt;
+       <span class="nt">--ask-password</span>              提示输入密码
+       <span class="nt">--use-askpass</span><span class="o">=</span>命令          指定用于请求用户名和密码的凭据管理器。
+                                     如果没有提供指定命令，程序将使用 WGET_ASKPASS 或
+                                     SSH_ASKPASS 环境变量。
+       <span class="nt">--no-iri</span>                    关闭 IRI 支持
+       <span class="nt">--local-encoding</span><span class="o">=</span>ENC        使用 ENC 作为 IRI <span class="o">(</span>国际化资源标识符<span class="o">)</span> 的本地编码
+       <span class="nt">--remote-encoding</span><span class="o">=</span>ENC       使用 ENC 作为默认远程编码
+       <span class="nt">--unlink</span>                    覆盖前移除文件
+       <span class="nt">--xattr</span>                     在文件的拓展属性中储存元数据
+
+目录：
+  <span class="nt">-nd</span>, <span class="nt">--no-directories</span>            不创建目录
+  <span class="nt">-x</span>,  <span class="nt">--force-directories</span>         强制创建目录
+  <span class="nt">-nH</span>, <span class="nt">--no-host-directories</span>       不要创建主 <span class="o">(</span>host<span class="o">)</span> 目录
+       <span class="nt">--protocol-directories</span>      在目录中使用协议名称
+  <span class="nt">-P</span>,  <span class="nt">--directory-prefix</span><span class="o">=</span>前缀     保存文件到 &lt;前缀&gt;/..
+       <span class="nt">--cut-dirs</span><span class="o">=</span>数字             忽略远程目录中 &lt;数字&gt; 个目录层。
+
+HTTP 选项：
+       <span class="nt">--http-user</span><span class="o">=</span>用户            设置 http 用户名为 &lt;用户&gt;
+       <span class="nt">--http-password</span><span class="o">=</span>密码        设置 http 密码为 &lt;密码&gt;
+       <span class="nt">--no-cache</span>                  不使用服务器缓存的数据。
+       <span class="nt">--default-page</span><span class="o">=</span>NAME         改变默认页 <span class="o">(</span>通常是“index.html”<span class="o">)</span>。
+  <span class="nt">-E</span>,  <span class="nt">--adjust-extension</span>          以合适的扩展名保存 HTML/CSS 文档
+       <span class="nt">--ignore-length</span>             忽略头部的‘Content-Length’区域
+       <span class="nt">--header</span><span class="o">=</span>字符串             在头部插入 &lt;字符串&gt;
+       <span class="nt">--compression</span><span class="o">=</span>类型          选择压缩类型，值可以为 auto、gzip 和 none。（默认：none）
+       <span class="nt">--max-redirect</span>              每页所允许的最大重定向
+       <span class="nt">--proxy-user</span><span class="o">=</span>用户           使用 &lt;用户&gt; 作为代理用户名
+       <span class="nt">--proxy-password</span><span class="o">=</span>密码       使用 &lt;密码&gt; 作为代理密码
+       <span class="nt">--referer</span><span class="o">=</span>URL               在 HTTP 请求头包含‘Referer: URL’
+       <span class="nt">--save-headers</span>              将 HTTP 头保存至文件。
+  <span class="nt">-U</span>,  <span class="nt">--user-agent</span><span class="o">=</span>代理           标识自己为 &lt;代理&gt; 而不是 Wget/VERSION。
+       <span class="nt">--no-http-keep-alive</span>        禁用 HTTP keep-alive <span class="o">(</span>持久连接<span class="o">)</span>。
+       <span class="nt">--no-cookies</span>                不使用 cookies。
+       <span class="nt">--load-cookies</span><span class="o">=</span>文件         会话开始前从 &lt;文件&gt; 中载入 cookies。
+       <span class="nt">--save-cookies</span><span class="o">=</span>文件         会话结束后保存 cookies 至 FILE。
+       <span class="nt">--keep-session-cookies</span>      载入并保存会话 <span class="o">(</span>非永久<span class="o">)</span> cookies。
+       <span class="nt">--post-data</span><span class="o">=</span>字符串          使用 POST 方式；把 &lt;字串&gt;作为数据发送。
+       <span class="nt">--post-file</span><span class="o">=</span>文件            使用 POST 方式；发送 &lt;文件&gt; 内容。
+       <span class="nt">--method</span><span class="o">=</span>HTTP方法           在请求中使用指定的 &lt;HTTP 方法&gt;。
+       <span class="nt">--post-data</span><span class="o">=</span>字符串          把 &lt;字串&gt; 作为数据发送，必须设置 <span class="nt">--method</span>
+       <span class="nt">--post-file</span><span class="o">=</span>文件            发送 &lt;文件&gt; 内容，必须设置 <span class="nt">--method</span>
+       <span class="nt">--content-disposition</span>       当选择本地文件名时允许 Content-Disposition
+                                   头部 <span class="o">(</span>实验中<span class="o">)</span>。
+       <span class="nt">--content-on-error</span>          在服务器错误时输出接收到的内容
+       <span class="nt">--auth-no-challenge</span>         不先等待服务器询问就发送基本 HTTP 验证信息。
+
+HTTPS <span class="o">(</span>SSL/TLS<span class="o">)</span> 选项：
+       <span class="nt">--secure-protocol</span><span class="o">=</span>PR         选择安全协议，值可以是 auto、SSLv2、
+                                    SSLv3、TLSv1、TLSv1_1、TLSv1_2 或 PFS
+       <span class="nt">--https-only</span>                 只跟随安全的 HTTPS 链接
+       <span class="nt">--no-check-certificate</span>       不要验证服务器的证书。
+       <span class="nt">--certificate</span><span class="o">=</span>文件           客户端证书文件。
+       <span class="nt">--certificate-type</span><span class="o">=</span>类型      客户端证书类型，PEM 或 DER。
+       <span class="nt">--private-key</span><span class="o">=</span>文件           私钥文件。
+       <span class="nt">--private-key-type</span><span class="o">=</span>类型      私钥文件类型，PEM 或 DER。
+       <span class="nt">--ca-certificate</span><span class="o">=</span>文件        带有一组 CA 证书的文件。
+       <span class="nt">--ca-directory</span><span class="o">=</span>DIR           保存 CA 证书的哈希列表的目录。
+       <span class="nt">--ca-certificate</span><span class="o">=</span>文件        带有一组 CA 证书的文件。
+       <span class="nt">--pinnedpubkey</span><span class="o">=</span>文件/散列值  用于验证节点的公钥（PEM/DER）文件或
+                                   任何数量的 sha256 散列值，以 <span class="nb">base64 </span>编码、
+                                   “sha256//” 开头、用“<span class="p">;</span>”间隔
+       <span class="nt">--random-file</span><span class="o">=</span>文件           用于初始化 SSL 伪随机数生成器（PRNG）的文件，
+                                      应含有随机数据
+
+       <span class="nt">--ciphers</span><span class="o">=</span>STR           直接设置 priority string <span class="o">(</span>GnuTLS<span class="o">)</span> 或 cipher list string <span class="o">(</span>OpenSSL<span class="o">)</span>。
+                                   请小心使用。该选项会覆盖 <span class="nt">--secure-protocol</span>。
+                                   其具体格式和字符串语法取决于对应的 SSL/TLS 引擎。
+HSTS 选项：
+       <span class="nt">--no-hsts</span>                   禁用 HSTS
+       <span class="nt">--hsts-file</span>                 HSTS 数据库路径（将覆盖默认值）
+
+FTP 选项：
+       <span class="nt">--ftp-user</span><span class="o">=</span>用户             设置 ftp 用户名为 &lt;用户&gt;。
+       <span class="nt">--ftp-password</span><span class="o">=</span>密码         设置 ftp 密码为 &lt;密码&gt;
+       <span class="nt">--no-remove-listing</span>         不要删除‘.listing’文件
+       <span class="nt">--no-glob</span>                   不在 FTP 文件名中使用通配符展开
+       <span class="nt">--no-passive-ftp</span>            禁用“passive”传输模式
+       <span class="nt">--preserve-permissions</span>      保留远程文件的权限
+       <span class="nt">--retr-symlinks</span>             递归目录时，获取链接的文件 <span class="o">(</span>而非目录<span class="o">)</span>
+
+FTPS 选项：
+       <span class="nt">--ftps-implicit</span>                 使用隐式 FTPS（默认端口 990）
+       <span class="nt">--ftps-resume-ssl</span>               打开数据连接时继续控制连接中的 SSL/TLS 会话
+       <span class="nt">--ftps-clear-data-connection</span>    只加密控制信道；数据传输使用明文
+       <span class="nt">--ftps-fallback-to-ftp</span>          回落到 FTP，如果目标服务器不支持 FTPS
+WARC 选项：
+       <span class="nt">--warc-file</span><span class="o">=</span>文件名          在一个 .warc.gz 文件里保持请求/响应数据
+       <span class="nt">--warc-header</span><span class="o">=</span>字符串        在头部插入 &lt;字符串&gt;
+       <span class="nt">--warc-max-size</span><span class="o">=</span>数字        将 WARC 的最大尺寸设置为 &lt;数字&gt;
+       <span class="nt">--warc-cdx</span>                  写入 CDX 索引文件
+       <span class="nt">--warc-dedup</span><span class="o">=</span>文件名         不要记录列在此 CDX 文件内的记录
+       <span class="nt">--no-warc-compression</span>       不要 GZIP 压缩 WARC 文件
+       <span class="nt">--no-warc-digests</span>           不要计算 SHA1 摘要
+       <span class="nt">--no-warc-keep-log</span>          不要在 WARC 记录中存储日志文件
+       <span class="nt">--warc-tempdir</span><span class="o">=</span>目录         WARC 写入器的临时文件目录
+
+递归下载：
+  <span class="nt">-r</span>,  <span class="nt">--recursive</span>                 指定递归下载
+  <span class="nt">-l</span>,  <span class="nt">--level</span><span class="o">=</span>数字                最大递归深度 <span class="o">(</span>inf 或 0 代表无限制，即全部下载<span class="o">)</span>。
+       <span class="nt">--delete-after</span>              下载完成后删除本地文件
+  <span class="nt">-k</span>,  <span class="nt">--convert-links</span>             让下载得到的 HTML 或 CSS 中的链接指向本地文件
+       <span class="nt">--convert-file-only</span>         只转换 URL 的文件部分（一般叫做“基础名”/basename）
+       <span class="nt">--backups</span><span class="o">=</span>N                 写入文件 X 前，轮换移动最多 N 个备份文件
+  <span class="nt">-K</span>,  <span class="nt">--backup-converted</span>          在转换文件 X 前先将它备份为 X.orig。
+  <span class="nt">-m</span>,  <span class="nt">--mirror</span>                    <span class="nt">-N</span> <span class="nt">-r</span> <span class="nt">-l</span> inf <span class="nt">--no-remove-listing</span> 的缩写形式。
+  <span class="nt">-p</span>,  <span class="nt">--page-requisites</span>           下载所有用于显示 HTML 页面的图片之类的元素。
+       <span class="nt">--strict-comments</span>           用严格方式 <span class="o">(</span>SGML<span class="o">)</span> 处理 HTML 注释。
+
+递归接受/拒绝：
+  <span class="nt">-A</span>,  <span class="nt">--accept</span><span class="o">=</span>列表               逗号分隔的可接受的扩展名列表
+  <span class="nt">-R</span>,  <span class="nt">--reject</span><span class="o">=</span>列表               逗号分隔的要拒绝的扩展名列表
+       <span class="nt">--accept-regex</span><span class="o">=</span>REGEX        匹配接受的 URL 的正则表达式
+       <span class="nt">--reject-regex</span><span class="o">=</span>REGEX        匹配拒绝的 URL 的正则表达式
+       <span class="nt">--regex-type</span><span class="o">=</span>类型           正则类型 <span class="o">(</span>posix<span class="o">)</span>
+  <span class="nt">-D</span>,  <span class="nt">--domains</span><span class="o">=</span>列表              逗号分隔的可接受的域名列表
+       <span class="nt">--exclude-domains</span><span class="o">=</span>列表      逗号分隔的要拒绝的域名列表
+       <span class="nt">--follow-ftp</span>                跟踪 HTML 文档中的 FTP 链接
+       <span class="nt">--follow-tags</span><span class="o">=</span>列表          逗号分隔的跟踪的 HTML 标识列表
+       <span class="nt">--ignore-tags</span><span class="o">=</span>列表          逗号分隔的忽略的 HTML 标识列表
+  <span class="nt">-H</span>,  <span class="nt">--span-hosts</span>                递归时转向外部主机
+  <span class="nt">-L</span>,  <span class="nt">--relative</span>                  仅跟踪相对链接
+  <span class="nt">-I</span>,  <span class="nt">--include-directories</span><span class="o">=</span>列表  允许目录的列表
+       <span class="nt">--trust-server-names</span>        使用重定向 URL 的最后一段作为本地文件名
+  <span class="nt">-X</span>,  <span class="nt">--exclude-directories</span><span class="o">=</span>列表  排除目录的列表
+  <span class="nt">-np</span>, <span class="nt">--no-parent</span>                 不追溯至父目录
+</code></pre></div></div>
+
+<h3 id="2-curl--用于传输用-url-语法指定的数据">2. curl — 用于传输用 URL 语法指定的数据</h3>
+
+<blockquote>
+  <p>curl 是常用的命令行工具，用来请求 Web 服务器。它的名字就是客户端（client）的 URL 工具的意思。它的功能非常强大，命令行参数多达几十种。如果熟练的话，完全可以取代 Postman 这一类的图形界面工具。</p>
+
+</blockquote>
+
+<blockquote>
+  <p><strong>curl</strong> is a tool for transferring data from or to a server. It supports these protocols: DICT, FILE, FTP, FTPS, GOPHER, GOPHERS, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, MQTT, POP3, POP3S, RTMP, RTMPS, RTSP, SCP, SFTP, SMB, SMBS, SMTP, SMTPS, TELNET or TFTP. The command is designed to work without user interaction.
+curl offers a busload of useful tricks like proxy support, user authentication, FTP upload, HTTP post, SSL connections, cookies, file transfer resume and more. As you will see below, the number of features will make your head spin!
+curl is powered by libcurl for all transfer-related features.</p>
+
+</blockquote>
+
+<p><strong>-limit-rate</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">-limit-rate</code>用来限制 HTTP 请求和回应的带宽，模拟慢网速的环境。</p>
+
+<p>-o</p>
+
+<p><code class="language-plaintext highlighter-rouge">-o</code>参数将服务器的回应保存成文件，等同于<code class="language-plaintext highlighter-rouge">wget</code>命令。</p>
+
+<p>-O</p>
+
+<p><code class="language-plaintext highlighter-rouge">-O</code>参数将服务器回应保存成文件，并将 URL 的最后部分当作文件名。</p>
+
+<h2 id="mac-web服务器">mac web服务器</h2>
+
+<ul>
+  <li>sudo apachectl start</li>
+  <li>sudo apachectl stop</li>
+  <li>sudo apachectl restart</li>
+</ul>
+
+<p>Apache服务器默认的web根目录在：/Library/WebServer/Documents</p>
+
+<p>Apache的配置文件在：/etc/apache2</p>
+
+<p>浏览器输入：<a href="http://localhost/">http://localhost</a></p>
+
+  </div>
+<!-- Gitalk 评论系统 -->
+
+<div id="gitalk-container"></div>
+<script>
+  const gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: 'moselikk/moselikk.github.io',
+    owner: 'moselikk',
+    admin: '["moselikk"]',
+    id: 'https://moselikk.com/blog/15-CLI-tools', // Ensure uniqueness and length less than 50
+    distractionFreeMode: 'false' // Facebook-like distraction free mode
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+</article>
+
+      </div>
+    </div>
+  </div>
+  <script>
+    // open outbound links in new tab
+    let origin = document.location.origin;
+    let links = document.getElementsByTagName("a");
+    for (let link of links) {
+      if (
+        link.href &&
+        link.href.indexOf(origin) != 0 &&
+        !link.href.includes("mailto:")
+      )
+        link.setAttribute("target", "_blank");
+    }
+
+    // responsive table
+    let tables = document.getElementsByTagName("table");
+    for (let table of tables) {
+      let ths = table.tHead.rows[0].cells;
+      let trs = table.tBodies[0].rows;
+      for (let row of trs) {
+        for (let i = 0; i < row.cells.length; i++) {
+          row.cells[i].setAttribute("data-label", ths[i].textContent);
+        }
+      }
+    }
+
+    // hitokoto api
+    const rule = ["a", "b","c","d","h","i","j","k"];
+    const query = rule.map(item => `c=${item}`).join('&');
+
+      // Function to fetch hitokoto
+      function fetchHitokoto() {
+      fetch(`https://v1.hitokoto.cn?${query}`)
+        .then((response) => response.json())
+        .then((data) => {
+          const hitokoto = document.getElementById("hitokoto_text");
+          hitokoto.href = "https://hitokoto.cn/?uuid=" + data.uuid;
+          const from = data.from ? " -" + data.from : ''
+          hitokoto.innerText = data.hitokoto + from;
+          // Store the timestamp and result of the last API call
+          localStorage.setItem('lastHitokotoCall', Date.now());
+          localStorage.setItem('lastHitokotoResult', JSON.stringify(data));
+        })
+        .catch(console.error);
+    }
+
+    // Function to use the last hitokoto result
+    function useLastHitokotoResult() {
+      const data = JSON.parse(localStorage.getItem('lastHitokotoResult'));
+      const hitokoto = document.getElementById("hitokoto_text");
+      hitokoto.href = "https://hitokoto.cn/?uuid=" + data.uuid;
+      hitokoto.innerText = data.hitokoto;
+    }
+
+    // Check if we can call the API
+    function canCallHitokoto() {
+      const lastCall = localStorage.getItem('lastHitokotoCall');
+      const now = Date.now();
+      // Check if the last call was more than a minute ago
+      return !lastCall || now - lastCall > 60 * 1000;
+    }
+
+    // Main logic
+    if (canCallHitokoto()) {
+      fetchHitokoto();
+    } else {
+      const lastResult = localStorage.getItem('lastHitokotoResult');
+      if (lastResult) {
+        useLastHitokotoResult();
+      } else {
+        fetchHitokoto();
+      }
+    }
+  </script>
+  <!-- <script src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": ""}'
+    onerror="gtag('set', 'user_properties', {blocker: 'true'});"></script> -->
+  <script src="/js/zooming.min.js"></script>
+  <script>
+    if (window.Zooming && typeof screen.orientation == "undefined")
+      window.addEventListener("load", function () {
+        new Zooming().listen(".post-content img");
+      });
+  </script>
+  <script src="../js/denglong.js"></script>
+</body>
+
+</html>

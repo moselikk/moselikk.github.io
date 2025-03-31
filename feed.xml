@@ -1,0 +1,1410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>moselikk</title>
+    <description>Less is more.</description>
+    <link>https://moselikk.com/</link>
+    <atom:link href="https://moselikk.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 31 Mar 2025 16:55:04 +0800</pubDate>
+    <lastBuildDate>Mon, 31 Mar 2025 16:55:04 +0800</lastBuildDate>
+    <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>Berkeley Commands</title>
+        <description>&lt;p&gt;&lt;strong&gt;Berkeley Commands&lt;/strong&gt; 是指由 &lt;strong&gt;Berkeley Software Distribution (BSD)&lt;/strong&gt; 系统引入的一组命令，通常用于网络管理和调试。这些命令源于最早的 BSD 操作系统，该操作系统由加利福尼亚大学伯克利分校的计算机科学研究小组开发。它们现在仍然是许多类 Unix 操作系统（包括 Linux 和 macOS）的一部分，特别是在网络调试和管理方面。&lt;/p&gt;
+
+&lt;p&gt;最常见的 Berkeley 命令主要集中在以下几个领域：&lt;/p&gt;
+
+&lt;h3 id=&quot;1-网络管理和调试工具&quot;&gt;1. &lt;strong&gt;网络管理和调试工具&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ifconfig&lt;/code&gt;&lt;/strong&gt;（interface configuration）：用于配置网络接口（如以太网接口、无线接口等），查看接口的状态、IP 地址、MAC 地址等。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;netstat&lt;/code&gt;&lt;/strong&gt;（network statistics）：显示网络连接、路由表、接口状态等信息。常用于调试和监视网络状况。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ping&lt;/code&gt;&lt;/strong&gt;：测试网络连接性，通过发送 ICMP 回显请求并等待响应来检查目标主机的可达性。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;traceroute&lt;/code&gt;&lt;/strong&gt;（或 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tracert&lt;/code&gt;）：追踪数据包从源到目标的路径，并显示中间经过的路由节点。它有助于诊断网络延迟和问题。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;route&lt;/code&gt;&lt;/strong&gt;：显示和修改系统的路由表，控制数据包的流向。可以用来配置静态路由。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;arp&lt;/code&gt;&lt;/strong&gt;（Address Resolution Protocol）：用于查看和修改系统的 ARP 表（将 IP 地址映射到 MAC 地址）。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;host&lt;/code&gt;&lt;/strong&gt; 和 &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nslookup&lt;/code&gt;&lt;/strong&gt;：查询域名服务器（DNS）记录，用于检查域名解析。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tcpdump&lt;/code&gt;&lt;/strong&gt;：一个强大的命令行网络抓包工具，用于捕获网络流量并分析数据包内容。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nmap&lt;/code&gt;&lt;/strong&gt;：一个开源的网络扫描和安全审计工具，可以用来发现网络上的主机和服务。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;2-bsd-系统中的其他命令&quot;&gt;2. &lt;strong&gt;BSD 系统中的其他命令&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;这些命令在现代 Unix 系统中广泛使用，尤其是在 BSD 系统和 Linux 中：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chmod&lt;/code&gt;&lt;/strong&gt;（change mode）：更改文件或目录的权限。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chown&lt;/code&gt;&lt;/strong&gt;（change owner）：更改文件或目录的所有者。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ps&lt;/code&gt;&lt;/strong&gt;（process status）：列出当前运行的进程信息。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;kill&lt;/code&gt;&lt;/strong&gt;：终止进程。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;3-打印相关的命令&quot;&gt;3. &lt;strong&gt;打印相关的命令&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;在早期的 BSD 系统中，打印命令也被作为一类 Berkeley 命令引入。它们主要用于管理打印任务、打印队列等。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lpc&lt;/code&gt;&lt;/strong&gt;（Line Printer Control）：用于控制打印机队列，执行打印机的启动、停止、清空队列等操作。常见的子命令包括 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;status&lt;/code&gt;（查看打印机状态）、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;restart&lt;/code&gt;（重新启动打印服务）等。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lpq&lt;/code&gt;&lt;/strong&gt;（Line Printer Queue）：查看打印队列的状态，列出排队等待打印的任务及其状态。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lpr&lt;/code&gt;&lt;/strong&gt;（Line Printer Request）：将文件发送到打印队列以供打印。常用于发送文档到指定打印机。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lprm&lt;/code&gt;&lt;/strong&gt;（Line Printer Remove）：用于从打印队列中移除任务，可以取消尚未打印的文档。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;4-背景&quot;&gt;4. &lt;strong&gt;背景&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;BSD 操作系统&lt;/strong&gt;：最初是 Unix 的一种变体，开发者在其中添加了许多新功能和工具，尤其是网络相关的工具，这些功能对后来的 Unix 系统产生了深远影响。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Berkeley 网络命令的影响&lt;/strong&gt;：这些工具在网络管理和诊断中非常重要。BSD 系统最初将它们作为标准网络工具引入，它们成为了许多现代 Unix 系统的标准部分（如 Linux 和 macOS），并且在大多数操作系统中都可以找到。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;5-总结&quot;&gt;5. &lt;strong&gt;总结&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Berkeley Commands&lt;/strong&gt; 是一组网络管理和调试工具，起源于 Berkeley Software Distribution 操作系统。它们提供了大量功能，帮助用户管理和诊断网络，包括命令如 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ping&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;netstat&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ifconfig&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;route&lt;/code&gt; 等。随着 Unix 系统的演进，这些命令仍然是网络和系统管理中的核心工具。同时，早期的打印管理命令，如 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lpc&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lpq&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lpr&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lprm&lt;/code&gt;，也在 BSD 系统中扮演了重要角色，并对现代 Unix 系统的打印管理工具产生了影响。&lt;/p&gt;
+</description>
+        <pubDate>Wed, 25 Dec 2024 20:30:00 +0800</pubDate>
+        <link>https://moselikk.com/blog/berkeley</link>
+        <guid isPermaLink="true">https://moselikk.com/blog/berkeley</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>使用 IPV6 访问设备</title>
+        <description>&lt;p&gt;使用 IPV6 访问家庭设备&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;访问 https://test-ipv6.com/ 测试自己网络 IPV6 连通性&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;光猫配置（移动）(如下图将 Ipv6Spi 选线置为关闭)
+&lt;img src=&quot;https://less-1251975755.cos.ap-beijing.myqcloud.com/posts/2024-03-22%2021.00.01.png&quot; alt=&quot;miao&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;找到设备被分配的 IPV6 地址
+&lt;img src=&quot;https://less-1251975755.cos.ap-beijing.myqcloud.com/posts/2024-03-22%2021.00.02.png&quot; alt=&quot;ipv6-address&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;启动一个项目测试连通性
+&lt;img src=&quot;https://less-1251975755.cos.ap-beijing.myqcloud.com/posts/2024-03-22%2021.00.03.png&quot; alt=&quot;server&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;使用手机移动网络访问（目前移动网络都支持 IPV6）（访问 IPV6 地址需要使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[]&lt;/code&gt; 包住）
+&lt;img src=&quot;https://less-1251975755.cos.ap-beijing.myqcloud.com/posts/2024-03-22%2021.00.04.jpg&quot; alt=&quot;test&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Fri, 22 Mar 2024 21:00:00 +0800</pubDate>
+        <link>https://moselikk.com/blog/ipv6</link>
+        <guid isPermaLink="true">https://moselikk.com/blog/ipv6</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Nginx Conf</title>
+        <description>&lt;p&gt;Nginx 是一种高性能的 Web 服务器软件，也可以充当反向代理服务器、负载均衡器等。在使用 Nginx 时，经常会遇到需要根据请求的路径进行转发或者重定向的情况，本文将详细讲解如何配置 Nginx 根据路径转发的步骤。&lt;/p&gt;
+
+&lt;h3 id=&quot;1-配置-location-指令&quot;&gt;1. 配置 location 指令&lt;/h3&gt;
+&lt;p&gt;在 Nginx 中，可以使用 location 指令来匹配请求的 URL，然后进行转发或重定向。下面是 location 指令的语法格式：&lt;/p&gt;
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;location [ = | ~ | ~* | ^~ ] URL {&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;. . .&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;其中：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;= 表示精确匹配 URL；&lt;/li&gt;
+  &lt;li&gt;~ 表示区分大小写的正则表达式匹配 URL；&lt;/li&gt;
+  &lt;li&gt;~* 表示不区分大小写的正则表达式匹配 URL；&lt;/li&gt;
+  &lt;li&gt;^~ 表示普通字符匹配URL。
+对于大部分情况，我们使用最简单的普通字符匹配即可。比如下面的配置：
+    &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;location /api {&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;proxy_pass http://127.0.0.1:8000;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;这个配置表示，如果请求的 URL 以 /api 开头，Nginx 就会将请求转发到 http://127.0.0.1:8000 这个地址。注意，这里的 /api 应该是相对于 Nginx 根路径的相对路径，并不是绝对路径。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;2-配置rewrite指令&quot;&gt;2. 配置rewrite指令&lt;/h3&gt;
+&lt;p&gt;如果我们想要对请求的 URL 进行重定向，可以使用 rewrite 指令。比如下面的配置：&lt;/p&gt;
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;location /old {&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;rewrite ^/old(.*)$ /new$1 permanent;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;这个配置表示，如果请求的 URL 以 /old 开头，Nginx 就会将URL中的 /old 替换成 /new 并进行重定向。注意，这里的重定向是永久重定向（301），如果需要临时重定向（302），可以将 permanent 改为 redirect。&lt;/p&gt;
+
+&lt;p&gt;示例一：转发 API 请求
+假设我们有一个 Web 应用，需要将所有 API 请求转发到后台的 API 服务器，API 服务器的地址是 http://api.example.com，我们可以在 Nginx 中加入下面的配置：&lt;/p&gt;
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;location /api {&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;proxy_pass http://api.example.com;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;这个配置表示，如果请求的 URL 以 /api 开头，Nginx 就会将请求转发到 http://api.example.com 这个地址。比如说，如果有一个请求 /api/users/1，Nginx 就会将请求转发到 http://api.example.com/api/users/1 这个地址，然后将 API 服务器返回的响应返回给客户端。&lt;/p&gt;
+
+&lt;p&gt;示例二：多站点部署
+假设我们有两个 Web 应用，分别是前端应用和后台管理应用，前端应用的地址是 http://example.com，后台管理应用的地址是 http://admin.example.com，我们可以在 Nginx 中加入下面的配置：&lt;/p&gt;
+
+&lt;h3 id=&quot;前端应用配置&quot;&gt;前端应用配置&lt;/h3&gt;
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;server {&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;server_name example.com;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;location / {&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;root /var/www/example.com;&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;index index.html;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;后台管理应用配置&quot;&gt;后台管理应用配置&lt;/h3&gt;
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;server {&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;server_name admin.example.com;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;location / {&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;proxy_pass http://127.0.0.1:8000;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;这个配置表示，如果请求的域名是 example.com，并且请求的 URL 不以 /api 开头，Nginx 就会将请求映射到 /var/www/example.com 目录下的静态文件，例如 /index.html；如果请求的域名是 admin.example.com，或者请求的 URL 以 /api 开头，Nginx 就会将请求转发到 http://127.0.0.1:8000 这个应用服务器，这个服务器可以是一个 Django 应用、Flask 应用、Node.js 应用等。&lt;/p&gt;
+
+&lt;p&gt;注意，这个配置中我们使用了不同的虚拟主机（server）来处理不同的域名，这样可以让不同的应用使用不同的配置。并且，我们在后台管理应用的 location 中加入了 /api 前缀的匹配，这是为了将 API 请求转发到后台的 API 服务器，和前端应用的静态文件请求区分开来。&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 25 Jun 2023 22:00:00 +0800</pubDate>
+        <link>https://moselikk.com/blog/nginx-conf</link>
+        <guid isPermaLink="true">https://moselikk.com/blog/nginx-conf</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Fab 相关</title>
+        <description>&lt;h3 id=&quot;半导体设备由-8-类核心子系统构成&quot;&gt;半导体设备由 8 类核心子系统构成&lt;/h3&gt;
+&lt;p&gt;据半导体产业调查公司 VLSI 统计，半导体设备的关键子系统主要分为 8 大类。&lt;br /&gt;
+包含：气液流量控制系统、真空系统、制程诊断系统、光学系统、电源及气体反应系统、热管理系统、晶圆传送系统、其他集成系统及关键组件，每个子系统亦由数量庞大的零部件组合而成。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;核心子系统&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;核心子系统(英文&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;具体部件&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;气液流量控制系统&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Fluid Management Subsystems&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;气体流量控制器、液体流量控制器、排液泵等&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;真空系统&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Vacuum Subsystems&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;控制阀、隔离阀、传输阀、低温泵、干式泵、分子泵等&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;制程诊断系统&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Integrated Process Diagnostics Subsystems&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;气体分析仪、液体分析仪、粒子计数器、其他计量等&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;光学系统&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Optical Subsystems&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;光刻光学系统&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;电源及气体反应&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Power and Reactive Gas Subsystems&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;RF 射频电源，RF 射频电源匹配网络、DC 制程电源、等离子体源等&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;热管理系统&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Thermal Management Subsystems&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;温控装臵、换热系统、测温系统等&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;晶圆传送系统&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Wafer Handling Subsystems&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;真空机械手臂、常压机械手臂、&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;集成系统&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Integrated Subsystems&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;晶圆传关键组件送系统&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Critical Components&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;静电卡盘装臵、陶瓷组件、橡胶组件&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;不同半导体设备的核心零部件有所不同。&lt;/strong&gt; &lt;br /&gt;
+例如：光刻机的核心零部件包括工作台、投影物镜、光源
+等，而等离子体真空设备（PVD、CVD、刻蚀）的核心零部件包括 MFC、射频电源、真空泵、ESC 等。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;图表 2. 各类半导体设备所需核心零部件比较&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;设备&lt;/th&gt;
+      &lt;th&gt;半导体设备核心零部件&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;光刻机&lt;/td&gt;
+      &lt;td&gt;工件台、投影物镜、光源、光束矫正器、能量控制器、光束形状设臵、掩膜台、内部封闭框架、减振器等&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;涂胶显影机&lt;/td&gt;
+      &lt;td&gt;机械传动、陶瓷热盘、中空轴电机、光刻胶泵、高精度温湿度控制器&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;清洗设备&lt;/td&gt;
+      &lt;td&gt;气路系统、物料传送系统、反应腔、电气类、加热器、功能水、臭氧发生器、 CO2 混合发生器、冷却器、氢气发生器、兆声波发生器等&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;PVD&lt;/td&gt;
+      &lt;td&gt;真空及排气系统、MFC、冷却水供给系统、加热电源、阴极电源、检测/监控系统&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;PECVD&lt;/td&gt;
+      &lt;td&gt;RF 射频电源、MFC、反应室系统、尾气处理系统、真空系统&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;刻蚀机&lt;/td&gt;
+      &lt;td&gt;晶圆盒、ESC、射频发生器、反应控制器、分子泵、等离子体反应器等&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;离子注入机&lt;/td&gt;
+      &lt;td&gt;离子源、引出电极、离子分析器、加速管、扫描系统、工艺室&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CMP&lt;/td&gt;
+      &lt;td&gt;设备 研磨衬垫、自旋晶圆载具、研磨浆输配器装臵等&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;半导体设备企业采购的零部件通常包括机械类、机电一体类、电气类、气体输送系统类、真空系统
+类、附属设备等。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SSI &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Small Scale Integration&lt;/code&gt; 小型集成电路&lt;/li&gt;
+  &lt;li&gt;MSI &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Medium Scale Integration&lt;/code&gt; 中型集成电路&lt;/li&gt;
+  &lt;li&gt;LSI &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Large Scale Integration&lt;/code&gt; 大规模集成电路&lt;/li&gt;
+  &lt;li&gt;VLSI &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Very Large Scale Integration Circuit&lt;/code&gt; 超大规模集成电路&lt;/li&gt;
+  &lt;li&gt;ULSI &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ultra Large Scale Integration&lt;/code&gt; 极大规模集成电路&lt;/li&gt;
+  &lt;li&gt;IC &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Integrated Circuit Chip&lt;/code&gt; 集成电路&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;CMOS &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Complementary Metal Oxide Semiconductor&lt;/code&gt; 互补式金属氧化物半导体&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;按导电类型不同分类：&lt;/li&gt;
+  &lt;li&gt;集成电路按导电类型可分为双极型集成电路和单极型集成电路。双极型集成电路的制作工艺复杂，功耗较大，代表集成电路有TTL、ECL、HTL、LST-TL、STTL等类型&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;单极型集成电路的制作工艺简单，功耗也较低，易于制成大规模集成电路，代表集成电路有CMOS、NMOS、PMOS等类型&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;MES &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Manufacturing Execution System&lt;/code&gt; 制造执行系统&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;SPC &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Statistic Process Control&lt;/code&gt; 统计制程管制&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;SVID &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Status Variable ID&lt;/code&gt; 设备状态变量&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;PVD &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Physical Vapor Deposition&lt;/code&gt; 物理气相沉积&lt;/li&gt;
+  &lt;li&gt;CVD &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Chemical Vapor Deposition&lt;/code&gt; 化学气相沉积&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;CMP 化学机械研磨&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;PR 光阻&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Quartz 石英&lt;/li&gt;
+  &lt;li&gt;RF Generator 射频发生器&lt;/li&gt;
+  &lt;li&gt;Pump 泵&lt;/li&gt;
+  &lt;li&gt;Valve 阀门&lt;/li&gt;
+  &lt;li&gt;e-Chuck 静电吸盘&lt;/li&gt;
+  &lt;li&gt;Shower Head 反应腔喷淋头&lt;/li&gt;
+  &lt;li&gt;Edge Ring 边缘环&lt;/li&gt;
+  &lt;li&gt;真空规/真空计
+    &lt;blockquote&gt;
+      &lt;p&gt;主要是用来测量某一个腔室或者管道中的压强&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;MFC &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Mass Flow Meter&lt;/code&gt; 质量流量计
+    &lt;blockquote&gt;
+      &lt;p&gt;是一种精确测量气体流量的仪表，其测量值不因温度或压力的波动而失准，不需要温度压力补偿。质量流量控制器, 即Mass Flow Controller（缩写为MFC）, 不但具有
+质量流量计的功能，更重要的是，它能自动控制气体流量，即用户可根据需要进行流量设定，MFC自动地将流量恒定在设定值上，即使系统压力有波动或环境温度有变化，也
+会使其偏离设定值。简单地说,质量流量控制器就是一个稳流装置, 是一个可以手动设定或与计算机联接自动控制的气体稳流装置。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Chiller 半导体温控装臵系列&lt;/li&gt;
+  &lt;li&gt;Wafer Sorter/AMR 机器人系列&lt;/li&gt;
+  &lt;li&gt;Local Scrubber 废气处理装臵系列&lt;/li&gt;
+  &lt;li&gt;Ceramic 陶瓷部件&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;O-Ring O型密封圈&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Gauge 测量&lt;/li&gt;
+  &lt;li&gt;Valve 阀门&lt;/li&gt;
+  &lt;li&gt;Shower head 反应腔 喷淋头&lt;/li&gt;
+  &lt;li&gt;block plate 气体缓冲盘&lt;/li&gt;
+  &lt;li&gt;Chuck 吸盘&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Edge Ring 边缘环&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;PDCA 循环 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Plan（计划）、Do（执行）、Check（检查）和Act（处理）&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;前段制程（扩散制程）：&lt;br /&gt;
+FEOL：在硅片上做出电阻、电容、二极管等元件&lt;br /&gt;
+BEOL：在各种原件间做出各种连接线路&lt;br /&gt;
+》〉成膜，曝光，蚀刻，掺杂，CMP，清洗/干燥，针测〈《&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;后段制程：&lt;br /&gt;
+封装：&lt;br /&gt;
+测试：&lt;br /&gt;
+》〉背面研磨，切割〈《&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;英文&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;中文&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;英文&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;中文  ｜&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Si&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;硅&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;SiO&lt;sub&gt;2&lt;/sub&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;二氧化硅&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;sub&gt;2&lt;/sub&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;氧气&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;SiH&lt;sub&gt;4&lt;/sub&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;硅烷&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;N&lt;sub&gt;2&lt;/sub&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;氮气&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Poly-Si&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;多晶硅&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;B&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;硼&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;NiO&lt;sub&gt;2&lt;/sub&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;二氧化镍&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        <pubDate>Sun, 16 Apr 2023 19:00:00 +0800</pubDate>
+        <link>https://moselikk.com/blog/fab-word-list</link>
+        <guid isPermaLink="true">https://moselikk.com/blog/fab-word-list</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>游民三部曲</title>
+        <description>&lt;h2 id=&quot;老唐头&quot;&gt;《老唐头》&lt;/h2&gt;
+
+&lt;h2 id=&quot;算命&quot;&gt;《算命》&lt;/h2&gt;
+
+&lt;h2 id=&quot;麦收&quot;&gt;《麦收》&lt;/h2&gt;
+</description>
+        <pubDate>Sun, 19 Mar 2023 20:00:00 +0800</pubDate>
+        <link>https://moselikk.com/blog/xu-tong</link>
+        <guid isPermaLink="true">https://moselikk.com/blog/xu-tong</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>中文技术文档的写作规范</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;原文：&lt;a href=&quot;https://github.com/ruanyf/document-style-guide&quot;&gt;https://github.com/ruanyf/document-style-guide&lt;/a&gt;&lt;br /&gt;
+作者：&lt;a href=&quot;https://github.com/ruanyf&quot;&gt;ruanyf&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;标题&quot;&gt;标题&lt;/h1&gt;
+
+&lt;h2 id=&quot;层级&quot;&gt;层级&lt;/h2&gt;
+
+&lt;p&gt;标题分为四级。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;一级标题：文章的标题&lt;/li&gt;
+  &lt;li&gt;二级标题：文章主要部分的大标题&lt;/li&gt;
+  &lt;li&gt;三级标题：二级标题下面一级的小标题&lt;/li&gt;
+  &lt;li&gt;四级标题：三级标题下面某一方面的小标题&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;下面是示例。&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gh&quot;&gt;# 一级标题&lt;/span&gt;
+
+&lt;span class=&quot;gu&quot;&gt;## 二级标题&lt;/span&gt;
+
+&lt;span class=&quot;gu&quot;&gt;### 三级标题&lt;/span&gt;
+
+&lt;span class=&quot;gu&quot;&gt;#### 四级标题&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;原则&quot;&gt;原则&lt;/h2&gt;
+
+&lt;p&gt;（1）一级标题下，不能直接出现三级标题。&lt;/p&gt;
+
+&lt;p&gt;示例：下面的文章结构，缺少二级标题。&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gh&quot;&gt;# 一级标题&lt;/span&gt;
+
+&lt;span class=&quot;gu&quot;&gt;### 三级标题&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（2）标题要避免孤立编号（即同级标题只有一个）。&lt;/p&gt;
+
+&lt;p&gt;示例：下面的文章结构，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;二级标题 A&lt;/code&gt;只包含一个三级标题，完全可以省略&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;三级标题 A&lt;/code&gt;。&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gu&quot;&gt;## 二级标题 A&lt;/span&gt;
+
+&lt;span class=&quot;gu&quot;&gt;### 三级标题 A&lt;/span&gt;
+
+&lt;span class=&quot;gu&quot;&gt;## 二级标题 B&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（3）下级标题不重复上一级标题的名字。&lt;/p&gt;
+
+&lt;p&gt;示例：下面的文章结构，二级标题与下属的三级标题同名，建议避免。&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gu&quot;&gt;## 概述&lt;/span&gt;
+
+&lt;span class=&quot;gu&quot;&gt;### 概述&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（4）谨慎使用四级标题，尽量避免出现，保持层级的简单，防止出现过于复杂的章节。&lt;/p&gt;
+
+&lt;p&gt;如果三级标题下有并列性的内容，建议只使用项目列表（Item list）。&lt;/p&gt;
+
+&lt;p&gt;示例：下面的结构二要好于结构一。结构一适用的场景，主要是较长篇幅的内容。&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;结构一
+
+&lt;span class=&quot;gu&quot;&gt;### 三级标题&lt;/span&gt;
+
+&lt;span class=&quot;gu&quot;&gt;#### 四级标题 A&lt;/span&gt;
+
+&lt;span class=&quot;gu&quot;&gt;#### 四级标题 B&lt;/span&gt;
+
+&lt;span class=&quot;gu&quot;&gt;#### 四级标题 C&lt;/span&gt;
+
+结构二
+
+&lt;span class=&quot;gu&quot;&gt;### 三级标题&lt;/span&gt;
+
+&lt;span class=&quot;gs&quot;&gt;**（1）A**&lt;/span&gt;
+
+&lt;span class=&quot;gs&quot;&gt;**（2）B**&lt;/span&gt;
+
+&lt;span class=&quot;gs&quot;&gt;**（3）C**&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;文本&quot;&gt;文本&lt;/h1&gt;
+
+&lt;h2 id=&quot;字间距&quot;&gt;字间距&lt;/h2&gt;
+
+&lt;p&gt;（1）全角中文字符与半角英文字符之间，应有一个半角空格。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;错误：本文介绍如何快速启动Windows系统。
+
+正确：本文介绍如何快速启动 Windows 系统。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（2）全角中文字符与半角阿拉伯数字之间，有没有半角空格都可，但必须保证风格统一，不能两种风格混杂。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;正确：2011年5月15日，我订购了5台笔记本电脑与10台平板电脑。
+
+正确：2011 年 5 月 15 日，我订购了 5 台笔记本电脑与 10 台平板电脑。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;半角的百分号，视同阿拉伯数字。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;正确：今年我国经济增长率是6.5%。
+
+正确：今年我国经济增长率是 6.5%。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（3）英文单位若不翻译，单位前的阿拉伯数字与单位符号之间，应留出适当的空隙。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;例1：一部容量为 16 GB 的智能手机
+
+例2：1 h = 60 min = 3,600 s
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（4）半角英文字符和半角阿拉伯数字，与全角标点符号之间不留空格。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;错误：他的电脑是 MacBook Air 。
+
+正确：他的电脑是 MacBook Air。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;句子&quot;&gt;句子&lt;/h2&gt;
+
+&lt;p&gt;（1）避免使用长句。&lt;/p&gt;
+
+&lt;p&gt;不包含任何标点符号的单个句子，或者以逗号分隔的句子构件，长度尽量保持在 20 个字以内；20～29 个字的句子，可以接受；30～39 个字的句子，语义必须明确，才能接受；多于 40 个字的句子，任何情况下都不能接受。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;错误：本产品适用于从由一台服务器进行动作控制的单一节点结构到由多台服务器进行动作控制的并行处理程序结构等多种体系结构。
+
+正确：本产品适用于多种体系结构。无论是由一台服务器（单一节点结构），还是由多台服务器（并行处理结构）进行动作控制，均可以使用本产品。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;逗号分割的长句，总长度不应该超过 100 字或者正文的 3 行。&lt;/p&gt;
+
+&lt;p&gt;（2）尽量使用简单句和并列句，避免使用复合句。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;并列句：他昨天生病了，没有参加会议。
+
+复合句：那个昨天生病的人没有参加会议。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（3）同样一个意思，尽量使用肯定句表达，不使用否定句表达。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;错误：请确认没有接通装置的电源。
+
+正确：请确认装置的电源已关闭。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（4）避免使用双重否定句。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;错误：没有删除权限的用户，不能删除此文件。
+
+正确：用户必须拥有删除权限，才能删除此文件。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;写作风格&quot;&gt;写作风格&lt;/h2&gt;
+
+&lt;p&gt;（1）尽量不使用被动语态，改为使用主动语态。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;错误：假如此软件尚未被安装，
+
+正确：假如尚未安装这个软件，
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（2）不使用非正式的语言风格。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;错误：Lady Gaga 的演唱会真是酷毙了，从没看过这么给力的表演！！！
+
+正确：无法参加本次活动，我深感遗憾。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（3）不使用冷僻、生造或者文言文的词语，而要使用现代汉语的常用表达方式。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;错误：这是唯二的快速启动的方法。
+
+正确：这是仅有的两种快速启动的方法。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（4）用对“的”、“地”、“得”。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;她露出了开心的笑容。
+（形容词＋的＋名词）
+
+她开心地笑了。
+（副词＋地＋动词）
+
+她笑得很开心。
+（动词＋得＋副词）
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（5）使用代词时（比如“其”、“该”、“此”、“这”等词），必须明确指代的内容，保证只有一个含义。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;错误：从管理系统可以监视中继系统和受其直接控制的分配系统。
+
+正确：从管理系统可以监视两个系统：中继系统和受中继系统直接控制的分配系统。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（6）名词前不要使用过多的形容词。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;错误：此设备的使用必须在接受过本公司举办的正式的设备培训的技师的指导下进行。
+
+正确：此设备必须在技师的指导下使用，且指导技师必须接受过由本公司举办的正式设备培训。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;英文处理&quot;&gt;英文处理&lt;/h2&gt;
+
+&lt;p&gt;（1）英文原文如果使用了复数形式，翻译成中文时，应该将其还原为单数形式。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;英文：...information stored in random access memory (RAMs)...
+
+中文：⋯⋯存储在随机存取存储器（RAM）里的信息⋯⋯
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（2）外文缩写可以使用半角圆点(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.&lt;/code&gt;)表示缩写。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;U.S.A.
+Apple, Inc.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（3）表示中文时，英文省略号（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;...&lt;/code&gt;）应改为中文省略号（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;⋯⋯&lt;/code&gt;）。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;英文：5 minutes later...
+
+中文：5 分钟过去了⋯⋯
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（4）英文书名或电影名改用中文表达时，双引号应改为书名号。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;英文：He published an article entitled &quot;The Future of the Aviation&quot;.
+
+中文：他发表了一篇名为《航空业的未来》的文章。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（5）第一次出现英文词汇时，在括号中给出中文标注。此后再次出现时，直接使用英文缩写即可。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;IOC（International Olympic Committee，国际奥林匹克委员会）。这样定义后，便可以直接使用“IOC”了。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（6）专有名词中每个词第一个字母均应大写，非专有名词则不需要大写。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;“American Association of Physicists in Medicine”（美国医学物理学家协会）是专有名词，需要大写。
+
+“online transaction processing”（在线事务处理）不是专有名词，不应大写。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;段落&quot;&gt;段落&lt;/h1&gt;
+
+&lt;h2 id=&quot;原则-1&quot;&gt;原则&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;一个段落只能有一个主题，或一个中心句子。&lt;/li&gt;
+  &lt;li&gt;段落的中心句子放在段首，对全段内容进行概述。后面陈述的句子为中心句子服务。&lt;/li&gt;
+  &lt;li&gt;一个段落的长度不能超过七行，最佳段落长度小于等于四行。&lt;/li&gt;
+  &lt;li&gt;段落的句子语气要使用陈述和肯定语气，避免使用感叹语气。&lt;/li&gt;
+  &lt;li&gt;段落之间使用一个空行隔开。&lt;/li&gt;
+  &lt;li&gt;段落开头不要留出空白字符。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;引用&quot;&gt;引用&lt;/h2&gt;
+
+&lt;p&gt;引用第三方内容时，应注明出处。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;One man’s constant is another man’s variable. — Alan Perlis
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;如果是全篇转载，请在全文开头显著位置注明作者和出处，并链接至原文。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;本文转载自 WikiQuote
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;使用外部图片时，必须在图片下方或文末标明来源。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;本文部分图片来自 Wikipedia
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;数值&quot;&gt;数值&lt;/h1&gt;
+
+&lt;h2 id=&quot;半角数字&quot;&gt;半角数字&lt;/h2&gt;
+
+&lt;p&gt;阿拉伯数字一律使用半角形式，不得使用全角形式。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;错误：这件商品的价格是１０００元。
+
+正确：这件商品的价格是 1000 元。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;千分号&quot;&gt;千分号&lt;/h2&gt;
+
+&lt;p&gt;数值为千位以上，应添加千分号（半角逗号）。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;XXX 公司的实收资本为 ￥1,258,000 人民币。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;对于 4 位的数值，千分号是选用的，比如&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1000&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1,000&lt;/code&gt;都可以接受。对于 4 位以上的数值，应添加千分号。&lt;/p&gt;
+
+&lt;h2 id=&quot;货币&quot;&gt;货币&lt;/h2&gt;
+
+&lt;p&gt;货币应为阿拉伯数字，并在数字前写出货币符号，或在数字后写出货币中文名称。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$1,000
+1,000 美元
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;英文的货币名称，建议参考国际标准 &lt;a href=&quot;https://en.wikipedia.org/wiki/ISO_4217&quot;&gt;ISO 4217&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;数值范围&quot;&gt;数值范围&lt;/h2&gt;
+
+&lt;p&gt;表示数值范围时，用波浪线（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;～&lt;/code&gt;）或一字线（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;—&lt;/code&gt;）连接。参见《标点符号》一节的“连接号”部分。&lt;/p&gt;
+
+&lt;p&gt;带有单位或百分号时，两个数字建议都要加上单位或百分号。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;132 kg～234 kg
+
+67%～89%
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;变化程度的表示法&quot;&gt;变化程度的表示法&lt;/h2&gt;
+
+&lt;p&gt;数字的增加要使用“增加了”、“增加到”。“了”表示增量，“到”表示定量。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;增加到过去的两倍
+（过去为一，现在为二）
+
+增加了两倍
+（过去为一，现在为三）
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;数字的减少要使用“降低了”、“降低到”。“了”表示增量，“到”表示定量。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;降低到百分之八十
+（定额是一百，现在是八十）
+
+降低了百分之八十
+（原来是一百，现在是二十）
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;不能用“降低 N 倍”或“减少 N 倍”的表示法，要用“降低百分之几”或“减少百分之几”。因为减少（或降低）一倍表示数值原来为一百，现在等于零。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;标点符号&quot;&gt;标点符号&lt;/h1&gt;
+
+&lt;h2 id=&quot;原则-2&quot;&gt;原则&lt;/h2&gt;
+
+&lt;p&gt;（1）中文语句的标点符号，均应该采取全角符号，这样可以与全角文字保持视觉的一致。&lt;/p&gt;
+
+&lt;p&gt;（2）如果整句为英文，则该句使用英文/半角标点。&lt;/p&gt;
+
+&lt;p&gt;（3）句号、问号、叹号、逗号、顿号、分号和冒号不得出现在一行之首。&lt;/p&gt;
+
+&lt;p&gt;（4）点号（句号、逗号、顿号、分号、冒号）不得出现在标题的末尾，而标号（引号、括号、破折号、省略号、书名号、着重号、间隔号、叹号、问号）可以。&lt;/p&gt;
+
+&lt;h2 id=&quot;句号&quot;&gt;句号&lt;/h2&gt;
+
+&lt;p&gt;（1）中文语句的结尾处应该用全角句号（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;。&lt;/code&gt;）。&lt;/p&gt;
+
+&lt;p&gt;（2）句子末尾用括号加注时，句号应在括号之外。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;错误：关于文件的输出，请参照第 1.3 节（见第 26 页。）
+
+正确：关于文件的输出，请参照第 1.3 节（见第 26 页）。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;逗号&quot;&gt;逗号&lt;/h2&gt;
+
+&lt;p&gt;（1）逗号（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;，&lt;/code&gt;）表示句子内部的一般性停顿。&lt;/p&gt;
+
+&lt;p&gt;（2）注意避免“一逗到底”，即整个段落除了结尾，全部停顿都使用逗号。&lt;/p&gt;
+
+&lt;h2 id=&quot;顿号&quot;&gt;顿号&lt;/h2&gt;
+
+&lt;p&gt;（1）句子内部的并列词，应该用全角顿号(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;、&lt;/code&gt;) 分隔，而不用逗号，即使并列词是英语也是如此。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;错误：我最欣赏的科技公司有 Google, Facebook, 腾讯, 阿里和百度等。
+
+正确：我最欣赏的科技公司有 Google、Facebook、腾讯、阿里和百度等。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（2）英文句子中，并列词语之间使用半角逗号（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;,&lt;/code&gt;）分隔。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;例句：Microsoft Office includes Word, Excel, PowerPoint, Outlook and other components.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（3）中文句子内部的并列词，最后一个尽量使用（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;和&lt;/code&gt;）来连接，使句子读起来更加连贯，下面两个句子都可以，第二个更优。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;正确：我最欣赏的科技公司有 Google、Facebook、腾讯、阿里，以及百度等。
+
+正确：我最欣赏的科技公司有 Google、Facebook、腾讯、阿里和百度等。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;分号&quot;&gt;分号&lt;/h2&gt;
+
+&lt;p&gt;（1）分号（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;；&lt;/code&gt;）表示复句内部并列分句之间的停顿。&lt;/p&gt;
+
+&lt;h2 id=&quot;引号&quot;&gt;引号&lt;/h2&gt;
+
+&lt;p&gt;（1）引用时，应该使用全角双引号（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;“ ”&lt;/code&gt;），注意前后双引号不同。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;例句：许多人都认为客户服务的核心是“友好”和“专业”。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（2）引号里面还要用引号时，外面一层用双引号，里面一层用单引号（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;‘ ’&lt;/code&gt;），注意前后单引号不同。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;例句：鲍勃解释道：“我要放音乐，可萨利说，‘不行！’。”
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;括号&quot;&gt;括号&lt;/h2&gt;
+
+&lt;p&gt;（1）补充说明时，使用全角圆括号（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;（）&lt;/code&gt;），括号前后不加空格。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;例句：请确认所有的连接（电缆和接插件）均安装牢固。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（2）几种括号的中英文名称。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;英文&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;中文&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{ }&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;braces 或 curly brackets&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;大括号&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[ ]&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;square brackets 或 brackets&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;方括号&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt; &amp;gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;angled brackets&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;尖括号&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;( )&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;parentheses&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;圆括号&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;冒号&quot;&gt;冒号&lt;/h2&gt;
+
+&lt;p&gt;（1）全角冒号（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;：&lt;/code&gt;）常用在需要解释的词语后边，引出解释和说明。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;例句：请确认以下几项内容：时间、地点、活动名称和来宾数量。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（2）表示时间时，应使用半角冒号（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:&lt;/code&gt;）。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;例句：早上 8:00
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;省略号&quot;&gt;省略号&lt;/h2&gt;
+
+&lt;p&gt;（1）省略号（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;⋯⋯&lt;/code&gt;）表示语句未完、或者语气的不连续。&lt;/p&gt;
+
+&lt;p&gt;（2）省略号占两个汉字空间、包含六个省略点，不要使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;。。。&lt;/code&gt;或&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;...&lt;/code&gt;等非标准形式。&lt;/p&gt;
+
+&lt;p&gt;（3）省略号不应与“等”这个词一起使用。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;错误：我们为会餐准备了香蕉、苹果、梨…等各色水果。
+
+正确：我们为会餐准备了各色水果，有香蕉、苹果、梨⋯⋯
+
+正确：我们为会餐准备了香蕉、苹果、梨等各色水果。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;感叹号&quot;&gt;感叹号&lt;/h2&gt;
+
+&lt;p&gt;（1）应该使用平静的语气叙述，尽量避免使用感叹号（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;！&lt;/code&gt;）。&lt;/p&gt;
+
+&lt;p&gt;（2）不得多个感叹号连用，比如&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;！！&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;!!!&lt;/code&gt;。&lt;/p&gt;
+
+&lt;h2 id=&quot;破折号&quot;&gt;破折号&lt;/h2&gt;
+
+&lt;p&gt;（1）破折号&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;————&lt;/code&gt;一般用于进一步解释。&lt;/p&gt;
+
+&lt;p&gt;（2）破折号应占两个汉字的位置。如果破折号本身只占一个汉字的位置，那么前后应该留出一个半角空格。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;例句：直觉————尽管它并不总是可靠的————告诉我，这事可能出了些问题。
+
+例句：直觉 —— 尽管它并不总是可靠的 —— 告诉我，这事可能出了些问题。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;连接号&quot;&gt;连接号&lt;/h2&gt;
+
+&lt;p&gt;（1）连接号用于连接两个类似的词。&lt;/p&gt;
+
+&lt;p&gt;（2）以下场合应该使用直线连接号（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-&lt;/code&gt;），占一个半角字符的位置。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;两个名词的复合&lt;/li&gt;
+  &lt;li&gt;图表编号&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;例句：氧化-还原反应
+
+例句：图 1-1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;（3）数值范围（例如日期、时间或数字）应该使用波浪连接号（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;～&lt;/code&gt;）或一字号（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;—&lt;/code&gt;），占一个全角字符的位置。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;例句：2009 年～2011 年
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;注意，波浪连接号前后两个值都建议加上单位。&lt;/p&gt;
+
+&lt;p&gt;（4）波浪连接号也可以用汉字“至”代替。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;例句：周围温度：-20 °C 至 -10 °C
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;文档体系&quot;&gt;文档体系&lt;/h1&gt;
+
+&lt;h2 id=&quot;结构&quot;&gt;结构&lt;/h2&gt;
+
+&lt;p&gt;软件手册是一部完整的书，建议采用下面的结构。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;简介&lt;/strong&gt;（Introduction）：[必备] [文件] 提供对产品和文档本身的总体的、扼要的说明&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;快速上手&lt;/strong&gt;（Getting Started）：[可选] [文件] 如何最快速地使用产品&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;入门篇&lt;/strong&gt;（Basics）：[必备] [目录] 又称“使用篇”，提供初级的使用教程
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;环境准备&lt;/strong&gt;（Prerequisite）：[必备] [文件] 软件使用需要满足的前置条件&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;安装&lt;/strong&gt;（Installation）：[可选] [文件] 软件的安装方法&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;设置&lt;/strong&gt;（Configuration）：[必备] [文件] 软件的设置&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;进阶篇&lt;/strong&gt;（Advanced）：[可选] [目录] 又称“开发篇”，提供中高级的开发教程&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;API&lt;/strong&gt;（Referenc）：[可选] [目录 or 文件] 软件 API 的逐一介绍&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;FAQ&lt;/strong&gt;：[可选] [文件] 常见问题解答&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;附录&lt;/strong&gt;（Appendix）：[可选] [目录] 不属于教程本身、但对阅读教程有帮助的内容
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Glossary&lt;/strong&gt;：[可选] [文件] 名词解释&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Recipes&lt;/strong&gt;：[可选] [文件] 最佳实践&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Troubleshooting&lt;/strong&gt;：[可选] [文件] 故障处理&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;ChangeLog&lt;/strong&gt;：[可选] [文件] 版本说明&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Feedback&lt;/strong&gt;：[可选] [文件] 反馈方式&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;下面是两个真实范例，可参考。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://redux.js.org/introduction/getting-started&quot;&gt;Redux 手册&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://flight-manual.atom.io/&quot;&gt;Atom 手册&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;文件名&quot;&gt;文件名&lt;/h2&gt;
+
+&lt;p&gt;文档的文件名不得含有空格。&lt;/p&gt;
+
+&lt;p&gt;文件名必须使用半角字符，不得使用全角字符。这也意味着，中文不能用于文件名。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;错误：名词解释.md
+
+正确：glossary.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;文件名建议只使用小写字母，不使用大写字母。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;错误：TroubleShooting.md
+
+正确：troubleshooting.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;为了醒目，某些说明文件的文件名，可以使用大写字母，比如&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;README&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LICENSE&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;文件名包含多个单词时，单词之间建议使用半角的连词线（&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-&lt;/code&gt;）分隔。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;不佳：advanced_usage.md
+
+正确：advanced-usage.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;参考链接&quot;&gt;参考链接&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.taodocs.com/p-51273.html&quot;&gt;产品手册中文写作规范&lt;/a&gt;, by 华为&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://guide.daocloud.io/dcs/%E5%86%99%E4%BD%9C%E8%A7%84%E8%8C%83%E5%92%8C%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83-9153803.html&quot;&gt;写作规范和格式规范&lt;/a&gt;, by DaoCloud&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hitachi-tc.co.jp/company/thesis/thesis.pdf&quot;&gt;技术写作技巧在日汉翻译中的应用&lt;/a&gt;, by 刘方&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.lengoo.de/documents/styleguides/lengoo_styleguide_ZH.pdf&quot;&gt;简体中文规范指南&lt;/a&gt;, by lengoo&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://open.leancloud.cn/copywriting-style-guide.html&quot;&gt;文档风格指南&lt;/a&gt;, by LeanCloud&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/document/d/1R8lMCPf6zCD5KEA8ekZ5knK77iw9J-vJ6vEopPemqZM/edit&quot;&gt;豌豆荚文案风格指南&lt;/a&gt;, by 豌豆荚&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/sparanoid/chinese-copywriting-guidelines&quot;&gt;中文文案排版指北&lt;/a&gt;, by sparanoid&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://w3c.github.io/clreq/&quot;&gt;中文排版需求&lt;/a&gt;, by W3C&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.ruanyifeng.com/blog/2017/02/filename-should-be-lowercase.html&quot;&gt;为什么文件名要小写？&lt;/a&gt;, by 阮一峰&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developers.google.com/style/&quot;&gt;Google Developer Documentation Style Guide&lt;/a&gt;, by Google&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.moe.gov.cn/ewebeditor/uploadfile/2015/01/13/20150113091154536.pdf&quot;&gt;出版物上数字用法的规定（国家标准GBT15835－2011）&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://zh.wikisource.org/zh-hans/GB_3100-1993_%E5%9B%BD%E9%99%85%E5%8D%95%E4%BD%8D%E5%88%B6%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8&quot;&gt;GB 3100-1993 国际单位制及其应用&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 07 Mar 2023 19:00:00 +0800</pubDate>
+        <link>https://moselikk.com/blog/document-style-guide-copy</link>
+        <guid isPermaLink="true">https://moselikk.com/blog/document-style-guide-copy</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>个人开发环境预设</title>
+        <description>&lt;h3 id=&quot;个人常用环境配置文件备份&quot;&gt;个人常用环境配置文件备份：&lt;/h3&gt;
+
+&lt;p&gt;VSCode
+&lt;img src=&quot;https://less-1251975755.cos.ap-beijing.myqcloud.com/2023-03-03_10-22-36.png&quot; alt=&quot;VSCode&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;VSCode配置备份：&lt;a href=&quot;https://file-1251975755.cos.ap-nanjing.myqcloud.com/VSCode_Setting.code-profile&quot;&gt;下载&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;PowerShell（需自行下载安装，系统自带 Windows PowerShell 配置会有无法预料的问题）
+&lt;img src=&quot;https://less-1251975755.cos.ap-beijing.myqcloud.com/2023-03-03_13-49-17.png&quot; alt=&quot;WindowsTerminal&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ubuntu zsh (WSL)
+&lt;img src=&quot;https://less-1251975755.cos.ap-beijing.myqcloud.com/2023-03-03_13-49-07.png&quot; alt=&quot;WindowsTerminalWSL&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;PowerShell配置备份：&lt;a href=&quot;https://file-1251975755.cos.ap-nanjing.myqcloud.com/Microsoft.PowerShell_profile.ps1&quot;&gt;下载&lt;/a&gt;&lt;br /&gt;
+WindowsTerminal配置备份：&lt;a href=&quot;https://file-1251975755.cos.ap-nanjing.myqcloud.com/windows_terminal_settings.json&quot;&gt;下载&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;配置文件使用&quot;&gt;配置文件使用：&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;VSCode：按 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl+Shift+P&lt;/code&gt; 打开命令输入框，输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Import Profile&lt;/code&gt; 导入配置文件，选择所下载的配置文件导入。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;PowerShell：Terminal 中输入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$PROFILE&lt;/code&gt; 查看 PowerShell 配置文件地址，将下载的配置文件复制到相应文件中保存（需先安装好配置文件中用到的软件，如：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;starship&lt;/code&gt;）。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;WindowsTerminal：打开 终端 - 设置 - 打开JSON文件 将下载的配置文件中内容复制保存即可。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;前端开发环境&quot;&gt;前端开发环境&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Version&lt;/th&gt;
+      &lt;th&gt;Host&lt;/th&gt;
+      &lt;th&gt;Remark&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Google Chrome&lt;/td&gt;
+      &lt;td&gt;Next&lt;/td&gt;
+      &lt;td&gt;Windows&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Postman&lt;/td&gt;
+      &lt;td&gt;Next&lt;/td&gt;
+      &lt;td&gt;Windows&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Visual Studio Code&lt;/td&gt;
+      &lt;td&gt;Next&lt;/td&gt;
+      &lt;td&gt;Windows&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Power Shell&lt;/td&gt;
+      &lt;td&gt;Next&lt;/td&gt;
+      &lt;td&gt;Windows&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;WSL&lt;/td&gt;
+      &lt;td&gt;2.0&lt;/td&gt;
+      &lt;td&gt;Windows&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Ubuntu&lt;/td&gt;
+      &lt;td&gt;LTS&lt;/td&gt;
+      &lt;td&gt;Windows&lt;/td&gt;
+      &lt;td&gt;Based on WSL&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;nvm&lt;/td&gt;
+      &lt;td&gt;Next&lt;/td&gt;
+      &lt;td&gt;Ubuntu &amp;amp; Windows&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;node&lt;/td&gt;
+      &lt;td&gt;16&amp;amp;18&lt;/td&gt;
+      &lt;td&gt;Ubuntu &amp;amp; Windows&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;git&lt;/td&gt;
+      &lt;td&gt;Next&lt;/td&gt;
+      &lt;td&gt;Ubuntu &amp;amp; Windows&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Fira Code&lt;/td&gt;
+      &lt;td&gt;Next&lt;/td&gt;
+      &lt;td&gt;Windows&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;常用软件&quot;&gt;常用软件&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Version&lt;/th&gt;
+      &lt;th&gt;Host&lt;/th&gt;
+      &lt;th&gt;Remark&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;uTools&lt;/td&gt;
+      &lt;td&gt;Next&lt;/td&gt;
+      &lt;td&gt;Windows&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;WPS&lt;/td&gt;
+      &lt;td&gt;Next&lt;/td&gt;
+      &lt;td&gt;Windows&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Wireshark&lt;/td&gt;
+      &lt;td&gt;Next&lt;/td&gt;
+      &lt;td&gt;Windows&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        <pubDate>Fri, 03 Mar 2023 09:00:00 +0800</pubDate>
+        <link>https://moselikk.com/blog/Setting-Backups</link>
+        <guid isPermaLink="true">https://moselikk.com/blog/Setting-Backups</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>华为 eNSP 错误 40</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;环境：&lt;br /&gt;
+Windows11 x64 22H2&lt;br /&gt;
+WinPcap-4.1.3&lt;br /&gt;
+Wireshark-2.6.4&lt;br /&gt;
+VirtualBox-5.2.26&lt;br /&gt;
+eNSP V100R003C00SPC100&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;如果 eNSP 安装后，虚拟设备无法启动报错 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;错误代码：40&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;可打开 VirtualBox，启动eNSP安装时自动添加的 AR_Base 虚拟机，查看报错是否是：&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Raw-mode is unavailable courtesy of Hyper-V. (VERR_SUPDRV_NO_RAW_MODE_HYPER_&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;如满足以上条件，解决方法如下：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;问题发生原因：所安装 VirtualBox 版本与 Hyper-V 冲突，可使用以下命令检查 Hyper-V 是否开启&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;（系统附加功能 Hyper-V  &lt;strong&gt;没打勾不代表没有启用&lt;/strong&gt;，如使用WSL但没在附加功能中手动开启，Hyper-V 也会是启用状态）&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+// bcdedit 检查 Hyper-V 是否已启用
+// hypervisorlaunchtype 值代表其状态
+
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bcdedit
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;解决方法：关闭 Hyper-V 后 VirtualBox 与 eNSP 均可正常使用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 需使用管理员权限 shell 运行
+
+// 关闭 Hyper-V
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bcdedit /set hypervisorlaunchtype off
+
+// 开启 Hyper-V
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bcdedit /set hypervisorlaunchtype auto
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</description>
+        <pubDate>Tue, 28 Feb 2023 18:00:00 +0800</pubDate>
+        <link>https://moselikk.com/blog/eNSP-ERR40-copy</link>
+        <guid isPermaLink="true">https://moselikk.com/blog/eNSP-ERR40-copy</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>常用 Linux 命令</title>
+        <description>&lt;h2 id=&quot;screenfetch&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;screenfetch&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;screenFetch is a “Bash Screenshot Information Tool”. This handy Bash script can be used to generate one of those nifty terminal theme information + ASCII distribution logos you see in everyone’s screenshots nowadays. It will auto-detect your distribution and display an ASCII version of that distribution’s logo and some valuable information to the right. There are options to specify no ASCII art, colors, taking a screenshot upon displaying info, and even customizing the screenshot command! This script is very easy to add to and can easily be extended.&lt;/p&gt;
+
+&lt;h2 id=&quot;htop&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;htop&lt;/code&gt;&lt;/h2&gt;
+
+&lt;h2 id=&quot;ifconfig&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ifconfig&lt;/code&gt;&lt;/h2&gt;
+
+&lt;h2 id=&quot;bundle-exec-jekyll-serve&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle exec jekyll serve&lt;/code&gt;&lt;/h2&gt;
+</description>
+        <pubDate>Fri, 27 Jan 2023 10:00:00 +0800</pubDate>
+        <link>https://moselikk.com/blog/command</link>
+        <guid isPermaLink="true">https://moselikk.com/blog/command</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>有些问题，来一起来问问 ChatGPT</title>
+        <description>&lt;p&gt;&lt;img style=&quot;margin:0; width:30px; display:inline-block;vertical-align:bottom;&quot; src=&quot;https://less-1251975755.cos.ap-beijing.myqcloud.com/posts/f56180bc75b97674b69598fc6844f385.webp&quot; /&gt;   程序员如何提升自己的认知&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;margin:0; width:30px;&quot; src=&quot;https://less-1251975755.cos.ap-beijing.myqcloud.com/posts/chrtGPT.svg&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;对于程序员来说，要提升自己的认知可以采取以下几种方式：
+&lt;span class=&quot;p&quot;&gt;
+1.&lt;/span&gt; 练习：多写代码，多做题目。练习能帮助我们更好地理解和掌握知识点。
+&lt;span class=&quot;p&quot;&gt;
+2.&lt;/span&gt; 阅读：阅读专业书籍、文章和技术博客，可以帮助我们了解最新的技术和工具。
+&lt;span class=&quot;p&quot;&gt;
+3.&lt;/span&gt; 参加社区：参加线上或线下社区，和其他程序员交流和分享经验。
+&lt;span class=&quot;p&quot;&gt;
+4.&lt;/span&gt; 多语言：学习不同的编程语言，能够增加我们的思维能力和技能。
+&lt;span class=&quot;p&quot;&gt;
+5.&lt;/span&gt; 整合：结合不同的知识点，做到整体化学习，提高自己的认知能力。
+&lt;span class=&quot;p&quot;&gt;
+6.&lt;/span&gt; 尝试新领域：程序员要敢于尝试新领域，增加自己的竞争力。
+&lt;span class=&quot;p&quot;&gt;
+7.&lt;/span&gt; 练习思维：练习思维导图，猜想题等方式来提升思维能力。
+
+总之，提升自己的认知是一个持久的过程，需要不断学习和努力。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img style=&quot;margin:0; width:30px; display:inline-block;vertical-align:bottom;&quot; src=&quot;https://less-1251975755.cos.ap-beijing.myqcloud.com/posts/f56180bc75b97674b69598fc6844f385.webp&quot; /&gt;   年轻人创业需要做哪些准备&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;margin:0; width:30px;&quot; src=&quot;https://less-1251975755.cos.ap-beijing.myqcloud.com/posts/chrtGPT.svg&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;如果你是一个年轻人想要创业，你需要做准备以下几点：
+&lt;span class=&quot;p&quot;&gt;
+1.&lt;/span&gt; 了解市场：在你打算创业之前，首先要了解市场需求、竞争对手、行业趋势等。这些信息可以帮助你了解如何制定商业计划。
+&lt;span class=&quot;p&quot;&gt;
+2.&lt;/span&gt; 获取资金：创业所需资金可能是一个挑战，因此你需要考虑融资、众筹等资金来源。
+&lt;span class=&quot;p&quot;&gt;
+3.&lt;/span&gt; 制定商业计划：商业计划是创业的基础，它描述了你的商业理念、市场分析、财务预测等。
+&lt;span class=&quot;p&quot;&gt;
+4.&lt;/span&gt; 招募团队：创业一般需要多人参与，因此你需要招募到合适的人才来共同实现你的目标。
+&lt;span class=&quot;p&quot;&gt;
+5.&lt;/span&gt; 准备好承受风险：创业总是有风险的，因此你需要做好承受挫折和失败的准备。
+&lt;span class=&quot;p&quot;&gt;
+6.&lt;/span&gt; 保持学习和不断改进：创业是一个不断学习和改进的过程，你需要不断学习新的知识和技能来适应市场的变化。
+
+创业是一项充满挑战的任务，但如果你做好了准备，它也是一个非常有趣和充满潜力的过程。希望这些建议能帮助你成功创业。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img style=&quot;margin:0; width:30px; display:inline-block;vertical-align:bottom;&quot; src=&quot;https://less-1251975755.cos.ap-beijing.myqcloud.com/posts/f56180bc75b97674b69598fc6844f385.webp&quot; /&gt;   作为一个男生，如何提高自己的吸引力&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;margin:0; width:30px;&quot; src=&quot;https://less-1251975755.cos.ap-beijing.myqcloud.com/posts/chrtGPT.svg&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;作为一个男生，提高自己的吸引力可以通过以下几种方式：
+&lt;span class=&quot;p&quot;&gt;
+1.&lt;/span&gt; 身体健康：保持良好的体魄可以增加自信心，同时也是展现自己魅力的重要因素。
+&lt;span class=&quot;p&quot;&gt;
+2.&lt;/span&gt; 形象气质：注意自己的着装和仪表，展现出自己的穿着品味和气质。
+&lt;span class=&quot;p&quot;&gt;
+3.&lt;/span&gt; 性格魅力：展现自己的性格魅力和个性，让女性感到有趣和吸引。
+&lt;span class=&quot;p&quot;&gt;
+4.&lt;/span&gt; 智慧才智：展现自己的智慧和才智，让女性感到有信心和安全感。
+&lt;span class=&quot;p&quot;&gt;
+5.&lt;/span&gt; 人际交往：培养良好的人际关系和交往能力，让女性感到舒适和温馨。
+
+最重要的是，要保持真诚和诚实，展现自己的真实面相。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img style=&quot;margin:0; width:30px; display:inline-block;vertical-align:bottom;&quot; src=&quot;https://less-1251975755.cos.ap-beijing.myqcloud.com/posts/f56180bc75b97674b69598fc6844f385.webp&quot; /&gt;   如何获得异性的主动追求&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;margin:0; width:30px;&quot; src=&quot;https://less-1251975755.cos.ap-beijing.myqcloud.com/posts/chrtGPT.svg&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;要获得异性的主动追求，可以尝试以下几种方法：
+&lt;span class=&quot;p&quot;&gt;
+1.&lt;/span&gt; 增强魅力: 通过保持健康的生活方式、调整自己的形象和个性来增强自己的魅力。
+&lt;span class=&quot;p&quot;&gt;
+2.&lt;/span&gt; 展现自己的优点: 展现自己的优点，如智慧、勇气、激情等，可以吸引异性的注意。
+&lt;span class=&quot;p&quot;&gt;
+3.&lt;/span&gt; 保持积极的态度: 保持积极的态度，对周围的人和事充满热情，这样可以吸引异性的关注。
+&lt;span class=&quot;p&quot;&gt;
+4.&lt;/span&gt; 提高社交能力: 提高社交能力，学会和周围的人建立良好的关系，这样可以让异性觉得自己有魅力。
+&lt;span class=&quot;p&quot;&gt;
+5.&lt;/span&gt; 发挥自己的长处: 发挥自己的长处，找到自己的特长，并在这方面展现自己，这样可以吸引异性的关注。
+
+获得异性的主动追求并不是一件简单的事，需要不断努力和改进。最重要的是要认识到每个人都是独特的，不要担心自己的不足，发挥自己的长处。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Sun, 15 Jan 2023 19:33:00 +0800</pubDate>
+        <link>https://moselikk.com/blog/ChatGPT</link>
+        <guid isPermaLink="true">https://moselikk.com/blog/ChatGPT</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
