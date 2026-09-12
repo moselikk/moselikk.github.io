@@ -106,6 +106,7 @@ async function runTests() {
   assert(!homeHtml.includes('href="/blog/abc"'), 'Homepage archive does NOT contain unpublished draft "abc"');
   assert(!homeHtml.includes('href="/blog/def"'), 'Homepage archive does NOT contain unpublished draft "def"');
   assert(homeHtml.includes('href="/blog/verdaccio-offline"'), 'Homepage contains latest article "verdaccio-offline"');
+  assert(homeHtml.includes('href="/favicon.ico"'), 'Homepage includes favicon link tag');
   assert(homeHtml.includes('search-modal') && homeHtml.includes('theme-toggle'), 'Homepage contains search modal and theme toggle button');
   assert(homeHtml.includes('back-to-top'), 'Homepage contains back-to-top button');
 

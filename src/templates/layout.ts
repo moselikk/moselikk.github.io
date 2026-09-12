@@ -100,6 +100,8 @@ export function renderLayout(options: LayoutOptions): string {
   <meta name="author" content="${escapeHtml(siteConfig.author)}" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="canonical" href="${canonical}" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="stylesheet" href="/assets/main.css" />
   <link rel="alternate" type="application/rss+xml" title="${siteConfig.title}" href="/feed.xml" />
