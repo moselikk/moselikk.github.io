@@ -1,4 +1,5 @@
-import { renderLayout, siteConfig } from './layout.js';
+import { renderLayout, siteConfig, escapeHtml } from './layout.js';
+import { TocItem } from '../utils/markdown.js';
 
 export interface PostDetailOptions {
   title: string;
@@ -7,6 +8,7 @@ export interface PostDetailOptions {
   description?: string;
   url: string;
   contentHtml: string;
+  toc?: TocItem[];
 }
 
 export function formatDate(date: Date): string {
@@ -37,7 +39,25 @@ export function renderPostPage(post: PostDetailOptions): string {
     </p>
   </header>`;
 
+  // 生成右侧 TOC 目录 HTML
+  let tocHtml = '';
+  if (post.toc && post.toc.length >= 2) {
+    const items = post.toc.map(item => {
+      const indentClass = item.level === 3 ? 'toc-level-3' : 'toc-level-2';
+      const escapedText = escapeHtml(item.text);
+      return `<li class="${indentClass}"><a href="#${item.id}" title="${escapedText}">${escapedText}</a></li>`;
+    }).join('');
+    tocHtml = `
+    <aside class="post-toc">
+      <div class="toc-title">目录</div>
+      <ul class="toc-list">
+        ${items}
+      </ul>
+    </aside>`;
+  }
+
   const content = `<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  ${tocHtml}
   ${navHtml}
   <div class="post-content" itemprop="articleBody">
     ${post.contentHtml}

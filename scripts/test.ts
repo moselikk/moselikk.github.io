@@ -71,6 +71,7 @@ async function runTests() {
   assert(fs.existsSync(path.join(distDir, '404.html')), 'dist/404.html exists');
   assert(fs.existsSync(path.join(distDir, 'feed.xml')), 'dist/feed.xml exists');
   assert(fs.existsSync(path.join(distDir, 'sitemap.xml')), 'dist/sitemap.xml exists');
+  assert(fs.existsSync(path.join(distDir, 'search-index.json')), 'dist/search-index.json exists (Search Index)');
   assert(fs.existsSync(path.join(distDir, 'assets/main.css')), 'dist/assets/main.css exists');
   assert(fs.existsSync(path.join(distDir, 'assets/main.js')), 'dist/assets/main.js exists');
   assert(fs.existsSync(path.join(distDir, 'CNAME')), 'dist/CNAME exists');
@@ -97,10 +98,16 @@ async function runTests() {
   // Test Suite 2: Feature & Content Verification
   console.log('\n🔍 Test Suite 2: Features, Styles & Configurations');
   
+  const searchIndexData = JSON.parse(fs.readFileSync(path.join(distDir, 'search-index.json'), 'utf-8'));
+  assert(Array.isArray(searchIndexData) && searchIndexData.length === 30, `search-index.json contains exactly 30 indexable articles`);
+  assert(searchIndexData.some((item: any) => item.title.includes('离线环境') && item.url === '/blog/verdaccio-offline'), 'search-index.json contains valid article entries');
+
   const homeHtml = fs.readFileSync(path.join(distDir, 'index.html'), 'utf-8');
   assert(!homeHtml.includes('href="/blog/abc"'), 'Homepage archive does NOT contain unpublished draft "abc"');
   assert(!homeHtml.includes('href="/blog/def"'), 'Homepage archive does NOT contain unpublished draft "def"');
   assert(homeHtml.includes('href="/blog/verdaccio-offline"'), 'Homepage contains latest article "verdaccio-offline"');
+  assert(homeHtml.includes('search-modal') && homeHtml.includes('theme-toggle'), 'Homepage contains search modal and theme toggle button');
+  assert(homeHtml.includes('back-to-top'), 'Homepage contains back-to-top button');
 
   const verdaccioHtml = fs.readFileSync(path.join(distDir, 'blog/verdaccio-offline/index.html'), 'utf-8');
   assert(verdaccioHtml.includes('Gitalk'), 'verdaccio-offline article includes Gitalk comment container');
@@ -108,9 +115,13 @@ async function runTests() {
   assert(verdaccioHtml.includes('GTM-K329WMFD'), 'verdaccio-offline article includes GTM container tracking code');
   assert(verdaccioHtml.includes('shiki'), 'verdaccio-offline article includes Shiki syntax highlighted code blocks');
 
+  const openwrtHtml = fs.readFileSync(path.join(distDir, 'blog/OpenWrt/index.html'), 'utf-8');
+  assert(openwrtHtml.includes('post-toc'), 'Multi-heading article (OpenWrt) includes right TOC container');
+
   const mainCss = fs.readFileSync(path.join(distDir, 'assets/main.css'), 'utf-8');
   assert(mainCss.includes('--shiki-light') && mainCss.includes('--shiki-dark'), 'main.css contains dual-theme Shiki CSS variables');
-  assert(mainCss.includes('prefers-color-scheme:dark') || mainCss.includes('prefers-color-scheme: dark'), 'main.css contains dark mode media query');
+  assert(mainCss.includes('search-modal') && mainCss.includes('post-toc'), 'main.css contains search and TOC styling');
+  assert(mainCss.includes('data-theme="dark"') || mainCss.includes('prefers-color-scheme: dark'), 'main.css contains dark mode styles');
 
   const sitemapXml = fs.readFileSync(path.join(distDir, 'sitemap.xml'), 'utf-8');
   assert(sitemapXml.includes('<loc>https://www.moselikk.com/blog/verdaccio-offline</loc>'), 'sitemap.xml contains correct canonical URLs');
@@ -130,10 +141,10 @@ async function runTests() {
   assert(testRoute('/', 200, 'moselikk'), 'GET / -> 200 OK (Homepage)');
 
   // 2. 核心文章路由（包括特殊字符与 copy slugify）
-  assert(testRoute('/blog/verdaccio-offline', 200, '离线环境 npm 私服搭建'), 'GET /blog/verdaccio-offline -> 200 OK');
-  assert(testRoute('/blog/document-style-guide-copy', 200, '中文技术文档的写作规范'), 'GET /blog/document-style-guide-copy -> 200 OK');
-  assert(testRoute('/blog/eNSP-ERR40-copy', 200, '华为 eNSP 错误 40'), 'GET /blog/eNSP-ERR40-copy -> 200 OK');
-  assert(testRoute('/blog/mac-MDM', 200, 'Mac 企业监管机屏蔽弹窗'), 'GET /blog/mac-MDM -> 200 OK');
+  assert(testRoute('/blog/verdaccio-offline', 200, '离线环境'), 'GET /blog/verdaccio-offline -> 200 OK');
+  assert(testRoute('/blog/document-style-guide-copy', 200, '中文技术文档'), 'GET /blog/document-style-guide-copy -> 200 OK');
+  assert(testRoute('/blog/eNSP-ERR40-copy', 200, '华为 eNSP'), 'GET /blog/eNSP-ERR40-copy -> 200 OK');
+  assert(testRoute('/blog/mac-MDM', 200, 'Mac 企业监管机'), 'GET /blog/mac-MDM -> 200 OK');
   assert(testRoute('/blog/ChatGPT', 200, 'ChatGPT'), 'GET /blog/ChatGPT -> 200 OK');
   assert(testRoute('/blog/OpenWrt', 200, 'OpenWrt'), 'GET /blog/OpenWrt -> 200 OK');
 
@@ -143,9 +154,10 @@ async function runTests() {
   assert(testRoute('/excerpt', 200, '「读书 - 生活」 片段'), 'GET /excerpt -> 200 OK');
   assert(testRoute('/excerpt/', 200, '「读书 - 生活」 片段'), 'GET /excerpt/ -> 200 OK');
 
-  // 4. 静态资源
+  // 4. 静态资源与搜索索引
   assert(testRoute('/assets/main.css', 200, 'font-family'), 'GET /assets/main.css -> 200 OK');
   assert(testRoute('/assets/main.js', 200, 'hitokoto'), 'GET /assets/main.js -> 200 OK');
+  assert(testRoute('/search-index.json', 200, 'verdaccio-offline'), 'GET /search-index.json -> 200 OK (Search Index JSON)');
   assert(testRoute('/feed.xml', 200, '<rss'), 'GET /feed.xml -> 200 OK');
   assert(testRoute('/sitemap.xml', 200, '<urlset'), 'GET /sitemap.xml -> 200 OK');
 

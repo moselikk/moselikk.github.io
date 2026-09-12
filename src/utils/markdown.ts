@@ -33,20 +33,39 @@ export interface PostMetadata {
   layout?: string;
   permalink?: string;
   description?: string;
+  published?: boolean;
   [key: string]: any;
+}
+
+export interface TocItem {
+  id: string;
+  text: string;
+  level: number;
 }
 
 export interface ParsedMarkdown {
   metadata: PostMetadata;
   contentHtml: string;
   rawContent: string;
+  plainText: string;
+  toc: TocItem[];
+}
+
+// 规范中英文间隙 (Pangu 规则精简高效实现)
+export function spacingText(text: string): string {
+  return text
+    // 汉字与英文字符/数字之间插入空格
+    .replace(/([\u4e00-\u9fa5])([a-zA-Z0-9])/g, '$1 $2')
+    .replace(/([a-zA-Z0-9])([\u4e00-\u9fa5])/g, '$1 $2');
 }
 
 export async function parseMarkdown(fileContent: string): Promise<ParsedMarkdown> {
   const { data: metadata, content: rawContent } = matter(fileContent);
   const highlighter = await getHighlighterInstance();
 
-  // 自定义 remark/rehype 插件或在 rehype 阶段对 code 节点执行 shiki 渲染
+  const toc: TocItem[] = [];
+  let plainTextAcc = '';
+
   const processor = unified()
     .use(remarkParse)
     .use(remarkGfm)
@@ -54,8 +73,31 @@ export async function parseMarkdown(fileContent: string): Promise<ParsedMarkdown
     .use(rehypeRaw)
     .use(rehypeSlug)
     .use(() => (tree: any) => {
-      // 遍历 AST 找到 pre > code 并应用 shiki 代码高亮
       function visit(node: any, parent?: any, index?: number) {
+        // 1. 提取标题用于 TOC (h2, h3)
+        if (node.type === 'element' && (node.tagName === 'h2' || node.tagName === 'h3')) {
+          const level = parseInt(node.tagName.substring(1), 10);
+          const id = node.properties?.id || '';
+          
+          const extractText = (n: any): string => {
+            if (n.type === 'text') return n.value;
+            if (n.children) return n.children.map(extractText).join('');
+            return '';
+          };
+          const titleText = extractText(node).trim();
+          if (id && titleText) {
+            toc.push({ id, text: titleText, level });
+          }
+        }
+
+        // 2. 图片懒加载与异步解码属性注入
+        if (node.type === 'element' && node.tagName === 'img') {
+          node.properties = node.properties || {};
+          node.properties.loading = 'lazy';
+          node.properties.decoding = 'async';
+        }
+
+        // 3. 代码高亮
         if (node.type === 'element' && node.tagName === 'pre') {
           const codeNode = node.children?.find((child: any) => child.type === 'element' && child.tagName === 'code');
           if (codeNode) {
@@ -63,13 +105,11 @@ export async function parseMarkdown(fileContent: string): Promise<ParsedMarkdown
             const langClass = className.find((cls: string) => cls.startsWith('language-'));
             let lang = langClass ? langClass.replace('language-', '').toLowerCase() : 'text';
             
-            // 别名修正
             if (lang === 'sh') lang = 'bash';
             if (lang === 'yml') lang = 'yaml';
             if (lang === 'js') lang = 'javascript';
             if (lang === 'ts') lang = 'typescript';
 
-            // 提取代码文本
             const extractText = (n: any): string => {
               if (n.type === 'text') return n.value;
               if (n.children) return n.children.map(extractText).join('');
@@ -90,7 +130,6 @@ export async function parseMarkdown(fileContent: string): Promise<ParsedMarkdown
                 defaultColor: false
               });
 
-              // 将当前 pre 节点替换为 highlighed html 对应的 raw 节点
               if (parent && typeof index === 'number') {
                 parent.children[index] = {
                   type: 'raw',
@@ -102,6 +141,12 @@ export async function parseMarkdown(fileContent: string): Promise<ParsedMarkdown
             }
           }
         }
+
+        // 收集纯文本用于搜索索引
+        if (node.type === 'text') {
+          plainTextAcc += ' ' + node.value;
+        }
+
         if (node.children) {
           for (let i = 0; i < node.children.length; i++) {
             visit(node.children[i], node, i);
@@ -114,9 +159,17 @@ export async function parseMarkdown(fileContent: string): Promise<ParsedMarkdown
 
   const result = await processor.process(rawContent);
 
+  // 纯文本摘要清理
+  const cleanPlainText = plainTextAcc
+    .replace(/\s+/g, ' ')
+    .replace(/[#*`_~>\-\[\]\(\)]/g, '')
+    .trim();
+
   return {
     metadata: metadata as PostMetadata,
     contentHtml: String(result),
-    rawContent
+    rawContent,
+    plainText: cleanPlainText,
+    toc
   };
 }

@@ -1,5 +1,10 @@
 import { initHitokoto } from './hitokoto.js';
 import { initDenglong } from './denglong.js';
+import { initThemeToggle } from './theme.js';
+import { initSearch } from './search.js';
+import { initToc } from './toc.js';
+import { initCodeCopy } from './codeCopy.js';
+import { initBackToTop } from './backToTop.js';
 
 function setupExternalLinks() {
   const origin = window.location.origin;
@@ -39,6 +44,11 @@ function setupResponsiveTables() {
 document.addEventListener('DOMContentLoaded', () => {
   setupExternalLinks();
   setupResponsiveTables();
+  initThemeToggle();
+  initSearch();
+  initToc();
+  initCodeCopy();
+  initBackToTop();
   initHitokoto();
   initDenglong();
 });

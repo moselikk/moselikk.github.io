@@ -126,6 +126,20 @@
     font-size: 12px;
     background-color: #eee;
     border-radius: 3px 0 0 3px;
+    z-index: 5;
+    max-width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include media-query-max($on-screen) {
+      position: static;
+      margin: 0 0 16px auto;
+      display: table;
+      border-radius: 3px;
+      max-width: 100%;
+      white-space: normal;
+    }
   }
 
 }
@@ -203,6 +217,19 @@
   a:not(:first-child) {
     margin-left: 10px;
   }
+
+  @include media-query-max($on-screen) {
+    margin-top: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 12px;
+    line-height: 1.6;
+
+    a:not(:first-child) {
+      margin-left: 0;
+    }
+  }
 }
 
 .post-link {
@@ -228,21 +255,9 @@
 }
 
 div.highlight {
-  background-color: $background-color-gray;
-  @include media-query-max($on-screen) {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-  }
-  @include media-query-min($on-screen) {
-    margin: 0 -50px;
-    > pre {
-      padding: 20px 50px;
-    }
-  }
+  background-color: transparent;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 summary + .highlight {
@@ -251,10 +266,19 @@ summary + .highlight {
 
 /* 响应式 */
 @media screen and (max-width: 800px) {
-    .navigation{
-        display: none;
+  .navigation {
+    display: none;
+  }
+  .page-content {
+    padding-top: 20px;
+  }
+  .post-header {
+    margin-bottom: 24px;
+    .post-title {
+      padding-right: 70px;
+      font-size: 1.45em;
+      line-height: 1.35;
+      word-break: break-word;
     }
-    .page-content{
-        padding-top: 0;
-    }
+  }
 }

@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import * as sass from 'sass';
 import * as esbuild from 'esbuild';
-import { parseMarkdown } from '../src/utils/markdown.js';
+import { parseMarkdown, spacingText, TocItem } from '../src/utils/markdown.js';
 import { renderHomePage, PostSummary } from '../src/templates/home.js';
 import { renderPostPage } from '../src/templates/post.js';
 import { renderCustomPage } from '../src/templates/page.js';
@@ -81,9 +81,10 @@ async function build() {
     console.log('⚡ Client TS bundled successfully to assets/main.js');
   }
 
-  // 5. Parse and build Published Posts (按 Jekyll 标准: 必须符合 YYYY-MM-DD-*.md 且 published !== false)
+  // 5. Parse and build Published Posts
   const postFiles = await fs.readdir(postsDir);
   const postsList: { summary: PostSummary; feedItem: FeedPostItem; date: Date }[] = [];
+  const searchIndex: { title: string; url: string; date: string; content: string }[] = [];
   const sitemapUrls: SitemapUrl[] = [
     { loc: '/', changefreq: 'daily', priority: 1.0 },
     { loc: '/about/', changefreq: 'monthly', priority: 0.8 },
@@ -95,31 +96,23 @@ async function build() {
 
     // 必须符合标准命名规范: YYYY-MM-DD-title.md
     const match = file.match(/^(\d{4}-\d{2}-\d{2})-(.+)\.(md|markdown)$/);
-    if (!match) {
-      // 非标准命名的文件（如草稿 abc.md, def.md）不作为正式文章发布
-      continue;
-    }
+    if (!match) continue;
 
     const [, dateStr, rawSlug] = match;
     const fullPath = path.resolve(postsDir, file);
     const rawContent = await fs.readFile(fullPath, 'utf-8');
-    const { metadata, contentHtml } = await parseMarkdown(rawContent);
+    const { metadata, contentHtml, plainText, toc } = await parseMarkdown(rawContent);
 
-    // 如果 frontmatter 明确标记 published: false 则跳过发布
-    if (metadata.published === false) {
-      continue;
-    }
+    if (metadata.published === false) continue;
 
-    // 解析发布日期
     const postDate = parseSafeDate(metadata.date, dateStr);
-
-    // 标准 slug 处理（与 Jekyll 一致，空格转换为短横线）
     const slug = slugify(rawSlug);
     const postUrl = `/blog/${slug}`;
 
-    const title = metadata.title || rawSlug;
+    // 排版美化 (中英文规范微间隙)
+    const title = spacingText(metadata.title || rawSlug);
     const author = metadata.author;
-    const description = metadata.description;
+    const description = metadata.description ? spacingText(metadata.description) : undefined;
 
     // 输出文章 HTML
     const postHtml = renderPostPage({
@@ -128,15 +121,13 @@ async function build() {
       author,
       description,
       url: postUrl,
-      contentHtml
+      contentHtml,
+      toc
     });
 
-    // 写入 dist/blog/[slug]/index.html
     const postOutDir = path.resolve(distDir, 'blog', slug);
     await fs.ensureDir(postOutDir);
     await fs.writeFile(path.resolve(postOutDir, 'index.html'), postHtml);
-
-    // 同时写入 dist/blog/[slug].html（保证在所有 Clean URL 静态服务器下均可无缝直接匹配）
     await fs.writeFile(path.resolve(distDir, 'blog', `${slug}.html`), postHtml);
 
     postsList.push({
@@ -156,6 +147,14 @@ async function build() {
       }
     });
 
+    // 收集全文搜索索引
+    searchIndex.push({
+      title,
+      url: postUrl,
+      date: postDate.toISOString().split('T')[0],
+      content: plainText.slice(0, 300) // 提取前 300 字符作为紧凑搜索摘要
+    });
+
     sitemapUrls.push({
       loc: postUrl,
       lastmod: postDate.toISOString().split('T')[0],
@@ -169,12 +168,16 @@ async function build() {
 
   console.log(`📝 Generated ${postsList.length} published blog posts in dist/blog/`);
 
+  // 输出全文搜索索引文件 dist/search-index.json
+  await fs.writeJSON(path.resolve(distDir, 'search-index.json'), searchIndex);
+  console.log('🔍 Search index generated at dist/search-index.json');
+
   // 6. Generate Homepage (dist/index.html)
   const homeHtml = renderHomePage(postsList.map(p => p.summary));
   await fs.writeFile(path.resolve(distDir, 'index.html'), homeHtml);
   console.log('🏠 Homepage generated at dist/index.html');
 
-  // 7. Generate About page (dist/about/index.html + dist/about.html)
+  // 7. Generate About page
   const aboutPath = path.resolve(contentDir, 'about.md');
   if (await fs.pathExists(aboutPath)) {
     const aboutRaw = await fs.readFile(aboutPath, 'utf-8');
@@ -192,7 +195,7 @@ async function build() {
     console.log('👤 About page generated at dist/about/index.html & dist/about.html');
   }
 
-  // 8. Generate Excerpt page (dist/excerpt/index.html + dist/excerpt.html)
+  // 8. Generate Excerpt page
   const excerptPath = path.resolve(contentDir, 'excerpt.md');
   if (await fs.pathExists(excerptPath)) {
     const excerptRaw = await fs.readFile(excerptPath, 'utf-8');
@@ -210,17 +213,17 @@ async function build() {
     console.log('📖 Excerpt page generated at dist/excerpt/index.html & dist/excerpt.html');
   }
 
-  // 9. Generate 404 page (dist/404.html)
+  // 9. Generate 404 page
   const notFoundHtml = render404Page();
   await fs.writeFile(path.resolve(distDir, '404.html'), notFoundHtml);
   console.log('🚫 404 page generated at dist/404.html');
 
-  // 10. Generate RSS feed (dist/feed.xml)
+  // 10. Generate RSS feed
   const rssXml = generateRssFeed(postsList.map(p => p.feedItem));
   await fs.writeFile(path.resolve(distDir, 'feed.xml'), rssXml);
   console.log('📡 RSS Feed generated at dist/feed.xml');
 
-  // 11. Generate Sitemap (dist/sitemap.xml)
+  // 11. Generate Sitemap
   const sitemapXml = generateSitemap(sitemapUrls);
   await fs.writeFile(path.resolve(distDir, 'sitemap.xml'), sitemapXml);
   console.log('🗺️ Sitemap generated at dist/sitemap.xml');
