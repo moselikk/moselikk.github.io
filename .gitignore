@@ -1,6 +1,4 @@
-.sass-cache
-_site
+node_modules/
+dist/
 .DS_Store
-.jekyll-cache
-.idea
-Gemfile.lock
+*.log

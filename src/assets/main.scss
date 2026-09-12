@@ -1,10 +1,6 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
-
 @charset "utf-8";
 
-// Our variables
+// Variables
 $base-font-family: 'source-han-serif-sc', 'Source Han Serif SC', 'Source Han Serif CN', 'Source Han Serif TC', 'Source Han Serif TW', 'Source Han Serif', 'PingFang SC', 'Hiragino Sans GB', 'Songti SC', 'Microsoft YaHei', serif;
 $base-font-size: 17px;
 $base-font-weight: 300;
@@ -32,13 +28,6 @@ $on-palm: 600px;
 $on-laptop: 800px;
 $on-screen: 769px;
 
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
 @mixin media-query-max($device) {
   @media screen and (max-width: $device) {
     @content;
@@ -50,5 +39,42 @@ $on-screen: 769px;
   }
 }
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import '../_sass/base', '../_sass/layout','../_sass/denglong';
+// Import partials
+@import './base';
+@import './layout';
+@import './denglong';
+
+/* Shiki Dual-theme (GitHub Light & GitHub Dark) Styles */
+.shiki,
+.shiki span {
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
+  font-style: var(--shiki-light-font-style);
+  font-weight: var(--shiki-light-font-weight);
+  text-decoration: var(--shiki-light-text-decoration);
+}
+
+@media (prefers-color-scheme: dark) {
+  .shiki,
+  .shiki span {
+    color: var(--shiki-dark) !important;
+    background-color: var(--shiki-dark-bg) !important;
+    font-style: var(--shiki-dark-font-style);
+    font-weight: var(--shiki-dark-font-weight);
+    text-decoration: var(--shiki-dark-text-decoration);
+  }
+}
+
+pre.shiki {
+  padding: 16px;
+  overflow-x: auto;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 1.2em 0;
+}
+
+div.highlight {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+}
