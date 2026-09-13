@@ -22,8 +22,9 @@ function assert(condition: boolean, message: string) {
   }
 }
 
-// 线上 https://www.moselikk.com/ 实际发布的 30 篇文章标准列表
+// 博客发布的文章标准列表
 const EXPECTED_LIVE_SLUGS = [
+  'pulsebar',
   'verdaccio-offline',
   'berkeley',
   'ipv6',
@@ -99,13 +100,13 @@ async function runTests() {
   console.log('\n🔍 Test Suite 2: Features, Styles & Configurations');
   
   const searchIndexData = JSON.parse(fs.readFileSync(path.join(distDir, 'search-index.json'), 'utf-8'));
-  assert(Array.isArray(searchIndexData) && searchIndexData.length === 30, `search-index.json contains exactly 30 indexable articles`);
-  assert(searchIndexData.some((item: any) => item.title.includes('离线环境') && item.url === '/blog/verdaccio-offline'), 'search-index.json contains valid article entries');
+  assert(Array.isArray(searchIndexData) && searchIndexData.length === EXPECTED_LIVE_SLUGS.length, `search-index.json contains exactly ${EXPECTED_LIVE_SLUGS.length} indexable articles`);
+  assert(searchIndexData.some((item: any) => item.title.includes('PulseBar') && item.url === '/blog/pulsebar'), 'search-index.json contains pulsebar article entry');
 
   const homeHtml = fs.readFileSync(path.join(distDir, 'index.html'), 'utf-8');
   assert(!homeHtml.includes('href="/blog/abc"'), 'Homepage archive does NOT contain unpublished draft "abc"');
   assert(!homeHtml.includes('href="/blog/def"'), 'Homepage archive does NOT contain unpublished draft "def"');
-  assert(homeHtml.includes('href="/blog/verdaccio-offline"'), 'Homepage contains latest article "verdaccio-offline"');
+  assert(homeHtml.includes('href="/blog/pulsebar"'), 'Homepage contains latest article "pulsebar"');
   assert(homeHtml.includes('href="/favicon.ico"'), 'Homepage includes favicon link tag');
   assert(homeHtml.includes('search-modal') && homeHtml.includes('theme-toggle'), 'Homepage contains search modal and theme toggle button');
   assert(homeHtml.includes('back-to-top'), 'Homepage contains back-to-top button');
